@@ -14,7 +14,7 @@
     {"offset": {"line": 67, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
     {"offset": {"line": 73, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
     {"offset": {"line": 77, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 83, "column": 0}, "map": {"version":3,"sources":["file:///Users/safalpoudel/Desktop/Code/nplcoder/app/page.tsx"],"sourcesContent":["import Image from \"next/image\";\nimport Nav from \"@/components/Nav\";\nimport Hero from \"@/components/Hero\";\nexport default function Home() {\n  return (\n    <div className=\"m-0 p-0 box-border\">\n<Nav/>\n<Hero/>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;AACA;AACA;;;;AACe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;;0BACnB,8OAAC,kHAAA,CAAA,UAAG;;;;;0BACJ,8OAAC,mHAAA,CAAA,UAAI;;;;;;;;;;;AAGL"}},
+    {"offset": {"line": 83, "column": 0}, "map": {"version":3,"sources":["file:///Users/safalpoudel/Desktop/Code/nplcoder/app/page.tsx"],"sourcesContent":["import Nav from \"@/components/Nav\";\nimport Hero from \"@/components/Hero\";\nexport default function Home() {\n  return (\n    <div className=\"m-0 p-0 box-border\">\n<Nav/>\n<Hero/>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;;;;AACe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;;0BACnB,8OAAC,kHAAA,CAAA,UAAG;;;;;0BACJ,8OAAC,mHAAA,CAAA,UAAI;;;;;;;;;;;AAGL"}},
     {"offset": {"line": 113, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
     {"offset": {"line": 124, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
     {"offset": {"line": 124, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},

@@ -368,7 +368,7 @@ function ModeToggle() {
             setMounted(true);
         }
     }["ModeToggle.useEffect"], []);
-    if (!mounted) return null; // Prevent hydration issues
+    if (!mounted) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "mt-1",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -376,7 +376,7 @@ function ModeToggle() {
             className: "flex items-center p-2 rounded text-white transition",
             "aria-label": "Toggle theme",
             children: theme === "dark" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                src: "/images/sun.svg",
+                src: "/images/sun.png",
                 alt: "Sun Icon",
                 className: "transition-transform duration-200 pb-1",
                 width: 19,
@@ -386,7 +386,7 @@ function ModeToggle() {
                 lineNumber: 25,
                 columnNumber: 21
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                src: "/images/moon.svg",
+                src: "/images/moon.png",
                 alt: "Moon Icon",
                 className: "transition-transform duration-200 pb-1",
                 width: 18,
@@ -919,7 +919,7 @@ const Initiative = ({ icon, title, description })=>{
                     children: icon
                 }, void 0, false, {
                     fileName: "[project]/components/Initiatives.jsx",
-                    lineNumber: 9,
+                    lineNumber: 8,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -930,7 +930,7 @@ const Initiative = ({ icon, title, description })=>{
                             children: title
                         }, void 0, false, {
                             fileName: "[project]/components/Initiatives.jsx",
-                            lineNumber: 15,
+                            lineNumber: 13,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -938,13 +938,13 @@ const Initiative = ({ icon, title, description })=>{
                             children: description
                         }, void 0, false, {
                             fileName: "[project]/components/Initiatives.jsx",
-                            lineNumber: 19,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Initiatives.jsx",
-                    lineNumber: 14,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -952,7 +952,7 @@ const Initiative = ({ icon, title, description })=>{
                     children: "Learn More"
                 }, void 0, false, {
                     fileName: "[project]/components/Initiatives.jsx",
-                    lineNumber: 25,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, this)
             ]
@@ -979,7 +979,7 @@ const Initiatives = ()=>{
                     children: "Our Initiatives"
                 }, void 0, false, {
                     fileName: "[project]/components/Initiatives.jsx",
-                    lineNumber: 37,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -987,7 +987,7 @@ const Initiatives = ()=>{
                     children: "NPLCoder has two initiatives aimed at fostering technological skills among students in Nepal."
                 }, void 0, false, {
                     fileName: "[project]/components/Initiatives.jsx",
-                    lineNumber: 41,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -998,14 +998,14 @@ const Initiatives = ()=>{
                                 className: "w-8 h-8 text-white"
                             }, void 0, false, {
                                 fileName: "[project]/components/Initiatives.jsx",
-                                lineNumber: 47,
+                                lineNumber: 44,
                                 columnNumber: 19
                             }, void 0),
                             title: "Nepal Olympiad in Informatics",
                             description: "The National Olympiad in Informatics (NOI) is an inaugural programming competition open to secondary school and junior college students across Nepal. The competition consists of an online qualification round followed by a final contest for top performers. Participants will solve algorithmic problems that test their programming and problem-solving abilities. The NOI aims to promote interest in informatics and computational thinking. High-achieving students may receive medals and awards, and outstanding performers could be selected for further training with the possibility of representing Nepal at the International Olympiad in Informatics (IOI). Visit this page to learn more and sign up."
                         }, void 0, false, {
                             fileName: "[project]/components/Initiatives.jsx",
-                            lineNumber: 46,
+                            lineNumber: 43,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Initiative, {
@@ -1013,31 +1013,31 @@ const Initiatives = ()=>{
                                 className: "w-8 h-8 text-white"
                             }, void 0, false, {
                                 fileName: "[project]/components/Initiatives.jsx",
-                                lineNumber: 54,
+                                lineNumber: 51,
                                 columnNumber: 15
                             }, void 0),
                             title: "Nepal Data Challenge",
                             description: "The Nepal Data Challenge is a program for university students interested in AI and ML. It focuses on collaboration, mentorship, and professional development. Participants can work individually or in teams of up to four members to tackle data-driven projects. The challenge encourages building professional networks and emphasizes inclusivity and support among participants. Prizes are awarded to top teams based on technical excellence, innovation, and collaborative efforts, with a total prize pool of $1,000. Visit this page to learn more and sign up."
                         }, void 0, false, {
                             fileName: "[project]/components/Initiatives.jsx",
-                            lineNumber: 52,
+                            lineNumber: 49,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Initiatives.jsx",
-                    lineNumber: 45,
+                    lineNumber: 42,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/Initiatives.jsx",
-            lineNumber: 36,
+            lineNumber: 33,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Initiatives.jsx",
-        lineNumber: 35,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 };
