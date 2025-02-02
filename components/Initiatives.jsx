@@ -5,12 +5,10 @@ const Initiative = ({ icon, title, description }) => {
   return (
     <div className="relative rounded-2xl overflow-hidden bg-[#2C3043]/50 backdrop-blur-lg p-8 shadow-2xl border border-gray-800/50 hover:border-gray-700/50 transition-all duration-300">
       <div className="flex flex-col gap-6">
-        {/* Icon */}
         <div className="w-12 h-12 flex items-center justify-center">
           {icon}
         </div>
         
-        {/* Content */}
         <div className="space-y-4">
           <h3 className="text-2xl text-white font-bold tracking-tight">
             {title}
@@ -21,7 +19,6 @@ const Initiative = ({ icon, title, description }) => {
           </p>
         </div>
         
-        {/* Button */}
         <button className="bg-white/10 hover:bg-white/20 text-white px-4 py-4 rounded-[16px] font-semibold transition-all duration-300 border border-gray-700/50 hover:border-gray-600/50">
           Learn More
         </button>

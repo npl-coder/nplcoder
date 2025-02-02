@@ -12,7 +12,7 @@ function ModeToggle() {
         setMounted(true);
     }, []);
 
-    if (!mounted) return null; // Prevent hydration issues
+    if (!mounted) return null;
 
     return (
         <div className="mt-1">
@@ -23,7 +23,7 @@ function ModeToggle() {
             >
                 {theme === "dark" ? (
                     <Image
-                        src="/images/sun.svg"
+                        src="/images/sun.png"
                         alt="Sun Icon" 
                         className="transition-transform duration-200 pb-1"
                         width={19}
@@ -31,7 +31,7 @@ function ModeToggle() {
                     />
                 ) : (
                     <Image
-                        src="/images/moon.svg"
+                        src="/images/moon.png"
                         alt="Moon Icon" 
                         className="transition-transform duration-200 pb-1"
                         width={18}
