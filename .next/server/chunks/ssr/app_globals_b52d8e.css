@@ -1841,6 +1841,10 @@ body {
     max-height: 300px;
   }
 
+  .sm\:max-h-full {
+    max-height: 100%;
+  }
+
   .sm\:w-auto {
     width: auto;
   }
@@ -1956,6 +1960,10 @@ body {
 
   .lg\:h-24 {
     height: 6rem;
+  }
+
+  .lg\:max-h-full {
+    max-height: 100%;
   }
 
   .lg\:flex-row {

@@ -4,8 +4,8 @@ import { Highlight, themes } from "prism-react-renderer";
 const codeSnippets = [
   {
     filename: "binary_search.cpp",
-    code: ` #include <bits/stdc++.h>
-using namespace std;
+    code: `  #include <bits/stdc++.h>
+ using namespace std;
 
 int binarySearch(vector<int>& arr, int target) {
     int left = 0, right = arr.size() - 1;

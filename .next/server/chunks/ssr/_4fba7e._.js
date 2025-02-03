@@ -163,48 +163,41 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2
 ;
 ;
 const Register = ({ variant = 'navbar' })=>{
+    const buttonStyles = variant === 'hero' ? 'bg-[#DC143C] hover:bg-red-700 text-white px-6 py-4' : 'bg-gray-200 hover:bg-gray-100 text-slate-900 px-4 py-4';
+    const commonButtonStyles = 'rounded-[16px] font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2';
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTrigger"], {
                 asChild: true,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    className: `${variant === 'hero' ? 'bg-[#DC143C] hover:bg-red-700 text-white px-6 py-4' : 'bg-gray-200 hover:bg-gray-100 text-slate-900 px-4 py-4'} rounded-[16px] font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2`,
+                    className: `${buttonStyles} ${commonButtonStyles}`,
                     children: "Register Now"
                 }, void 0, false, {
                     fileName: "[project]/components/Register.jsx",
-                    lineNumber: 14,
-                    columnNumber: 7
+                    lineNumber: 20,
+                    columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Register.jsx",
-                lineNumber: 13,
+                lineNumber: 19,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogContent"], {
-                className: "fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] bg-white w-[90%] max-w-[95vw] sm:max-w-6xl p-4 sm:p-8 rounded-3xl z-[101] overflow-y-auto max-h-[90vh]",
+                className: "fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] bg-white w-[90%] max-w-[95vw] sm:max-w-6xl p-4 sm:p-8 rounded-3xl z-[101] overflow-y-auto max-h-[90vh] sm:max-h-full",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogHeader"], {
                         className: "flex flex-row justify-between items-start mb-4 sm:mb-8",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTitle"], {
-                                className: "text-2xl sm:text-3xl font-bold text-slate-900 hidden",
-                                children: "Register"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Register.jsx",
-                                lineNumber: 24,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTrigger"], {
-                                asChild: true
-                            }, void 0, false, {
-                                fileName: "[project]/components/Register.jsx",
-                                lineNumber: 25,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTitle"], {
+                            className: "text-2xl sm:text-3xl font-bold text-slate-900",
+                            children: "Register"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Register.jsx",
+                            lineNumber: 27,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
                         fileName: "[project]/components/Register.jsx",
-                        lineNumber: 23,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -218,15 +211,15 @@ const Register = ({ variant = 'navbar' })=>{
                                         children: "Algorithm को श्रीपेच 001"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Register.jsx",
-                                        lineNumber: 31,
+                                        lineNumber: 32,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex justify-center mb-4",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                             src: "./images/Algorithm.jpeg",
-                                            alt: "NPL Coder",
-                                            className: "w-full h-auto max-h-[200px] sm:max-h-[300px] object-cover rounded-lg"
+                                            alt: "Algorithm",
+                                            className: "w-full h-auto max-h-[200px] sm:max-h-[300px] lg:max-h-full object-cover rounded-lg"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Register.jsx",
                                             lineNumber: 34,
@@ -242,13 +235,13 @@ const Register = ({ variant = 'navbar' })=>{
                                         children: "Register Now"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Register.jsx",
-                                        lineNumber: 41,
+                                        lineNumber: 40,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Register.jsx",
-                                lineNumber: 30,
+                                lineNumber: 31,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -259,23 +252,23 @@ const Register = ({ variant = 'navbar' })=>{
                                         children: "Nepal Data Challenge"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Register.jsx",
-                                        lineNumber: 47,
+                                        lineNumber: 46,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex justify-center mb-4",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                             src: "./images/NDC.jpeg",
-                                            alt: "NPL Coder",
-                                            className: "w-full h-auto max-h-[200px] sm:max-h-[300px] object-cover rounded-lg"
+                                            alt: "NDC",
+                                            className: "w-full h-auto max-h-[200px] sm:max-h-[300px] lg:max-h-full object-cover rounded-lg"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Register.jsx",
-                                            lineNumber: 50,
+                                            lineNumber: 48,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/Register.jsx",
-                                        lineNumber: 49,
+                                        lineNumber: 47,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -283,31 +276,31 @@ const Register = ({ variant = 'navbar' })=>{
                                         children: "Register Now"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Register.jsx",
-                                        lineNumber: 57,
+                                        lineNumber: 54,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Register.jsx",
-                                lineNumber: 46,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Register.jsx",
-                        lineNumber: 29,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Register.jsx",
-                lineNumber: 22,
+                lineNumber: 25,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Register.jsx",
-        lineNumber: 12,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 };
@@ -659,8 +652,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$prism$2d$rea
 const codeSnippets = [
     {
         filename: "binary_search.cpp",
-        code: ` #include <bits/stdc++.h>
-using namespace std;
+        code: `  #include <bits/stdc++.h>
+ using namespace std;
 
 int binarySearch(vector<int>& arr, int target) {
     int left = 0, right = arr.size() - 1;
