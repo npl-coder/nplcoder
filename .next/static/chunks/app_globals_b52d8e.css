@@ -496,12 +496,12 @@ body {
   z-index: 101;
 }
 
-.z-\[1\] {
-  z-index: 1;
-}
-
 .z-\[105\] {
   z-index: 105;
+}
+
+.z-\[1\] {
+  z-index: 1;
 }
 
 .m-0 {
@@ -680,6 +680,14 @@ body {
   min-height: 100vh;
 }
 
+.min-h-\[300px\] {
+  min-height: 300px;
+}
+
+.min-h-\[310px\] {
+  min-height: 310px;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -756,10 +764,6 @@ body {
   flex: 1;
 }
 
-.flex-grow {
-  flex-grow: 1;
-}
-
 .origin-left {
   transform-origin: 0;
 }
@@ -810,10 +814,6 @@ body {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -840,10 +840,6 @@ body {
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-end {
@@ -1180,12 +1176,36 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-black\/50 {
+  --tw-gradient-from: #00000080 var(--tw-gradient-from-position);
+  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-black\/10 {
+  --tw-gradient-from: #0000001a var(--tw-gradient-from-position);
+  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-\[\#003893\] {
   --tw-gradient-to: #003893 var(--tw-gradient-to-position);
 }
 
 .to-black\/70 {
   --tw-gradient-to: #000000b3 var(--tw-gradient-to-position);
+}
+
+.to-black\/90 {
+  --tw-gradient-to: #000000e6 var(--tw-gradient-to-position);
+}
+
+.to-black\/20 {
+  --tw-gradient-to: #0003 var(--tw-gradient-to-position);
+}
+
+.to-black\/80 {
+  --tw-gradient-to: #000c var(--tw-gradient-to-position);
 }
 
 .bg-clip-text {
@@ -1317,11 +1337,6 @@ body {
 .text-xs {
   font-size: .75rem;
   line-height: 1rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -2069,16 +2084,12 @@ body {
     height: 1.25rem;
   }
 
-  .md\:h-64 {
-    height: 16rem;
+  .md\:h-\[350px\] {
+    height: 350px;
   }
 
   .md\:h-\[400px\] {
     height: 400px;
-  }
-
-  .md\:h-\[350px\] {
-    height: 350px;
   }
 
   .md\:w-5 {

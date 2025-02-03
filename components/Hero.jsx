@@ -18,7 +18,7 @@ const Hero = () => {
               <span className="bg-gradient-to-r from-[#DC143C] to-[#003893] text-transparent bg-clip-text">
               Next Generation 
               </span>{' '}
-              of Nepali Programmers.
+              of Nepali Computational Minds.
             </h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-xl">
             We are a non-profit dedicated to empowering students in Nepal by providing them with the tools, resources, and support they need to excel in coding and competitive programming.

@@ -80,7 +80,7 @@ const CodeBlock = () => {
           {codeSnippets[activeTab].filename}
         </div>
       </div>
-      <div className="bg-slate-800 dark:bg-gray-800 p-4 rounded-lg font-mono text-sm text-white min-h-64">
+      <div className="bg-slate-800 dark:bg-gray-800 p-4 rounded-lg font-mono text-sm text-white min-h-[310px]">
         <Highlight theme={themes.nightOwl} code={code} language={activeTab === 1 ? "python" : "cpp"}>
           {({ tokens, getLineProps, getTokenProps }) => (
             <pre className="p-2 rounded-md overflow-x-auto">
