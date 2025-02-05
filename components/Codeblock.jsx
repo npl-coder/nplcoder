@@ -19,15 +19,14 @@ int binarySearch(vector<int>& arr, int target) {
 }`,
   },
   {
-    filename: "quicksort.py",
-    code: ` def quicksort(arr):
-    if len(arr) <= 1:
-        return arr
-    pivot = arr[len(arr) // 2]
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
-    return quicksort(left) + middle + quicksort(right)`,
+    filename: "subarraysum.py",
+    code: ` def max_subarray_sum(arr):
+    max_sum = current_sum = arr[0]
+    for num in arr[1:]:
+        current_sum = max(num, current_sum + num)
+        max_sum = max(max_sum, current_sum)
+    return max_sum
+`,
   },
   {
     filename: "fibonacci.cpp",
@@ -41,7 +40,7 @@ int fibonacci(int n) {
 
 int main() {
     int n = 10;
-    cout << "Fibonacci(" << n << ") = " << fibonacci(n) << endl;
+    cout << fibonacci(n) << endl;
     return 0;
 }`,
   },
