@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Nav from "@/components/Nav";
+
 
 export const metadata: Metadata = {
   title: "NPLCoder",
@@ -10,7 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="font-verdana antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+        <Nav/>
+        {children}</ThemeProvider>
+
       </body>
     </html>
   );

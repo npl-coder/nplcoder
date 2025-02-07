@@ -47,7 +47,7 @@ const Nav = () => {
 
               <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
                 <div className="flex space-x-8">
-                  {['Home', 'NOI', 'NDC', 'Events', 'Team', 'About'].map((item) => (
+                  {['Home','About', 'NOI', 'NDC', 'Events', 'Team'].map((item) => (
                     <Link
                       key={item}
                       href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
@@ -93,7 +93,7 @@ const Nav = () => {
               }`}
             >
               <div className="flex flex-col space-y-4 px-4 pb-6">
-                {['Home', 'NOI', 'NDC', 'Events', 'Team', 'About'].map((item) => (
+                {['Home', 'About', 'NOI', 'NDC', 'Events', 'Team', ].map((item) => (
                   <Link 
                     key={item}
                     href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}

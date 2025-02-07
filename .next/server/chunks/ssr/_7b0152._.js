@@ -667,15 +667,14 @@ int binarySearch(vector<int>& arr, int target) {
 }`
     },
     {
-        filename: "quicksort.py",
-        code: ` def quicksort(arr):
-    if len(arr) <= 1:
-        return arr
-    pivot = arr[len(arr) // 2]
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
-    return quicksort(left) + middle + quicksort(right)`
+        filename: "subarraysum.py",
+        code: ` def max_subarray_sum(arr):
+    max_sum = current_sum = arr[0]
+    for num in arr[1:]:
+        current_sum = max(num, current_sum + num)
+        max_sum = max(max_sum, current_sum)
+    return max_sum
+`
     },
     {
         filename: "fibonacci.cpp",
@@ -689,7 +688,7 @@ int fibonacci(int n) {
 
 int main() {
     int n = 10;
-    cout << "Fibonacci(" << n << ") = " << fibonacci(n) << endl;
+    cout << fibonacci(n) << endl;
     return 0;
 }`
     }
@@ -726,21 +725,21 @@ const CodeBlock = ()=>{
                         className: "w-3 h-3 mt-2 bg-red-500 rounded-full"
                     }, void 0, false, {
                         fileName: "[project]/components/Codeblock.jsx",
-                        lineNumber: 76,
+                        lineNumber: 75,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-3 h-3 mt-2 bg-yellow-500 rounded-full"
                     }, void 0, false, {
                         fileName: "[project]/components/Codeblock.jsx",
-                        lineNumber: 77,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-3 h-3 mt-2 bg-green-500 rounded-full"
                     }, void 0, false, {
                         fileName: "[project]/components/Codeblock.jsx",
-                        lineNumber: 78,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -748,13 +747,13 @@ const CodeBlock = ()=>{
                         children: codeSnippets[activeTab].filename
                     }, void 0, false, {
                         fileName: "[project]/components/Codeblock.jsx",
-                        lineNumber: 79,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Codeblock.jsx",
-                lineNumber: 75,
+                lineNumber: 74,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -775,33 +774,33 @@ const CodeBlock = ()=>{
                                             })
                                         }, key, false, {
                                             fileName: "[project]/components/Codeblock.jsx",
-                                            lineNumber: 90,
+                                            lineNumber: 89,
                                             columnNumber: 21
                                         }, this))
                                 }, i, false, {
                                     fileName: "[project]/components/Codeblock.jsx",
-                                    lineNumber: 88,
+                                    lineNumber: 87,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/Codeblock.jsx",
-                            lineNumber: 86,
+                            lineNumber: 85,
                             columnNumber: 13
                         }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Codeblock.jsx",
-                    lineNumber: 84,
+                    lineNumber: 83,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Codeblock.jsx",
-                lineNumber: 83,
+                lineNumber: 82,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Codeblock.jsx",
-        lineNumber: 74,
+        lineNumber: 73,
         columnNumber: 5
     }, this);
 };
