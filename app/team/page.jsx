@@ -86,7 +86,7 @@ export default function TeamPage() {
           </h1> */}
   
           {/* Executive Members Section */}
-          <div className="mt-20 mb-16">
+          <div className="mt-14">
             <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white text-center">
               Executive Members
             </h2>
@@ -106,8 +106,8 @@ export default function TeamPage() {
           </div>
   
           {/* Operations Members Section */}
-          <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white text-center">
+          <div className="mb-8">
+          <h2 className="text-3xl font-bold mb-2 mt-2  text-gray-900 dark:text-white text-center">
               Operations Members
             </h2>
             <div className="h-1 w-1/2 mx-auto bg-gradient-to-r from-[#DC143C] to-[#0062ff] my-4"></div>
