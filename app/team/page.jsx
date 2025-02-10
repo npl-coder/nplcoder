@@ -43,7 +43,7 @@ const teamMembers = [{
     title: "AI Engineer",
     image: './images/teamMembers/Sumit.jpeg',
     linkedin: "https://www.linkedin.com/in/rockerritesh",
-    category: "Operations"
+    category: "Executive"
   },
   // {
   //   name: "Amod Paudel",
@@ -80,13 +80,13 @@ export default function TeamPage() {
   
     return (
       <main className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
-        <section className="px-4 py-10 lg:px-8 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+        <section className="px-4 py-10 lg:px-8 max-w-7xl mx-auto my-20">
+          {/* <h1 className="text-3xl font-bold mb-14 text-center text-gray-900 dark:text-white">
             Meet Our Team
-          </h1>
+          </h1> */}
   
           {/* Executive Members Section */}
-          <div className="mb-16">
+          <div className="mt-20 mb-16">
             <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white text-center">
               Executive Members
             </h2>
