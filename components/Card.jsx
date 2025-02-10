@@ -4,7 +4,7 @@ import { FaLinkedin, FaGlobeAmericas } from 'react-icons/fa'
 const Card = ({ name, title, image, linkedin, website }) => {
   return (
 
-    <div className="group max-w-[300px] mx-auto text-center font-sans p-1 h-[500px] transition-all duration-500 hover:shadow-lg">
+    <div className="group max-w-[300px] mx-auto text-center font-sans p-1 h-[500px] transition-all duration-1000 hover:shadow-xl">
       <div className="border-4 border-gray-300 transition-all duration-500 group-hover:border-red-500">
         <Image
           src={image}

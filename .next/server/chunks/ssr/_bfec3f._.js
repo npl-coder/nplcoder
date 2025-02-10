@@ -16,7 +16,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$ico
 ;
 const Card = ({ name, title, image, linkedin, website })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "group max-w-[300px] mx-auto text-center font-sans p-1 h-[500px] transition-all duration-500 hover:shadow-lg",
+        className: "group max-w-[300px] mx-auto text-center font-sans p-1 h-[500px] transition-all duration-1000 hover:shadow-xl",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "border-4 border-gray-300 transition-all duration-500 group-hover:border-red-500",
@@ -121,38 +121,45 @@ const teamMembers = [
         name: "Aditi Gajurel",
         title: "University of Southern California",
         image: './images/teamMembers/aditi.jpeg',
-        linkedin: "https://www.linkedin.com/in/aditi-gajurel-334492146/"
+        linkedin: "https://www.linkedin.com/in/aditi-gajurel-334492146/",
+        category: "Executive"
     },
     {
         name: "Aayushma Sapkota",
         title: "Stanford University | CS + MS&E | QuestBridge",
         image: './images/teamMembers/Aayushma.jpeg',
-        linkedin: "https://www.linkedin.com/in/aayushma-sapkota/"
+        linkedin: "https://www.linkedin.com/in/aayushma-sapkota/",
+        category: "Executive"
     },
     {
         name: "Manish Acharya",
         title: "Undergraduate Student, Vanderbilt University",
         image: './images/teamMembers/ManishAcharya.jpeg',
-        linkedin: "https://www.linkedin.com/in/manishacharya60/"
+        linkedin: "https://www.linkedin.com/in/manishacharya60/",
+        website: "https://acharyamanish.net/",
+        category: "Executive"
     },
     {
         name: "Aashish Karki",
-        title: "IOE, Pulchowk Campus || AI Fellow '24 @Fusemachines || APIE || AWS Certified Solution Architect Associate",
+        title: "IOE, Pulchowk Campus || AI Fellow '24 @Fusemachines || APIE || AWS Certified Solutions Architect Associate",
         image: './images/teamMembers/Aashish.jpeg',
         linkedin: "https://www.linkedin.com/in/aashish-karki-718757233/",
-        website: "https://karkiaashish.com.np/"
+        website: "https://karkiaashish.com.np/",
+        category: "Executive"
     },
     {
         name: "Mahesh Pandit",
         title: "Undergraduate Student",
         image: "https://uunchai.org/assets/img/mahesh.jpg",
-        website: "https://maheshpandit.com.np/"
+        website: "https://maheshpandit.com.np/",
+        category: "Operations"
     },
     {
         name: "Sumit Yadav",
         title: "AI Engineer",
         image: './images/teamMembers/Sumit.jpeg',
-        linkedin: "https://www.linkedin.com/in/rockerritesh"
+        linkedin: "https://www.linkedin.com/in/rockerritesh",
+        category: "Operations"
     },
     // {
     //   name: "Amod Paudel",
@@ -164,22 +171,27 @@ const teamMembers = [
         name: "Sujit Maharjan",
         title: "PhD Student in Computer Science, University of Texas at Arlington",
         image: "https://maharjansujit.com.np/images/avatar.jpg",
-        website: "https://maharjansujit.com.np"
+        website: "https://maharjansujit.com.np",
+        category: "Operations"
     },
     {
         name: "Amrit Kandel",
         title: "Advisor",
         image: './images/teamMembers/Amrit.jpeg',
-        linkedin: "https://www.linkedin.com/in/amritkandel/"
+        linkedin: "https://www.linkedin.com/in/amritkandel/",
+        category: "Operations"
     },
     {
         name: "Raul Aguilera",
         title: "Advisor",
         image: './images/teamMembers/Raul.jpeg',
-        linkedin: "https://www.linkedin.com/in/aguilera-avenue/"
+        linkedin: "https://www.linkedin.com/in/aguilera-avenue/",
+        category: "Operations"
     }
 ];
 function TeamPage() {
+    const executiveMembers = teamMembers.filter((member)=>member.category === "Executive");
+    const operationMembers = teamMembers.filter((member)=>member.category === "Operations");
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "min-h-screen bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -190,36 +202,102 @@ function TeamPage() {
                     children: "Meet Our Team"
                 }, void 0, false, {
                     fileName: "[project]/app/team/page.jsx",
-                    lineNumber: 70,
+                    lineNumber: 84,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center",
-                    children: teamMembers.map((member)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Card$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                            name: member.name,
-                            title: member.title,
-                            image: member.image,
-                            linkedin: member.linkedin,
-                            website: member.website
-                        }, member.name, false, {
+                    className: "mb-16",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-3xl font-bold mb-2 text-gray-900 dark:text-white text-center",
+                            children: "Executive Members"
+                        }, void 0, false, {
                             fileName: "[project]/app/team/page.jsx",
-                            lineNumber: 75,
-                            columnNumber: 15
-                        }, this))
-                }, void 0, false, {
+                            lineNumber: 90,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "h-1 w-1/2 mx-auto bg-gradient-to-r from-[#DC143C] to-[#0062ff] my-4"
+                        }, void 0, false, {
+                            fileName: "[project]/app/team/page.jsx",
+                            lineNumber: 93,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center",
+                            children: executiveMembers.map((member)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Card$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    name: member.name,
+                                    title: member.title,
+                                    image: member.image,
+                                    linkedin: member.linkedin,
+                                    website: member.website
+                                }, member.name, false, {
+                                    fileName: "[project]/app/team/page.jsx",
+                                    lineNumber: 96,
+                                    columnNumber: 17
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/app/team/page.jsx",
+                            lineNumber: 94,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/app/team/page.jsx",
-                    lineNumber: 73,
+                    lineNumber: 89,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mb-16",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-3xl font-bold mb-2 text-gray-900 dark:text-white text-center",
+                            children: "Operations Members"
+                        }, void 0, false, {
+                            fileName: "[project]/app/team/page.jsx",
+                            lineNumber: 110,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "h-1 w-1/2 mx-auto bg-gradient-to-r from-[#DC143C] to-[#0062ff] my-4"
+                        }, void 0, false, {
+                            fileName: "[project]/app/team/page.jsx",
+                            lineNumber: 113,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center",
+                            children: operationMembers.map((member)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Card$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    name: member.name,
+                                    title: member.title,
+                                    image: member.image,
+                                    linkedin: member.linkedin,
+                                    website: member.website
+                                }, member.name, false, {
+                                    fileName: "[project]/app/team/page.jsx",
+                                    lineNumber: 116,
+                                    columnNumber: 17
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/app/team/page.jsx",
+                            lineNumber: 114,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/app/team/page.jsx",
+                    lineNumber: 109,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/team/page.jsx",
-            lineNumber: 69,
+            lineNumber: 83,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/team/page.jsx",
-        lineNumber: 68,
+        lineNumber: 82,
         columnNumber: 7
     }, this);
 }
