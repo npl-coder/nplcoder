@@ -7,7 +7,7 @@ import Register from './Register'
 
 const Hero = () => {
   return (
-    <main className="relative min-h-screen bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
+    <main className="relative bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
       <div className="h-12 lg:h-24"></div>
       
       <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
@@ -25,10 +25,14 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Register variant="hero" />
-            <button className="border hover:scale-105 border-gray-600 text-gray-800 dark:text-white hover:bg-white/10 px-6 py-2 sm:px-4 sm:py-2 rounded-[16px] font-semibold transition-all duration-300 w-full sm:w-auto">
+            <button className="p-8 bg-red-600 hover:bg-red-700 text-white py-3 sm:py-4 rounded-xl font-semibold mt-4 sm:mt-6">
+Join Our Initiative </button>            
+<a href="/about">
+<button className="p-8 bg-transparent 0 border hover:scale-105 border-gray-600 text-gray-800 dark:text-white hover:bg-white/10 py-3 sm:py-4 rounded-xl font-semibold mt-4 sm:mt-6">
+
     About Us
   </button>
+  </a>
 </div>
 
 
@@ -85,7 +89,6 @@ const Hero = () => {
           </div>
         </div>
 
-        <Initiatives />
       </div>
     </main>
   );}
