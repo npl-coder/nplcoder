@@ -18,7 +18,7 @@ const socialIcons = [
   { icon: Linkedin, platform: 'https://www.linkedin.com/company/nplcoder/' },
   { icon: Instagram, platform: 'https://www.instagram.com/nplcoder/' },
   { icon: Facebook, platform: 'https://www.facebook.com/nplcoder/' },
-  { icon: Mail, platform: 'mailto:hello@incubatenepal.com' }
+  { icon: Mail, platform: 'mailto:contact@nplcoder.org' }
 ];
 
 const quickLinks = [
