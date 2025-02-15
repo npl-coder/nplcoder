@@ -14,8 +14,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-verdana antialiased">
         <ThemeProvider>
         <Nav/>
+
         {children}
-        
         
         <Footer/></ThemeProvider>
 

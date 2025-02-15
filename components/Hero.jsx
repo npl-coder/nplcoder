@@ -7,19 +7,17 @@ import Register from './Register'
 
 const Hero = () => {
   return (
-    <main className="relative bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
-      <div className="h-12 lg:h-24"></div>
-      
-      <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-20">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
-          <div className="flex-1 text-left pt-8 lg:pt-12">
-            <h1 className="text-3xl lg:text-5xl font-bold text-gray-800 dark:text-white tracking-tight mb-6">
-            Empowering the {' '}
-              <span className="bg-gradient-to-r from-[#DC143C] to-[#003893] text-transparent bg-clip-text">
-              Next Generation 
-              </span>{' '}
-              of Nepali Computational Minds.
-            </h1>
+    <main className="relative bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c] p-20">
+    <div className="container mx-auto px-4 lg:px-8 pt-24 lg:pt-[140px]">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+        <div className="flex-1 text-left">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white tracking-tight mb-6">
+            Empowering the{' '}
+            <span className="bg-gradient-to-r from-[#DC143C] to-[#003893] text-transparent bg-clip-text">
+              Next Generation
+            </span>{' '}
+            of Nepali Computational Minds.
+          </h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-xl">
             We are a non-profit dedicated to empowering students in Nepal by providing them with the tools, resources, and support they need to excel in coding and competitive programming.
             </p>

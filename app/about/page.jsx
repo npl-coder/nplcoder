@@ -81,25 +81,25 @@ const AboutUs = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
-<section className="relative overflow-hidden mx-auto lg:px-8 pt-24 lg:pt-[220px]">
-  <div className="max-w-7xl mx-auto px-4">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-      <div className="relative group flex justify-center lg:justify-start">
-        <div className="relative z-10 rounded-3xl overflow-hidden">
-          <img 
-            src="./images/NPLCoder.png" 
-            alt="About NPLCoder" 
-            className="w-48 h-48 lg:w-64 lg:h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-        <div className="absolute -inset-4 bg-gradient-to-r from-[#DC143C]/20 to-[#003893]/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500 -z-10" />
-      </div>
+    <main className="min-h-screen p-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
+    <section className="relative overflow-hidden mx-auto lg:px-8 pt-24 lg:pt-[140px]">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="relative group flex justify-center lg:justify-start">
+            <div className="relative z-10 rounded-3xl overflow-hidden">
+              <img 
+                src="./images/NPLCoder.png" 
+                alt="About NPLCoder" 
+                className="w-48 h-48 lg:w-64 lg:h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#DC143C]/20 to-[#003893]/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500 -z-10" />
+          </div>
 
-      <div className="space-y-6 text-center lg:text-left">
-        <h2 className="text-3xl font-bold text-black dark:text-white">
-          About NPLCoder
-        </h2>
+          <div className="space-y-6 text-center lg:text-left">
+            <h1 className="text-4xl lg:text-5xl font-bold text-black dark:text-white">
+              About NPLCoder
+            </h1>
         <div className="space-y-4 text-gray-600 dark:text-gray-300">
           <p className="text-lg leading-relaxed">
             NPLCoder is dedicated to fostering technological innovation and excellence among Nepalese students. We believe in the power of education to transform lives and communities.
