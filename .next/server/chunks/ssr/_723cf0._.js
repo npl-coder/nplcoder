@@ -19,10 +19,22 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 ;
 const NOI = ()=>{
+    const [shareText, setShareText] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["useState"])("Share this");
+    const handleShare = async ()=>{
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            setShareText("Link copied!");
+            setTimeout(()=>setShareText("Share this"), 2000);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+            setShareText("Failed to copy");
+            setTimeout(()=>setShareText("Share this"), 2000);
+        }
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-white pb-20 dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "container mx-auto px-4 lg:px-8 pt-24 lg:pt-[140px]",
+            className: "container mx-auto px-4 lg:px-8  lg:pt-[100px]",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "relative py-16 overflow-hidden",
@@ -36,7 +48,7 @@ const NOI = ()=>{
                                     children: "Nepal Codes Challenge 2025"
                                 }, void 0, false, {
                                     fileName: "[project]/app/noi/page.jsx",
-                                    lineNumber: 11,
+                                    lineNumber: 25,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -44,7 +56,7 @@ const NOI = ()=>{
                                     children: "Join us in revolutionizing competitive programming in Nepal. Be part of a movement that's shaping the future of tech education."
                                 }, void 0, false, {
                                     fileName: "[project]/app/noi/page.jsx",
-                                    lineNumber: 14,
+                                    lineNumber: 28,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -55,37 +67,38 @@ const NOI = ()=>{
                                             children: "Register Now"
                                         }, void 0, false, {
                                             fileName: "[project]/app/noi/page.jsx",
-                                            lineNumber: 18,
+                                            lineNumber: 32,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: handleShare,
                                             className: "px-8 py-4 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-white rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800",
-                                            children: "Learn More"
+                                            children: shareText
                                         }, void 0, false, {
                                             fileName: "[project]/app/noi/page.jsx",
-                                            lineNumber: 21,
+                                            lineNumber: 35,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/noi/page.jsx",
-                                    lineNumber: 17,
+                                    lineNumber: 31,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/noi/page.jsx",
-                            lineNumber: 10,
+                            lineNumber: 24,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/noi/page.jsx",
-                        lineNumber: 9,
+                        lineNumber: 23,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/noi/page.jsx",
-                    lineNumber: 8,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -100,16 +113,16 @@ const NOI = ()=>{
                                         className: "w-8 h-8 text-[#DC143C] mb-4"
                                     }, void 0, false, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 32,
-                                        columnNumber: 13
+                                        lineNumber: 49,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         className: "text-xl font-semibold text-gray-900 dark:text-white mb-2",
                                         children: "Event Timeline"
                                     }, void 0, false, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 33,
-                                        columnNumber: 13
+                                        lineNumber: 50,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                         className: "space-y-3 text-gray-600 dark:text-gray-300",
@@ -118,41 +131,41 @@ const NOI = ()=>{
                                                 children: "Registration: March 1-15"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 35,
-                                                columnNumber: 15
+                                                lineNumber: 52,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "Phase 1: April 1-30"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 36,
-                                                columnNumber: 15
+                                                lineNumber: 53,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "Phase 2: May 1-31"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 37,
-                                                columnNumber: 15
+                                                lineNumber: 54,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "Finals: June 30"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 38,
-                                                columnNumber: 15
+                                                lineNumber: 55,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 34,
-                                        columnNumber: 13
+                                        lineNumber: 51,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/noi/page.jsx",
-                                lineNumber: 31,
-                                columnNumber: 11
+                                lineNumber: 48,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "bg-white dark:bg-gray-800/50 rounded-xl p-6 shadow-lg backdrop-blur-lg",
@@ -161,16 +174,16 @@ const NOI = ()=>{
                                         className: "w-8 h-8 text-[#003893] mb-4"
                                     }, void 0, false, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 43,
-                                        columnNumber: 13
+                                        lineNumber: 60,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         className: "text-xl font-semibold text-gray-900 dark:text-white mb-2",
                                         children: "Prizes"
                                     }, void 0, false, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 44,
-                                        columnNumber: 13
+                                        lineNumber: 61,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                         className: "space-y-3 text-gray-600 dark:text-gray-300",
@@ -179,41 +192,41 @@ const NOI = ()=>{
                                                 children: "1st Place: NPR 100,000"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 46,
-                                                columnNumber: 15
+                                                lineNumber: 63,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "2nd Place: NPR 50,000"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 47,
-                                                columnNumber: 15
+                                                lineNumber: 64,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "3rd Place: NPR 25,000"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 48,
-                                                columnNumber: 15
+                                                lineNumber: 65,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "Special Category Awards"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 49,
-                                                columnNumber: 15
+                                                lineNumber: 66,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 45,
-                                        columnNumber: 13
+                                        lineNumber: 62,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/noi/page.jsx",
-                                lineNumber: 42,
-                                columnNumber: 11
+                                lineNumber: 59,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "bg-white dark:bg-gray-800/50 rounded-xl p-6 shadow-lg backdrop-blur-lg",
@@ -222,16 +235,16 @@ const NOI = ()=>{
                                         className: "w-8 h-8 text-[#DC143C] mb-4"
                                     }, void 0, false, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 54,
-                                        columnNumber: 13
+                                        lineNumber: 71,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         className: "text-xl font-semibold text-gray-900 dark:text-white mb-2",
                                         children: "Who Can Participate"
                                     }, void 0, false, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 55,
-                                        columnNumber: 13
+                                        lineNumber: 72,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                         className: "space-y-3 text-gray-600 dark:text-gray-300",
@@ -240,52 +253,52 @@ const NOI = ()=>{
                                                 children: "Students aged 16-25"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 57,
-                                                columnNumber: 15
+                                                lineNumber: 74,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "Basic programming knowledge"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 58,
-                                                columnNumber: 15
+                                                lineNumber: 75,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "Currently residing in Nepal"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 59,
-                                                columnNumber: 15
+                                                lineNumber: 76,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "Teams of 2-3 members"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 60,
-                                                columnNumber: 15
+                                                lineNumber: 77,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 56,
-                                        columnNumber: 13
+                                        lineNumber: 73,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/noi/page.jsx",
-                                lineNumber: 53,
-                                columnNumber: 11
+                                lineNumber: 70,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/noi/page.jsx",
-                        lineNumber: 30,
-                        columnNumber: 9
+                        lineNumber: 47,
+                        columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/noi/page.jsx",
-                    lineNumber: 29,
-                    columnNumber: 7
+                    lineNumber: 46,
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "bg-gray-50 dark:bg-gray-800/30 py-16  rounded-xl",
@@ -297,8 +310,8 @@ const NOI = ()=>{
                                 children: "Challenge Tracks"
                             }, void 0, false, {
                                 fileName: "[project]/app/noi/page.jsx",
-                                lineNumber: 68,
-                                columnNumber: 11
+                                lineNumber: 85,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "grid md:grid-cols-2 gap-8 max-w-4xl mx-auto",
@@ -310,30 +323,30 @@ const NOI = ()=>{
                                                 className: "w-8 h-8 text-[#DC143C] mb-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 71,
-                                                columnNumber: 15
+                                                lineNumber: 88,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                 className: "text-xl font-semibold text-gray-900 dark:text-white mb-2",
                                                 children: "Algorithmic Excellence"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 72,
-                                                columnNumber: 15
+                                                lineNumber: 89,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-gray-600 dark:text-gray-300",
                                                 children: "Master fundamental algorithms and data structures through hands-on challenges and expert mentorship."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 73,
-                                                columnNumber: 15
+                                                lineNumber: 90,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 70,
-                                        columnNumber: 13
+                                        lineNumber: 87,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "bg-white dark:bg-gray-800/50 rounded-xl p-6 shadow-lg",
@@ -342,57 +355,57 @@ const NOI = ()=>{
                                                 className: "w-8 h-8 text-[#003893] mb-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 79,
-                                                columnNumber: 15
+                                                lineNumber: 96,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                 className: "text-xl font-semibold text-gray-900 dark:text-white mb-2",
                                                 children: "Problem Solving"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 80,
-                                                columnNumber: 15
+                                                lineNumber: 97,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-gray-600 dark:text-gray-300",
                                                 children: "Tackle real-world problems and develop solutions that matter for Nepal's tech ecosystem."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/noi/page.jsx",
-                                                lineNumber: 81,
-                                                columnNumber: 15
+                                                lineNumber: 98,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/noi/page.jsx",
-                                        lineNumber: 78,
-                                        columnNumber: 13
+                                        lineNumber: 95,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/noi/page.jsx",
-                                lineNumber: 69,
-                                columnNumber: 11
+                                lineNumber: 86,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/noi/page.jsx",
-                        lineNumber: 67,
-                        columnNumber: 9
+                        lineNumber: 84,
+                        columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/noi/page.jsx",
-                    lineNumber: 66,
-                    columnNumber: 7
+                    lineNumber: 83,
+                    columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/noi/page.jsx",
-            lineNumber: 7,
+            lineNumber: 21,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/noi/page.jsx",
-        lineNumber: 6,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 };
