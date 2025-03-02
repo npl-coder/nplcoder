@@ -1,4 +1,5 @@
 import Card from '@/components/Card'
+import { FaLinkedin, FaGlobeAmericas } from 'react-icons/fa'
 
 const teamMembers = [{
     name: "Aditi Gajurel",
@@ -61,18 +62,12 @@ const teamMembers = [{
     category: "Operations"
 
   },
-  // {
-  //   name: "Amod Paudel",
-  //   title: "Computer Engineering Student at IOE, Pulchowk Campus",
-  //   image: "./images/PratikDahal.jpg",
-  //   linkedin: "https://www.linkedin.com/in/pratik-dahal-430aa21b2/",
-  // },
   {
     name: "Sujit Maharjan",
     title: "PhD Student in Computer Science, University of Texas at Arlington",
     image: "https://maharjansujit.com.np/images/avatar.jpg",
     website: "https://maharjansujit.com.np",
-    category: "Advisory"
+    category: "Operations"
   },
   {
     name: "Amrit Kandel",
@@ -142,20 +137,41 @@ export default function TeamPage() {
 
           {/* Advisory Members Section */}
           <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2 mt-2  text-gray-900 dark:text-white text-center">
+            <h2 className="text-3xl font-bold mb-6 mt-2 text-gray-900 dark:text-white text-center">
               Advisory Members
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
-              {advisoryMembers.map((member) => (
-                <Card
-                  key={member.name}
-                  name={member.name}
-                  title={member.title}
-                  image={member.image}
-                  linkedin={member.linkedin}
-                  website={member.website}
-                />
-              ))}
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {advisoryMembers.map((member) => (
+                  <div key={member.name} className="bg-gray-100 dark:bg-gray-800 p-5 rounded-lg border-l-4 border-blue-500 transition-all duration-300 hover:shadow-md">
+                    <h3 className="text-xl font-bold text-gray-800 dark:text-white">{member.name}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{member.title}</p>
+                    
+                    <div className="flex mt-3 space-x-3">
+                      {member.website && (
+                        <a 
+                          href={member.website} 
+                          className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                          target="_blank" 
+                          rel="noreferrer"
+                        >
+                          <FaGlobeAmericas size={16} />
+                        </a>
+                      )}
+                      {member.linkedin && (
+                        <a 
+                          href={member.linkedin} 
+                          className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                          target="_blank" 
+                          rel="noreferrer"
+                        >
+                          <FaLinkedin size={16} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
