@@ -84,8 +84,7 @@ const Footer = () => {
               />
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">NPL Coder</h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Empowering the Next Generation of Nepali Computational Minds
-              </p>
+              Shaping Nepal’s Future with Computational Innovation</p>
             </div>
 
             <div>
