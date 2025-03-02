@@ -17,8 +17,8 @@ const SocialIcon = ({ icon: Icon, href = "#", className = "" }) => (
 const socialIcons = [
   { icon: Linkedin, platform: 'https://www.linkedin.com/company/nplcoder/' },
   { icon: Instagram, platform: 'https://www.instagram.com/nplcoder/' },
-  { icon: Facebook, platform: 'https://www.facebook.com/nplcoder/' },
-  { icon: Mail, platform: 'mailto:contact@nplcoder.org' }
+  // { icon: Facebook, platform: 'https://www.facebook.com/nplcoder/' },
+  { icon: Mail, platform: 'mailto:work@nplcoder.org' }
 ];
 
 const quickLinks = [
@@ -29,8 +29,9 @@ const quickLinks = [
 ];
 
 const contactInfo = [
-  "+977 123456789",
-  "contact@nplcoder.org",
+  "+1 615-484-1629(USA) ",
+  "+977 9862021531(Nepal)",
+  "work@nplcoder.org",
   "Kathmandu, Nepal"
 ];
 
