@@ -1,7 +1,6 @@
 {
-  "/ndc/page": "app/ndc/page.js",
+  "/team/page": "app/team/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/noi/page": "app/noi/page.js",
   "/about/page": "app/about/page.js",
   "/events/page": "app/events/page.js"
 }
