@@ -48,7 +48,6 @@ const Footer = () => {
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-white dark:bg-[#24293d]" />
       </div>
-
       <div className="relative">
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">

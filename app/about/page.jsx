@@ -12,25 +12,25 @@ const AboutUs = () => {
     {
       icon: <Users className="w-6 h-6" />,
       title: "Empower the Youth",
-      description: "Equip students with the skills and confidence needed to excel in the global tech landscape.",
+      description: "Equip students with the skills and confidence needed to excel in the global tech landscape, enabling them to contribute innovative solutions to real-world problems.",
       color: "from-indigo-500/20 to-indigo-600/20"
     },
     {
       icon: <Rocket className="w-6 h-6" />,
       title: "Drive National Growth",
-      description: "Contribute to Nepal's development as a hub for technological innovation.",
+      description: "Contribute to the development of Nepal as a hub for technological innovation by fostering a generation of skilled programmers and tech professionals.",
       color: "from-purple-500/20 to-purple-600/20"
     },
     {
       icon: <Target className="w-6 h-6" />,
       title: "Achieve Global Representation",
-      description: "Support students to represent Nepal in international competitions and platforms.",
+      description: "Support students to represent Nepal in international competitions and platforms, showcasing their talents on a global stage and bringing recognition to the nation's capabilities.",
       color: "from-pink-500/20 to-pink-600/20"
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
       title: "Create Sustainable Impact",
-      description: "Build evolving programs ensuring long-term community benefits.",
+      description: "Build programs that evolve to meet the changing needs of students, ensuring long-term benefits for the community.",
       color: "from-red-500/20 to-red-600/20"
     }
   ];
@@ -39,43 +39,43 @@ const AboutUs = () => {
     {
       icon: <Brain className="w-6 h-6" />,
       title: "Promote Interest in Technology",
-      description: "Foster interest in computing and informatics among Nepali students.",
+      description: "Foster interest in computing and informatics among high school and university students in Nepal.",
       color: "from-emerald-500/20 to-emerald-600/20"
     },
     {
       icon: <Code2 className="w-6 h-6" />,
       title: "Provide Access to Resources",
-      description: "Offer educational tools, mentorship, and training programs.",
+      description: "Offer educational tools, mentorship, training programs, and necessary funding to students to enhance their computational skills and enable them to carry out impactful projects and research.",
       color: "from-cyan-500/20 to-cyan-600/20"
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
       title: "Encourage Innovation",
-      description: "Create platforms for solving real-world problems with computation.",
+      description: "Create platforms that challenge participants to solve real-world problems using computational thinking.",
       color: "from-teal-500/20 to-teal-600/20"
     },
     {
       icon: <Target className="w-6 h-6" />,
       title: "Enhance Representation",
-      description: "Enable students to compete in IOI, ICPC, and global challenges.",
+      description: "Enable talented students to represent Nepal in international competitions such as the International Olympiad in Informatics (IOI), the International Collegiate Programming Contest (ICPC), Kaggle Competitions, IEEE Big Data Cup, and other prestigious global challenges in computing.",
       color: "from-yellow-500/20 to-yellow-600/20"
     },
     {
       icon: <Network className="w-6 h-6" />,
       title: "Build Professional Networks",
-      description: "Connect students with mentors and industry professionals.",
+      description: "Connect students with mentors and industry professionals to foster collaboration, career development, and leadership in AI/ML research.",
       color: "from-orange-500/20 to-orange-600/20"
     },
     {
       icon: <UserPlus className="w-6 h-6" />,
       title: "Ensure Inclusivity",
-      description: "Encourage participation from all districts of Nepal.",
+      description: "Encourage participation from diverse backgrounds by actively targeting students from all districts of Nepal, ensuring equal opportunities for all students regardless of their geographic or economic circumstances",
       color: "from-rose-500/20 to-rose-600/20"
     },
     {
       icon: <User className="w-6 h-6" />,
       title: "Develop Mentorship",
-      description: "Guide junior participants and support future technologists.",
+      description: "Identify and engage mentors who can guide junior participants and support the next generation of technologists.",
       color: "from-violet-500/20 to-violet-600/20"
     }
   ];
@@ -84,8 +84,8 @@ const AboutUs = () => {
     <main className="min-h-screen p-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
     <section className="relative overflow-hidden mx-auto lg:px-8 pt-24 lg:pt-[140px]">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="relative group flex justify-center lg:justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-4 items-center">
+      <div className="relative group flex justify-center lg:justify-center">
             <div className="relative z-10 rounded-3xl overflow-hidden">
               <img 
                 src="./images/NPLCoder.png" 
@@ -97,20 +97,17 @@ const AboutUs = () => {
           </div>
 
           <div className="space-y-6 text-center lg:text-left">
-            <h1 className="text-4xl lg:text-5xl font-bold text-black dark:text-white">
+            <h1 className="text-3xl lg:text-4xl font-bold text-black dark:text-white">
                NPLCoder
             </h1>
         <div className="space-y-4 text-gray-600 dark:text-gray-300">
+          <p className="text-lg leading-relaxed ">
+         <b> NPLCoder </b>is a non-profit organization driven by a simple yet powerful belief: the immense talent in Nepal deserves the opportunity to shine in the field of technology. Nepal, a land of unparalleled cultural and natural diversity, is home to resilient and resourceful people who have long harnessed their ingenuity to adapt to challenging environments. However, in this era of rapid technological advancement, there is a pressing need to channel this potential into the field of computing and innovation.          </p>
           <p className="text-lg leading-relaxed">
-            NPLCoder is dedicated to fostering technological innovation and excellence among Nepalese students. We believe in the power of education to transform lives and communities.
-          </p>
-          <p className="text-lg leading-relaxed">
-            Our platform serves as a bridge between talented students and the resources they need to excel in the global tech landscape. Through mentorship, training, and hands-on experience, we're building the next generation of tech leaders.
-          </p>
-          <p className="text-lg leading-relaxed">
-            By focusing on both urban and rural areas, we ensure that opportunities in technology education are accessible to all students across Nepal, regardless of their background or location.
-          </p>
-        </div>
+          We are dedicated to empowering students in Nepal by providing them with the tools, resources, and support they need to excel in computing and lead the computing innovation from Nepal. By blending the richness of Nepal’s cultural heritage with a forward-looking approach to technology, we strive to cultivate a generation of technologists who will solve global challenges while proudly carrying the identity of their homeland. With the tagline "Shaping Nepal’s Future with Computational Innovation," we aim to nurture the next generation of technologists and computational thinkers.
+</p>    
+<p className='text-lg leading-relaxed'>NPLCoder is more than an organization; it is a movement to empower Nepalese youth through computational innovation. By nurturing talent, fostering collaboration, and providing platforms for growth, NPLCoder aims to shape Nepal’s future, one student at a time.</p>
+    </div>
       </div>
     </div>
   </div>
@@ -130,7 +127,7 @@ const AboutUs = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-black dark:text-white bg-clip-text">
-            Our Values
+            Our Vision
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((item, idx) => (
