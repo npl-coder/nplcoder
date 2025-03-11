@@ -506,7 +506,7 @@ const Initiatives = () => {
               </div>
             </div>
             
-            <div className="flex-1 lg:w-2/5 lg:flex-none h-80">
+            <div className="hidden lg:block flex-1 lg:w-2/5 lg:flex-none h-80">
               <div className="relative w-full h-full overflow-hidden">
                 {initiative.visual(canvasRefs.current[index])}
               </div>
