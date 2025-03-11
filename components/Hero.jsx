@@ -2,12 +2,12 @@
 
 import CodeBlock from './Codeblock';
 import React from 'react';
-import Initiatives from './Initiatives';
+import Initiatives from './EventsPage';
 import Register from './Register'
 
 const Hero = () => {
   return (
-    <main className="relative bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c] p-8">
+    <main className="relative">
     <div className="container mx-auto px-4 lg:px-8 pt-24 lg:pt-[140px]">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
         <div className="flex-1 text-left">
@@ -22,8 +22,10 @@ const Hero = () => {
             NPLCoder is a non-profit organization dedicated to empowering Nepalese students in computing and innovation. We provide resources, mentorship, and opportunities to nurture talent that will drive global change while proudly representing Nepal, blending the nation's rich heritage with technology.            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <a href='https://forms.gle/Z4bPVsWo5sdQLEvs5' target="_blank" rel="noreferrer">
             <button className="p-8 bg-red-600 hover:bg-red-700 text-white py-3 sm:py-4 rounded-xl font-semibold mt-4 sm:mt-6">
-Join Our Initiative </button>            
+Join Our Initiative </button>    
+</a>        
 <a href="/about">
 <button className="p-8 bg-transparent 0 border hover:scale-105 border-gray-600 text-gray-800 dark:text-white hover:bg-white/10 py-3 sm:py-4 rounded-xl font-semibold mt-4 sm:mt-6">
 
@@ -49,7 +51,7 @@ Join Our Initiative </button>
         />
       ))}
     </div>
-    <span className="text-gray-800 hidden lg:flex dark:text-white font-medium">+120 users</span>
+    <span className="text-gray-800 hidden lg:flex dark:text-white font-medium">+180 members</span>
 
     <div className="h-8 w-[1px] bg-gray-700  sm:block" />
 

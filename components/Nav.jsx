@@ -63,8 +63,10 @@ const Nav = () => {
               <div className="flex items-center space-x-4">
                 <ModeToggle />
                 <div className='hidden lg:flex'>
-               <Register/>
-               </div>
+                <a href='https://forms.gle/Z4bPVsWo5sdQLEvs5' target="_blank" rel="noreferrer">
+            <button className="bg-[#c9c8c97b] dark:bg-[#737273a3]  text-black dark:text-white px-6 py-4 rounded-[16px] font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+Join Our Initiative </button>    
+</a>                       </div>
                 <button 
                   className="lg:hidden text-gray-900 dark:text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
                   onClick={() => setIsOpen(!isOpen)}
@@ -103,7 +105,10 @@ const Nav = () => {
                     {item}
                   </Link>
                 ))}
-                               <Register/>
+                                <a href='https://forms.gle/Z4bPVsWo5sdQLEvs5' target="_blank" rel="noreferrer">
+            <button className="pbg-[#DC143C] hover:bg-red-700 text-white px-6 py-4 rounded-[16px] font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+Join Our Initiative </button>    
+</a>        
               </div>
             </div>
           </div>
