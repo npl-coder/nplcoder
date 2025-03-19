@@ -82,7 +82,7 @@ const AboutUs = () => {
 
   return (
     <main className="min-h-screen p-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
-    <section className="relative overflow-hidden mx-auto lg:px-8 pt-24 lg:pt-[140px]">
+    <section className="relative overflow-hidden mx-auto lg:px-8 pt-16 lg:pt-[140px]">
       <div className="max-w-7xl mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-4 items-center">
       <div className="relative group flex justify-center lg:justify-center">

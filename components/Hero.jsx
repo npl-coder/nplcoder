@@ -8,7 +8,7 @@ import Register from './Register'
 const Hero = () => {
   return (
     <main className="relative">
-    <div className="container mx-auto px-4 lg:px-8 pt-24 lg:pt-[140px]">
+    <div className="container mx-auto px-4 lg:px-8 pt-32 lg:pt-[140px] ">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
         <div className="flex-1 text-left">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white tracking-tight mb-6">
@@ -21,9 +21,10 @@ const Hero = () => {
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-xl">
             NPLCoder is a non-profit organization dedicated to empowering Nepalese students in computing and innovation. We provide resources, mentorship, and opportunities to nurture talent that will drive global change while proudly representing Nepal, blending the nation's rich heritage with technology.            </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-row gap-4 mb-12">
               <a href='https://forms.gle/Z4bPVsWo5sdQLEvs5' target="_blank" rel="noreferrer">
-            <button className="p-8 bg-red-600 hover:bg-red-700 text-white py-3 sm:py-4 rounded-xl font-semibold mt-4 sm:mt-6">
+              <button className="bg-gradient-to-r hover:scale-105 from-[#DC143C] to-[#003893] text-white py-3 sm:py-4 px-6 rounded-xl font-semibold mt-4 sm:mt-6 hover:shadow-lg transition duration-300">
+
 Join Our Initiative </button>    
 </a>        
 <a href="/about">

@@ -93,49 +93,46 @@ export const EventDetailModal = ({ event, onClose }) => {
     </motion.div>
   );
 };
-
 export const EventCard = ({ event, onDetailsClick }) => {
   return (
     <motion.div 
       whileHover={{ scale: 1.02 }}
       className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg dark:shadow-xl transform transition-all duration-300 flex flex-col h-full"
     >
-      <div className="relative h-64 md:h-[400px] overflow-hidden group">
+      <div className="relative h-96 overflow-hidden">
         <img 
           src={event.image} 
           alt={event.title}
-          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 flex flex-col justify-end p-4 md:p-6 text-white">
-          <h3 className="text-xl md:text-2xl font-bold mb-2">{event.title}</h3>
-          <p className="text-xs md:text-sm opacity-80">{event.description}</p>
-        </div>
       </div>
       
-      
+      <div className="p-5 flex flex-col flex-grow">
+        <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">{event.title}</h3>
+        <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{event.description}</p>
+        
+        <div className="mt-auto space-y-3">
+          <div className="flex items-center space-x-2">
+            <MapPin className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+            <span className="text-sm truncate text-gray-700 dark:text-gray-300">{event.location}</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Clock className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+            <span className="text-sm truncate text-gray-700 dark:text-gray-300">{event.date}</span>
+          </div>
+          <div className="flex items-center space-x-2 mb-4">
+            <Users className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+            <span className="text-sm truncate text-gray-700 dark:text-gray-300">{event.participants}</span>
+          </div>
 
-        <div className="p-4 md:p-6  flex flex-wrap gap-4 bg-white dark:bg-gray-800">
-  <div className="flex items-center space-x-2">
-    <MapPin className="w-5 h-5" />
-    <span className="text-sm truncate">{event.location}</span>
-  </div>
-  <div className="flex items-center space-x-2">
-    <Clock className="w-5 h-5" />
-    <span className="text-sm truncate">{event.date}</span>
-  </div>
-  <div className="flex items-center space-x-2">
-    <Users className="w-5 h-5" />
-    <span className="text-sm truncate">{event.participants}</span>
-  </div>
-
-
-        <button 
-          onClick={() => onDetailsClick(event)}
-          className="w-full flex items-center justify-center space-x-2 bg-blue-500 dark:bg-blue-700 text-white py-2 md:py-3 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-800 transition-colors text-sm md:text-base"
-        >
-          <Info className="w-4 h-4 md:w-5 md:h-5" />
-          <span>Event Details</span>
-        </button>
+          <button 
+            onClick={() => onDetailsClick(event)}
+            className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-[#DC143C] to-[#003893] text-white py-2.5 rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-medium"
+          >
+            <Info className="w-4 h-4" />
+            <span>Event Details</span>
+          </button>
+        </div>
       </div>
     </motion.div>
   );

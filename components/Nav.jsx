@@ -106,7 +106,7 @@ Join Our Initiative </button>
                   </Link>
                 ))}
                                 <a href='https://forms.gle/Z4bPVsWo5sdQLEvs5' target="_blank" rel="noreferrer">
-            <button className="pbg-[#DC143C] hover:bg-red-700 text-white px-6 py-4 rounded-[16px] font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+            <button className="bg-gradient-to-r from-[#DC143C] to-[#003893] text-white px-6 py-4 rounded-[16px] font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
 Join Our Initiative </button>    
 </a>        
               </div>

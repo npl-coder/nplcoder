@@ -143,7 +143,10 @@ export default function TeamPage() {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {advisoryMembers.map((member) => (
-                  <div key={member.name} className="bg-gray-100 dark:bg-gray-800 p-5 rounded-lg border-l-4 border-blue-500 transition-all duration-300 hover:shadow-md">
+                  <div 
+                    key={member.name} 
+                    className="bg-gray-100 dark:bg-gray-800 p-5 rounded-lg border-l-4 border-[#003893] transition-all duration-300 hover:shadow-md hover:border-[#DC143C]"
+                  >
                     <h3 className="text-xl font-bold text-gray-800 dark:text-white">{member.name}</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{member.title}</p>
                     
@@ -151,7 +154,7 @@ export default function TeamPage() {
                       {member.website && (
                         <a 
                           href={member.website} 
-                          className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                          className="text-gray-700 dark:text-gray-300 hover:text-[#DC143C] dark:hover:text-[#DC143C] transition-colors"
                           target="_blank" 
                           rel="noreferrer"
                         >
@@ -161,7 +164,7 @@ export default function TeamPage() {
                       {member.linkedin && (
                         <a 
                           href={member.linkedin} 
-                          className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                          className="text-gray-700 dark:text-gray-300 hover:text-[#003893] dark:hover:text-[#003893] transition-colors"
                           target="_blank" 
                           rel="noreferrer"
                         >

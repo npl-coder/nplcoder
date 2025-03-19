@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col justify-center items-center text-center">
               <h1 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
-                Shaping Nepal’s Future with Computational Innovation
+                Shaping Nepal's Future with Computational Innovation
               </h1>
 
               <a
@@ -88,8 +88,24 @@ const Footer = () => {
         </section>
 
         <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            <div className="space-y-4">
+          <div className="flex justify-center mb-8 md:hidden">
+            <div className="space-y-4 text-center">
+              <Image
+                src="/images/NPLCoder.png"
+                alt="NPL Coder Logo"
+                width={80}
+                height={80}
+                className="object-cover mx-auto"
+              />
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                NPL Coder
+              </h3>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+            {/* Logo for desktop, hidden on mobile */}
+            <div className="hidden md:block space-y-4">
               <Image
                 src="/images/NPLCoder.png"
                 alt="NPL Coder Logo"
@@ -100,11 +116,9 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                 NPL Coder
               </h3>
-              {/* <p className="text-gray-700 dark:text-gray-300">
-              Shaping Nepal’s Future with Computational Innovation</p> */}
             </div>
 
-            <div>
+            <div className="text-center md:text-left">
               <h4 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
                 Navigate
               </h4>
@@ -122,7 +136,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            <div className="text-center md:text-left">
               <h4 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
                 Contact Us
               </h4>
@@ -135,11 +149,11 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            <div className="col-span-2 md:col-span-1 text-center md:text-left mt-6 md:mt-0">
               <h4 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
                 Follow Us
               </h4>
-              <div className="flex gap-4">
+              <div className="flex gap-4 justify-center md:justify-start">
                 {socialIcons.map(({ icon: Icon, platform }) => (
                   <SocialIcon key={platform} icon={Icon} href={platform} />
                 ))}

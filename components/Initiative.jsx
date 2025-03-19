@@ -158,8 +158,7 @@ const Initiatives = () => {
                 <path d="M 66 75 L 100 50" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
               </g>
     
-              {/* Animated signal paths for data flow visualization */}
-              <g className="signal-paths" filter="url(#glow)">
+              <g className="signal-paths " filter="url(#glow)">
                 <circle r="2" className="animate-neural-signal">
                   <animateMotion 
                     path="M 0 25 L 33 48 L 66 50 L 100 50" 
@@ -168,7 +167,7 @@ const Initiatives = () => {
                     begin="0s"
                   />
                 </circle>
-                <circle r="2" className="animate-neural-signal">
+                <circle r="2" className="animate-neural-signal ">
                   <animateMotion 
                     path="M 0 75 L 33 80 L 66 75 L 100 50" 
                     dur="2.2s" 
@@ -184,6 +183,7 @@ const Initiatives = () => {
                     begin="1s"
                   />
                 </circle>
+                
               </g>
             </svg>
             
@@ -266,18 +266,7 @@ const Initiatives = () => {
             </div>
           </div>
           
-          <svg className="absolute left-1/6 bottom-1/6 w-2/3 h-2/3 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="careerGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="#003893" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="#DC143C" stopOpacity="0.4" />
-              </linearGradient>
-            </defs>
-            <line x1="40%" y1="80%" x2="45%" y2="64%" stroke="url(#careerGradient)" strokeWidth="1" strokeDasharray="3,3" className="animate-dash" />
-            <line x1="45%" y1="64%" x2="50%" y2="48%" stroke="url(#careerGradient)" strokeWidth="1" strokeDasharray="3,3" className="animate-dash-reverse" />
-            <line x1="50%" y1="48%" x2="55%" y2="32%" stroke="url(#careerGradient)" strokeWidth="1" strokeDasharray="3,3" className="animate-dash" />
-            <line x1="55%" y1="32%" x2="50%" y2="16%" stroke="url(#careerGradient)" strokeWidth="1" strokeDasharray="3,3" className="animate-dash-reverse" />
-          </svg>
+         
           
          
           <div className="absolute top-1/6 right-1/6 w-12 h-12 rounded-full border-2 border-dashed border-[#DC143C]/40 animate-spin-slow cursor-pointer hover:border-[#DC143C]/80 transition-colors"></div>
@@ -285,7 +274,7 @@ const Initiatives = () => {
           
           {/* resume document */}
           <div className="absolute bottom-5 right-5 w-1/4 h-1/4 bg-white dark:bg-gray-800 rounded shadow-md transform rotate-6 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer">
-            <div className="p-1 flex flex-col h-full">
+            <div className="p-1 flex flex-col h-full"> <p className='font-bold text-[12px] dark:text-gray-400'>Resume</p>
               <div className="w-full h-2 bg-[#003893] mb-1 rounded-sm"></div>
               <div className="flex gap-1 mb-1">
                 <div className="w-1/3 h-1 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
@@ -367,6 +356,7 @@ const Initiatives = () => {
                 {/* Paper 1 (top) */}
                 <div className="w-32 h-40 bg-white dark:bg-gray-700 rounded-md shadow-lg absolute top-0 hover:rotate-3 hover:translate-y-1 transition-transform cursor-pointer">
                   <div className="w-full h-full p-3 flex flex-col">
+                    <p className='font-bold text-[12px] dark:text-gray-400'>Abstract</p>
                     <div className="w-full h-2 bg-[#003893]/50 mb-2 rounded"></div>
                     <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
                     <div className="w-1/2 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
@@ -382,19 +372,8 @@ const Initiatives = () => {
             </div>
           </div>
           
-          {/* Research Tools - Right Side */}
-          <div className="absolute right-1/6 top-1/2 -translate-y-1/2 w-32 h-32">
-            {/* Microscope (larger) */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-32 flex flex-col items-center hover:scale-105 transition-transform cursor-pointer">
-              <div className="w-10 h-2 bg-[#DC143C] rounded-t"></div>
-              <div className="w-6 h-16 bg-[#DC143C]"></div>
-              <div className="w-12 h-4 bg-[#DC143C] rounded-full"></div>
-              <div className="w-14 h-2 bg-[#DC143C]"></div>
-              <div className="w-10 h-6 bg-[#DC143C] rounded"></div>
-            </div>
-          </div>
+        
           
-          {/* Study Tools - Left Side */}
           <div className="absolute left-1/6 top-1/2 -translate-y-1/2 w-32 h-40">
             {/* Open book */}
             <div className="relative w-32 h-24 flex hover:scale-105 transition-transform cursor-pointer">
@@ -429,15 +408,12 @@ const Initiatives = () => {
           <div className="absolute top-1/4 right-1/3 w-3 h-3 bg-[#DC143C]/20 rounded-full animate-float-slow"></div>
           <div className="absolute top-2/3 left-1/4 w-2 h-2 bg-[#003893]/20 rounded-full animate-float-slow-reverse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-4 h-4 bg-[#DC143C]/20 rounded-full animate-float"></div>
-          
+          <div className="absolute top-2/4 left-1/3 w-2 h-2 bg-[#003893]/20 rounded-full animate-float-slow-reverse"></div>
+          <div className="absolute bottom-3/4 right-1/5 w-4 h-4 bg-[#DC143C]/20 rounded-full animate-float"></div>
+          <div className="absolute bottom-1/3 right-1/2 w-4 h-4 bg-[#DC143C]/20 rounded-full animate-float"></div>
+
           {/* Subtle connections in background */}
-          <div className="absolute inset-0 opacity-5 pointer-events-none">
-            <svg viewBox="0 0 100 100" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20,40 Q30,38 40,45 T60,50 T80,45" stroke="#003893" fill="none" strokeWidth="0.5" />
-              <path d="M30,30 Q40,28 50,35 T70,40 T90,35" stroke="#DC143C" fill="none" strokeWidth="0.5" />
-              <path d="M25,50 Q35,48 45,55 T65,60 T85,55" stroke="#003893" fill="none" strokeWidth="0.5" />
-            </svg>
-          </div>
+         
           
           {/* Interactive canvas */}
           <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none"></canvas>
@@ -494,7 +470,7 @@ const Initiatives = () => {
                 {index % 2 === 0 && <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{initiative.title}</h3>}
               </div>
               
-              <div className={`${index % 2 === 0 ? 'text-left lg:text-lg' : 'text-left lg:text-right lg:text-lg'}`}>
+              <div className={`${index % 2 === 0 ? 'text-left lg:text-lg lg:items-start' : 'lg:items-end text-left lg:text-right lg:text-lg'} flex flex-col items-center `}>
                 <p className="text-gray-600 dark:text-gray-300">
                   {initiative.description}
                 </p>
