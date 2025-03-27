@@ -8,7 +8,7 @@ import Register from './Register'
 const Hero = () => {
   return (
     <main className="relative">
-    <div className="container mx-auto px-4 lg:px-8 pt-32 lg:pt-[140px] ">
+    <div className="container mx-auto px-4 lg:px-8 pt-32 lg:pt-[220px] pb-20">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
         <div className="flex-1 text-left">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white tracking-tight mb-6">
@@ -52,7 +52,7 @@ Join Our Initiative </button>
         />
       ))}
     </div>
-    <span className="text-gray-800 hidden lg:flex dark:text-white font-medium">+180 members</span>
+    <span className="text-gray-800 hidden lg:flex dark:text-white font-medium">+200 members</span>
 
     <div className="h-8 w-[1px] bg-gray-700  sm:block" />
 
