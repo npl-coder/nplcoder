@@ -1,35 +1,109 @@
 module.exports = {
 
-"[project]/app/team/page.jsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
+"[project]/app/team/page.jsx [app-rsc] (ecmascript)": (function(__turbopack_context__) {
 
-var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, m: module, e: exports, t: __turbopack_require_real__ } = __turbopack_context__;
 {
-__turbopack_esm__({
-    "default": (()=>Home)
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module '@/components/Card'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-;
-;
-function Home() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "flex justify-center items-center min-h-screen bg-gray-100",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(Card, {}, void 0, false, {
+/*#__PURE__*/ const { jsxDEV: _jsxDEV } = __turbopack_require__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
+_jsxDEV("div", {
+    className: "mb-8",
+    children: [
+        /*#__PURE__*/ _jsxDEV("h2", {
+            className: "text-3xl font-bold mb-6 mt-2 text-gray-900 dark:text-white text-center",
+            children: "Advisory Members"
+        }, void 0, false, {
             fileName: "[project]/app/team/page.jsx",
-            lineNumber: 6,
-            columnNumber: 7
+            lineNumber: 2,
+            columnNumber: 3
+        }, this),
+        /*#__PURE__*/ _jsxDEV("div", {
+            className: "max-w-4xl mx-auto",
+            children: /*#__PURE__*/ _jsxDEV("div", {
+                className: "grid grid-cols-1 md:grid-cols-2 gap-4",
+                children: advisoryMembers.map((member)=>/*#__PURE__*/ _jsxDEV("div", {
+                        className: "bg-gray-100 dark:bg-gray-800 p-5 rounded-lg border-l-4 border-[#003893] transition-all duration-300 hover:shadow-md hover:border-[#DC143C] flex flex-col items-center text-center",
+                        children: [
+                            /*#__PURE__*/ _jsxDEV("h3", {
+                                className: "text-xl font-bold text-gray-800 dark:text-white",
+                                children: member.name
+                            }, void 0, false, {
+                                fileName: "[project]/app/team/page.jsx",
+                                lineNumber: 12,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("p", {
+                                className: "text-sm text-gray-600 dark:text-gray-300 mt-1",
+                                children: member.title
+                            }, void 0, false, {
+                                fileName: "[project]/app/team/page.jsx",
+                                lineNumber: 13,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("div", {
+                                className: "flex mt-3 space-x-3",
+                                children: [
+                                    member.website && /*#__PURE__*/ _jsxDEV("a", {
+                                        href: member.website,
+                                        className: "text-gray-700 dark:text-gray-300 hover:text-[#DC143C] dark:hover:text-[#DC143C] transition-colors",
+                                        target: "_blank",
+                                        rel: "noreferrer",
+                                        children: /*#__PURE__*/ _jsxDEV(FaGlobeAmericas, {
+                                            size: 16
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/team/page.jsx",
+                                            lineNumber: 23,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/team/page.jsx",
+                                        lineNumber: 17,
+                                        columnNumber: 15
+                                    }, this),
+                                    member.linkedin && /*#__PURE__*/ _jsxDEV("a", {
+                                        href: member.linkedin,
+                                        className: "text-gray-700 dark:text-gray-300 hover:text-[#003893] dark:hover:text-[#003893] transition-colors",
+                                        target: "_blank",
+                                        rel: "noreferrer",
+                                        children: /*#__PURE__*/ _jsxDEV(FaLinkedin, {
+                                            size: 16
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/team/page.jsx",
+                                            lineNumber: 33,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/team/page.jsx",
+                                        lineNumber: 27,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/team/page.jsx",
+                                lineNumber: 15,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, member.name, true, {
+                        fileName: "[project]/app/team/page.jsx",
+                        lineNumber: 8,
+                        columnNumber: 9
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/app/team/page.jsx",
+                lineNumber: 6,
+                columnNumber: 5
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/app/team/page.jsx",
+            lineNumber: 5,
+            columnNumber: 3
         }, this)
-    }, void 0, false, {
-        fileName: "[project]/app/team/page.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this);
-}
+    ]
+}, void 0, true, {
+    fileName: "[project]/app/team/page.jsx",
+    lineNumber: 1,
+    columnNumber: 1
+}, this);
 }}),
 "[project]/app/team/page.jsx [app-rsc] (ecmascript, Next.js server component)": ((__turbopack_context__) => {
 

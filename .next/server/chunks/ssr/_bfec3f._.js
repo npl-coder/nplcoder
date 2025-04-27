@@ -122,21 +122,21 @@ const teamMembers = [
     {
         name: "Aditi Gajurel",
         title: "University of Southern California",
-        image: './images/teamMembers/aditi.jpeg',
+        image: "./images/teamMembers/aditi.jpeg",
         linkedin: "https://www.linkedin.com/in/aditi-gajurel-334492146/",
         category: "Founding"
     },
     {
         name: "Aayushma Sapkota",
         title: "Stanford University | CS + MS&E | QuestBridge",
-        image: './images/teamMembers/Aayushma.jpeg',
+        image: "./images/teamMembers/Aayushma.jpeg",
         linkedin: "https://www.linkedin.com/in/aayushma-sapkota/",
         category: "Founding"
     },
     {
         name: "Manish Acharya",
         title: "Undergraduate Student, Vanderbilt University",
-        image: './images/teamMembers/ManishAcharya.jpeg',
+        image: "./images/teamMembers/ManishAcharya.jpeg",
         linkedin: "https://www.linkedin.com/in/manishacharya60/",
         website: "https://acharyamanish.net/",
         category: "Founding"
@@ -144,7 +144,7 @@ const teamMembers = [
     {
         name: "Aashish Karki",
         title: "IOE, Pulchowk Campus || AWS Certified Solutions Architect Associate",
-        image: './images/teamMembers/Aashish.jpeg',
+        image: "./images/teamMembers/Aashish.jpeg",
         linkedin: "https://www.linkedin.com/in/aashish-karki-718757233/",
         website: "https://karkiaashish.com.np/",
         category: "Founding"
@@ -152,7 +152,7 @@ const teamMembers = [
     {
         name: "Sumit Yadav",
         title: "AI Engineer",
-        image: './images/teamMembers/Sumit.jpeg',
+        image: "./images/teamMembers/Sumit.jpeg",
         linkedin: "https://www.linkedin.com/in/rockerritesh",
         category: "Operations"
     },
@@ -179,25 +179,18 @@ const teamMembers = [
         website: "https://maheshpandit.com.np/",
         category: "Operations"
     },
-    {
-        name: "Sujit Maharjan",
-        title: "PhD Student in Computer Science, University of Texas at Arlington",
-        image: "https://maharjansujit.com.np/images/avatar.jpg",
-        website: "https://maharjansujit.com.np",
-        category: "Operations"
-    },
+    // {
+    //   name: "Sujit Maharjan",
+    //   title: "PhD Student in Computer Science, University of Texas at Arlington",
+    //   image: "https://maharjansujit.com.np/images/avatar.jpg",
+    //   website: "https://maharjansujit.com.np",
+    //   category: "Operations"
+    // },
     {
         name: "Amrit Kandel",
-        title: "Advisor",
-        image: './images/teamMembers/Amrit.jpeg',
+        title: "Founder & Visionary |  Advisor (Current)",
+        image: "./images/teamMembers/Amrit.jpeg",
         linkedin: "https://www.linkedin.com/in/amritkandel/",
-        category: "Advisory"
-    },
-    {
-        name: "Raul Aguilera",
-        title: "Advisor",
-        image: './images/teamMembers/Raul.jpeg',
-        linkedin: "https://www.linkedin.com/in/aguilera-avenue/",
         category: "Advisory"
     }
 ];
@@ -218,8 +211,8 @@ function TeamPage() {
                             children: "Founding Members"
                         }, void 0, false, {
                             fileName: "[project]/app/team/page.jsx",
-                            lineNumber: 102,
-                            columnNumber: 13
+                            lineNumber: 109,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center",
@@ -231,29 +224,29 @@ function TeamPage() {
                                     website: member.website
                                 }, member.name, false, {
                                     fileName: "[project]/app/team/page.jsx",
-                                    lineNumber: 107,
-                                    columnNumber: 17
+                                    lineNumber: 114,
+                                    columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/team/page.jsx",
-                            lineNumber: 105,
-                            columnNumber: 13
+                            lineNumber: 112,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/team/page.jsx",
-                    lineNumber: 101,
-                    columnNumber: 11
+                    lineNumber: 108,
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mb-8",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             className: "text-3xl font-bold mb-2 mt-2  text-gray-900 dark:text-white text-center",
-                            children: "Operations Members"
+                            children: "Project Members"
                         }, void 0, false, {
                             fileName: "[project]/app/team/page.jsx",
-                            lineNumber: 121,
+                            lineNumber: 128,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -266,19 +259,19 @@ function TeamPage() {
                                     website: member.website
                                 }, member.name, false, {
                                     fileName: "[project]/app/team/page.jsx",
-                                    lineNumber: 126,
-                                    columnNumber: 17
+                                    lineNumber: 133,
+                                    columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/team/page.jsx",
-                            lineNumber: 124,
-                            columnNumber: 13
+                            lineNumber: 131,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/team/page.jsx",
-                    lineNumber: 120,
-                    columnNumber: 11
+                    lineNumber: 127,
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mb-8",
@@ -288,31 +281,30 @@ function TeamPage() {
                             children: "Advisory Members"
                         }, void 0, false, {
                             fileName: "[project]/app/team/page.jsx",
-                            lineNumber: 140,
-                            columnNumber: 13
+                            lineNumber: 147,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "max-w-4xl mx-auto",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "grid grid-cols-1 md:grid-cols-2 gap-4",
                                 children: advisoryMembers.map((member)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "bg-gray-100 dark:bg-gray-800 p-5 rounded-lg border-l-4 border-[#003893] transition-all duration-300 hover:shadow-md hover:border-[#DC143C]",
+                                        className: "bg-gray-100 dark:bg-gray-800 p-5 rounded-lg border-l-4 border-[#003893] transition-all duration-300 hover:shadow-md hover:border-[#DC143C] flex flex-col items-center text-center",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                 className: "text-xl font-bold text-gray-800 dark:text-white",
                                                 children: member.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/team/page.jsx",
-                                                lineNumber: 150,
-                                                columnNumber: 21
+                                                lineNumber: 157,
+                                                columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-sm text-gray-600 dark:text-gray-300 mt-1",
                                                 children: member.title
                                             }, void 0, false, {
                                                 fileName: "[project]/app/team/page.jsx",
-                                                lineNumber: 151,
-                                                columnNumber: 21
+                                                lineNumber: 160,
+                                                columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex mt-3 space-x-3",
@@ -326,13 +318,13 @@ function TeamPage() {
                                                             size: 16
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/team/page.jsx",
-                                                            lineNumber: 161,
-                                                            columnNumber: 27
+                                                            lineNumber: 172,
+                                                            columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/team/page.jsx",
-                                                        lineNumber: 155,
-                                                        columnNumber: 25
+                                                        lineNumber: 166,
+                                                        columnNumber: 23
                                                     }, this),
                                                     member.linkedin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                         href: member.linkedin,
@@ -343,52 +335,52 @@ function TeamPage() {
                                                             size: 16
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/team/page.jsx",
-                                                            lineNumber: 171,
-                                                            columnNumber: 27
+                                                            lineNumber: 182,
+                                                            columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/team/page.jsx",
-                                                        lineNumber: 165,
-                                                        columnNumber: 25
+                                                        lineNumber: 176,
+                                                        columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/team/page.jsx",
-                                                lineNumber: 153,
-                                                columnNumber: 21
+                                                lineNumber: 164,
+                                                columnNumber: 19
                                             }, this)
                                         ]
                                     }, member.name, true, {
                                         fileName: "[project]/app/team/page.jsx",
-                                        lineNumber: 146,
-                                        columnNumber: 19
+                                        lineNumber: 153,
+                                        columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/team/page.jsx",
-                                lineNumber: 144,
-                                columnNumber: 15
+                                lineNumber: 151,
+                                columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/team/page.jsx",
-                            lineNumber: 143,
-                            columnNumber: 13
+                            lineNumber: 150,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/team/page.jsx",
-                    lineNumber: 139,
-                    columnNumber: 11
+                    lineNumber: 146,
+                    columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/team/page.jsx",
-            lineNumber: 95,
-            columnNumber: 9
+            lineNumber: 102,
+            columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/team/page.jsx",
-        lineNumber: 94,
-        columnNumber: 7
+        lineNumber: 101,
+        columnNumber: 5
     }, this);
 }
 }}),

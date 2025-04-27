@@ -3693,12 +3693,12 @@ body {
     padding-top: 100px;
   }
 
-  .lg\:pt-\[220px\] {
-    padding-top: 220px;
-  }
-
   .lg\:pt-\[200px\] {
     padding-top: 200px;
+  }
+
+  .lg\:pt-\[220px\] {
+    padding-top: 220px;
   }
 
   .lg\:text-left {
