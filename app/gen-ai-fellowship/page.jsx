@@ -51,7 +51,7 @@ const NPLCoderFellowship = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
       <div className="container mx-auto px-4 lg:px-8 pt-16 lg:pt-[180px]">
-        <div className="relative py-16 overflow-hidden">
+        <div className="relative py-12 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/2">
@@ -105,7 +105,7 @@ const NPLCoderFellowship = () => {
           </div>
         </div>
 
-        <div className="py-12 mb-16">
+        <div className="pt-12 mb-16">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-8 md:gap-16">
               <div className="flex items-center gap-4">
@@ -156,7 +156,7 @@ const NPLCoderFellowship = () => {
 
         <WhyFellowship title="Why This Fellowship?" reasons={whyData} />
 
-        <div className="py-16">
+        <div className="py-12">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
             Eligibility Criteria
           </h2>
@@ -203,7 +203,7 @@ const NPLCoderFellowship = () => {
           </div>
         </div>
 
-        <div className="py-16 text-center">
+        <div className="text-center pb-8">
           <div className="max-w-3xl mx-auto mb-8">
             <div className="inline-block px-6 py-2 bg-gradient-to-r from-[#DC143C]/20 to-[#003893]/20 dark:from-[#DC143C]/30 dark:to-[#003893]/30 rounded-full mb-8">
               <p className="text-xl font-semibold text-gray-900 dark:text-white">
