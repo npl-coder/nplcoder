@@ -37,9 +37,15 @@ export default {
             'ring-expand': 'ring-expand 2s infinite',
             'particle-flow': 'particle-flow 3s infinite',
             'badge-appear': 'badge-appear 0.5s forwards',
+            'star-ping': 'star-ping 1.2s ease-in-out infinite',
+
             'button-pulse': 'button-pulse 2s infinite',
           },
           keyframes: {
+            'star-ping': {
+        '0%, 100%': { transform: 'rotate(45deg) scale(1)', opacity: '1' },
+        '50%': { transform: 'rotate(45deg) scale(1.2)', opacity: '0.8' },
+      },
             float: {
               '0%, 100%': { transform: 'translateY(0)' },
               '50%': { transform: 'translateY(-10px)' },
