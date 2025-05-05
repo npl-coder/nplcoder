@@ -69,7 +69,7 @@ const NPLCoderFellowship = () => {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfhSf-f1e0gNzdrzjjWxlYCCpsLsoVwoIXfaKk-Whc8i0nhqg/viewform"
+                    href="https://forms.gle/tkY6EJSuDugmVn6RA"
                     target="_blank"
                   >
                     <button className="px-8 py-4 bg-gradient-to-r from-[#DC143C] to-[#003893] text-white rounded-xl font-semibold hover:opacity-90 transition-all">
@@ -212,7 +212,7 @@ const NPLCoderFellowship = () => {
             </div>
           </div>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfhSf-f1e0gNzdrzjjWxlYCCpsLsoVwoIXfaKk-Whc8i0nhqg/viewform"
+            href="https://forms.gle/tkY6EJSuDugmVn6RA"
             target="_blank"
           >
             <button className="px-8 py-4 bg-gradient-to-r from-[#DC143C] to-[#003893] text-white rounded-xl font-semibold hover:opacity-90 text-xl transition-all">
