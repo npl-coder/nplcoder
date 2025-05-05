@@ -106,7 +106,7 @@ const AboutUs = () => {
           <p className="text-lg leading-relaxed">
           We are dedicated to empowering students in Nepal by providing them with the tools, resources, and support they need to excel in computing and lead the computing innovation from Nepal. By blending the richness of Nepal’s cultural heritage with a forward-looking approach to technology, we strive to cultivate a generation of technologists who will solve global challenges while proudly carrying the identity of their homeland. With the tagline "Shaping Nepal’s Future with Computational Innovation," we aim to nurture the next generation of technologists and computational thinkers.
 </p>    
-<p className='text-lg leading-relaxed'>NPLCoder is more than an organization; it is a movement to empower Nepalese youth through computational innovation. By nurturing talent, fostering collaboration, and providing platforms for growth, NPLCoder aims to shape Nepal’s future, one student at a time.</p>
+<p className='text-lg leading-relaxed'>NPLCoder is more than an organization; it is a movement to empower Nepali youth through computational innovation. By nurturing talent, fostering collaboration, and providing platforms for growth, NPLCoder aims to shape Nepal’s future, one student at a time.</p>
     </div>
       </div>
     </div>
@@ -119,7 +119,7 @@ const AboutUs = () => {
         Our Mission
           </h2>
           <div className="text-center text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-            To unlock the vast potential of Nepalese talent by cultivating a culture of computational excellence and fostering innovation. NPLCoder is committed to equipping students with cutting-edge skills, invaluable resources, and transformative opportunities, enabling them to spearhead technological advancements on both national and global stages with confidence and expertise.
+            To unlock the vast potential of Nepali talent by cultivating a culture of computational excellence and fostering innovation. NPLCoder is committed to equipping students with cutting-edge skills, invaluable resources, and transformative opportunities, enabling them to spearhead technological advancements on both national and global stages with confidence and expertise.
           </div>
         </div>
       </section>

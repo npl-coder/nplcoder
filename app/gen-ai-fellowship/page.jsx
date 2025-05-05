@@ -62,7 +62,7 @@ const NPLCoderFellowship = () => {
                   Build real AI products in 6 weeks
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                  A 6-week intensive program for Nepalese students and
+                  A 6-week intensive program for Nepali students and
                   professionals looking to become hands-on AI builders. This
                   isn't another course, it's a launchpad for building real,
                   usable, AI-first products.
@@ -165,7 +165,7 @@ const NPLCoderFellowship = () => {
               <div className="flex flex-col items-center text-center max-w-xs">
                 <Users className="w-16 h-16 text-black dark:text-white mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Nepalese Citizen
+                  Nepali Citizen
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   Must be a citizen of Nepal

@@ -1124,7 +1124,7 @@ const Hero = ()=>{
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-xl",
-                                children: "NPLCoder is a non-profit organization dedicated to empowering Nepalese students in computing and innovation. We provide resources, mentorship, and opportunities to nurture talent that will drive global change while proudly representing Nepal, blending the nation's rich heritage with technology.            "
+                                children: "NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation. We provide resources, mentorship, and opportunities to nurture talent that will drive global change while proudly representing Nepal, blending the nation's rich heritage with technology.            "
                             }, void 0, false, {
                                 fileName: "[project]/components/Hero.jsx",
                                 lineNumber: 21,
