@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { ThemeProvider } from "@/components/theme-provider";
 import Nav from "@/components/Nav";
-import "./globals.css";
 
 import Footer from "@/components/Footer";
 
@@ -59,14 +58,13 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <html lang="en">
-      <body> <ThemeProvider>
+    <>
+    <ThemeProvider>
         <Nav/>
 
         {children}
         
         <Footer/></ThemeProvider>
-</body>
-    </html>
+        </>
   );
 }

@@ -514,8 +514,116 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$jsx_
 ;
 ;
 const metadata = {
-    title: "NPLCoder",
-    description: "NPLCoder: Shaping Nepal’s Future with Computational Innovation"
+    metadataBase: new URL('https://nplcoder.org'),
+    title: {
+        default: 'NPLCoder | Empowering the Next Generation of Nepali Computational Minds',
+        template: 'NPLCoder'
+    },
+    description: 'NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation through resources, mentorship, and opportunities to nurture talent that will drive global change.',
+    keywords: [
+        'NPLCoder',
+        'Nepal Programming',
+        'Nepali Coders',
+        'Nepal Tech',
+        'Competitive Programming Nepal',
+        'NPLAlgo',
+        'NPLNeural',
+        'NPLCareer',
+        'NPLAcademia',
+        'GenAI Fellowship',
+        'Nepal Olympiad in Informatics',
+        'Tech Education Nepal',
+        'Coding Nepal',
+        'AI Nepal',
+        'Machine Learning Nepal'
+    ],
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://nplcoder.org',
+        siteName: 'NPLCoder',
+        title: 'NPLCoder | Empowering the Next Generation of Nepali Computational Minds',
+        description: 'Building the foundation for Nepal\'s digital future through programs designed to nurture and showcase computational talent.',
+        images: [
+            {
+                url: '/images/NPLCoder.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'NPLCoder - Shaping Nepal\'s Future with Computational Innovation'
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'NPLCoder | Empowering Nepali Computational Minds',
+        description: 'A non-profit organization dedicated to empowering Nepali students in computing and innovation.',
+        images: [
+            '/images/NPLCoder.png'
+        ],
+        creator: '@nplcoder',
+        site: '@nplcoder'
+    },
+    icons: {
+        icon: [
+            {
+                url: '/favicon.ico'
+            },
+            {
+                url: '/favicon.ico',
+                type: 'image/svg+xml'
+            }
+        ],
+        apple: [
+            {
+                url: '/favicon.ico'
+            }
+        ],
+        other: [
+            {
+                rel: 'mask-icon',
+                url: '/favicon.ico'
+            }
+        ]
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1
+        }
+    },
+    alternates: {
+        canonical: 'https://nplcoder.org',
+        languages: {
+            'en-US': 'https://nplcoder.org'
+        }
+    },
+    category: 'Technology, Education, Non-Profit',
+    other: {
+        'application-name': 'NPLCoder',
+        'apple-mobile-web-app-capable': 'yes',
+        'apple-mobile-web-app-status-bar-style': 'default',
+        'apple-mobile-web-app-title': 'NPLCoder',
+        'format-detection': 'telephone=no',
+        'msapplication-TileColor': '#2d89ef',
+        'theme-color': '#ffffff'
+    }
+};
+const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'NPLCoder',
+    url: 'https://nplcoder.org',
+    logo: 'https://nplcoder.org/images/NPLCoder.png',
+    sameAs: [
+        'https://www.instagram.com/nplcoder',
+        'https://www.linkedin.com/company/nplcoder'
+    ],
+    description: 'NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation through resources, mentorship, and opportunities.'
 };
 function RootLayout({ children }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
@@ -527,29 +635,29 @@ function RootLayout({ children }) {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Nav$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 16,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, this),
                     children,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 20,
+                        lineNumber: 123,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/layout.tsx",
-                lineNumber: 15,
+                lineNumber: 118,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 14,
+            lineNumber: 117,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 13,
+        lineNumber: 116,
         columnNumber: 5
     }, this);
 }
