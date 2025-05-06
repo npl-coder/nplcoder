@@ -55,7 +55,13 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body> <ThemeProvider>
+        <Nav/>
+
+        {children}
+        
+        <Footer/></ThemeProvider>
+</body>
     </html>
   );
 }
