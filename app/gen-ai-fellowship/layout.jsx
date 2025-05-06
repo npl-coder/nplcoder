@@ -40,7 +40,7 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  
+
   canonical: 'https://www.nplcoder.org/gen-ai-fellowship',
   
   other: {
