@@ -60,11 +60,10 @@ export default function Layout({ children }) {
   return (
     <>
     <ThemeProvider>
-        <Nav/>
 
         {children}
         
-        <Footer/></ThemeProvider>
+       </ThemeProvider>
         </>
   );
 }
