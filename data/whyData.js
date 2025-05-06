@@ -20,8 +20,8 @@ const whyData = [
       "color": "#003893"
     },
     {
-      "title": "Hands-On Mentorship",
-      "description": "Get technical guidance and mentorship throughout your journey.",
+      "title": "Access to top resources and tools",
+      "description": "Get acess to top resources and supporting tools to build your project.",
       "color": "#DC143C"
     },
     {
