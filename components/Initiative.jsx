@@ -2,12 +2,17 @@
 
 import React, { useEffect, useRef } from 'react';
 
+import { useTranslations } from 'next-intl';
+
 const Initiatives = () => {
+
+    const t = useTranslations('Initiatives');
+  
   const initiatives = [
     {
       title: "NPLAlgo",
-      description: "NPLAlgo is dedicated to fostering a vibrant competitive programming culture in Nepal. It spearheads the Nepal Olympiad in Informatics (NOI), preparing students for prestigious international contests like the International Olympiad in Informatics (IOI). Additionally, NPLAlgo organizes weekly and monthly programming contests to enhance problem-solving skills, featuring algorithmic challenges that help participants excel in platforms like Codeforces and AtCoder. Through mentorship, practice sessions, and competitions, NPLAlgo aims to build a strong community of Nepali competitive programmers ready to tackle global challenges.",
-      icon: (
+      description: t('nplalgo')
+      ,icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <polyline points="16 18 22 12 16 6"></polyline>
           <polyline points="8 6 2 12 8 18"></polyline>
@@ -73,14 +78,13 @@ const Initiatives = () => {
             </defs>
           </svg>
           
-          {/* Interactive canvas for algorithm visualization would be drawn here using the ref */}
           <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none"></canvas>
         </div>
       )
     },
     {
       title: "NPLNeural",
-      description: "NPLNeural is dedicated to building a collaborative community for undergraduate students in Nepal to explore AI, data science, and machine learning. Through monthly AI competitions and hackathons, we create opportunities for students to work together, tackle real-world challenges, and enhance their technical skills. By connecting aspiring AI researchers and practitioners, NPLNeural fosters innovation, teamwork, and hands-on problem-solving. Our platform not only prepares students for industry-relevant AI challenges but also exposes them to global competitive programming arenas, helping them compete and excel on the world stage.",
+      description: t('nplneural'),
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -232,7 +236,7 @@ const Initiatives = () => {
     },
     {
       title: "NPLCareer",
-      description: "NPLCareer is committed to career guidance and professional development for Nepali students in computer science, both within Nepal and abroad, particularly in the U.S. It provides resources on internship opportunities, job applications, technical interviews, resume building, and networking. NPLCareer also hosts mentorship programs, industry talks, and career workshops, helping students successfully transition from academia to top tech companies, research labs, and startups.",
+      description: t('nplcareer'),
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -298,7 +302,7 @@ const Initiatives = () => {
     },
     {
       title: "NPLAcademia",
-      description: "NPLAcademia is a mentorship-driven initiative designed to help Nepali students navigate the complex journey of applying to top graduate schools in the U.S. and beyond. It provides personalized mentorship, strategy sessions, application workshops, and networking opportunities to increase the representation of Nepali students in world-class research programs. With guidance on research experience, recommendation letters, statement of purpose writing, and funding opportunities, NPLAcademia aims to create a pipeline of Nepali scholars excelling in academia and research globally.",
+      description: t('nplacademia'),
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -441,11 +445,9 @@ const Initiatives = () => {
     <div className="container mx-auto px-4 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white mb-6">
-          Our Initiatives
-        </h2>
+          {t('title')}        </h2>
         <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:text-lg">
-          Building the foundation for Nepal's digital future through these key programs designed to nurture and showcase computational talent.
-        </p>
+        {t('description')}              </p>
       </div>
   
       <div className="space-y-10">

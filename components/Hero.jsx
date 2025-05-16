@@ -1,63 +1,65 @@
-"use client"
-
+"use client";
 import CodeBlock from './Codeblock';
 import React from 'react';
-import Initiatives from './EventsPage';
-import Register from './Register'
+
+import { useTranslations } from 'next-intl';
 
 const Hero = () => {
+  const t = useTranslations('Hero');
+
   return (
     <main className="relative">
-    <div className="container mx-auto px-4 lg:px-8 pt-32 lg:pt-[220px] pb-20">
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
-        <div className="flex-1 text-left">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white tracking-tight mb-6">
-            Empowering the{' '}
-            <span className="bg-gradient-to-r from-[#DC143C] to-[#003893] text-transparent bg-clip-text">
-              Next Generation
-            </span>{' '}
-            of Nepali Computational Minds.
-          </h1>
+      <div className="container mx-auto px-4 lg:px-8 pt-32 lg:pt-[220px] pb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
+          <div className="flex-1 text-left">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white tracking-tight mb-6">
+              {t('part1')}
+              <span className="bg-gradient-to-r from-[#DC143C] to-[#003893] text-transparent bg-clip-text">
+                {t('highlight')}
+              </span>
+              {t('part2')}
+            </h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-xl">
-            NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation. We provide resources, mentorship, and opportunities to nurture talent that will drive global change while proudly representing Nepal, blending the nation's rich heritage with technology.            </p>
-            
+              {t('description')}
+            </p>
+
             <div className="flex flex-row gap-4 mb-12">
-              <a href='https://forms.gle/Z4bPVsWo5sdQLEvs5' target="_blank" rel="noreferrer">
-              <button className="bg-gradient-to-r hover:scale-105 from-[#DC143C] to-[#003893] text-white py-3 sm:py-4 px-6 rounded-xl font-semibold mt-4 sm:mt-6 hover:shadow-lg transition duration-300">
+              <a href="https://forms.gle/Z4bPVsWo5sdQLEvs5" target="_blank" rel="noreferrer">
+                <button className="bg-gradient-to-r hover:scale-105 from-[#DC143C] to-[#003893] text-white py-3 sm:py-4 px-6 rounded-xl font-semibold mt-4 sm:mt-6 hover:shadow-lg transition duration-300">
+                  {t('joinbutton')}
+                </button>
+              </a>
+              <a href="/about">
+                <button className="p-8 bg-transparent border hover:scale-105 border-gray-600 text-gray-800 dark:text-white hover:bg-white/10 py-3 sm:py-4 rounded-xl font-semibold mt-4 sm:mt-6">
+                  {t('aboutbutton')}
+                </button>
+              </a>
+            </div>
 
-Join Our Initiative </button>    
-</a>        
-<a href="/about">
-<button className="p-8 bg-transparent 0 border hover:scale-105 border-gray-600 text-gray-800 dark:text-white hover:bg-white/10 py-3 sm:py-4 rounded-xl font-semibold mt-4 sm:mt-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+              <div className="flex items-center gap-4">
+                <div className="flex -space-x-3">
+                  {[
+                    './images/discord-avatar1.png',
+                    './images/discord-avatar2.png',
+                    './images/discord-avatar.png',
+                  ].map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt={`User ${i + 1}`}
+                      className="w-10 h-10 rounded-full border-2 border-[#2C3043] object-cover"
+                    />
+                  ))}
+                </div>
+                <span className="text-gray-800 hidden lg:flex dark:text-white font-medium">
+                  {t('members')}
+                </span>
 
-    About Us
-  </button>
-  </a>
-</div>
+                <div className="h-8 w-[1px] bg-gray-700 sm:block" />
 
-
-<div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-  <div className="flex items-center gap-4">
-    <div className="flex -space-x-3">
-      {[
-        "./images/discord-avatar1.png",
-        "./images/discord-avatar2.png",
-        "./images/discord-avatar.png",
-      ].map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt={`User ${i + 1}`}
-          className="w-10 h-10 rounded-full border-2 border-[#2C3043] object-cover"
-        />
-      ))}
-    </div>
-    <span className="text-gray-800 hidden lg:flex dark:text-white font-medium">+200 members</span>
-
-    <div className="h-8 w-[1px] bg-gray-700  sm:block" />
-
-    <p className="text-gray-600 dark:text-gray-400 dark:hover:text-white flex items-center gap-2 hover:scale-110 transition-all duration-200 cursor-pointer">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <p className="text-gray-600 dark:text-gray-400 dark:hover:text-white flex items-center gap-2 hover:scale-110 transition-all duration-200 cursor-pointer">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -65,31 +67,26 @@ Join Our Initiative </button>
         fill="currentColor"
       />
     </svg>
-    <a href="https://discord.gg/kJrvdhmzVd" target="_blank" rel="noreferrer">
-      Join our Discord
-    </a>
-  </p>
-  </div>
-
-
- 
-</div>
-
+                  <a href="https://discord.gg/kJrvdhmzVd" target="_blank" rel="noreferrer">
+                    {t('discord')}
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="flex-1 relative w-full">
             <div className="relative rounded-2xl overflow-hidden backdrop-blur-lg p-6 shadow-xl">
               <div className="flex items-center gap-2 mb-4">
-               <CodeBlock/>
+                <CodeBlock />
               </div>
-              <div className="space-y-4">
-
-                       </div>
             </div>
           </div>
         </div>
-
       </div>
     </main>
-  );}
-  export default  Hero;
+  );
+};
+
+export default Hero;
+    

@@ -1,0 +1,178 @@
+{
+  "Switch": {
+    "en": "English",
+    "np": "Nepali"
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "events": "Events",
+    "team": "Team",
+    "resources": "Resources",
+    "contest": "Contest"
+  },
+  "Footer": {
+    "tagline": "Shaping Nepal's Future with Computational Innovation",
+    "join_discord": "Join Discord",
+    "navigate": "Navigate",
+    "quick_links": {
+      "home": "Home",
+      "about": "About",
+      "events": "Events",
+      "team": "Team"
+    },
+    "contact_us": "Contact Us",
+    "contact_info": {
+      "us": "+1 615-484-1629(USA)",
+      "nepal": "+977 9862021531(Nepal)",
+      "email": "work@nplcoder.org",
+      "location": "Kathmandu, Nepal"
+    },
+    "follow_us": "Follow Us",
+    "made_with": "Made with",
+    "by": "by Aashish Karki & Safal Poudel"
+  },
+  "Team": {
+    "founding_members": "Founding Members",
+    "project_members": "Project Members",
+    "advisory_members": "Advisory Members"
+  },
+  "Hero": {
+    "part1": "Empowering the ",
+    "highlight": "Next Generation",
+    "part2": " of Nepali Computational Minds.",
+    "description": "NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation. We provide resources, mentorship, and opportunities to nurture talent that will drive global change while proudly representing Nepal, blending the nation's rich heritage with technology.",
+    "joinbutton": "Join Our Initiative",
+    "aboutbutton": "About Us",
+    "members": "+300 members",
+    "discord": "Join our Discord"
+  },
+  "Initiatives": {
+    "title": "Our Initiatives",
+    "description": "Building the foundation for Nepal's digital future through these key programs designed to nurture and showcase computational talent.",
+    "nplalgo": "NPLAlgo is dedicated to fostering a vibrant competitive programming culture in Nepal. It spearheads the Nepal Olympiad in Informatics (NOI), preparing students for prestigious international contests like the International Olympiad in Informatics (IOI). Additionally, NPLAlgo organizes weekly and monthly programming contests to enhance problem-solving skills, featuring algorithmic challenges that help participants excel in platforms like Codeforces and AtCoder. Through mentorship, practice sessions, and competitions, NPLAlgo aims to build a strong community of Nepali competitive programmers ready to tackle global challenges.",
+    "nplneural": "NPLNeural is dedicated to building a collaborative community for undergraduate students in Nepal to explore AI, data science, and machine learning. Through monthly AI competitions and hackathons, we create opportunities for students to work together, tackle real-world challenges, and enhance their technical skills. By connecting aspiring AI researchers and practitioners, NPLNeural fosters innovation, teamwork, and hands-on problem-solving. Our platform not only prepares students for industry-relevant AI challenges but also exposes them to global competitive programming arenas, helping them compete and excel on the world stage.",
+    "nplcareer": "NPLCareer is committed to career guidance and professional development for Nepali students in computer science, both within Nepal and abroad, particularly in the U.S. It provides resources on internship opportunities, job applications, technical interviews, resume building, and networking. NPLCareer also hosts mentorship programs, industry talks, and career workshops, helping students successfully transition from academia to top tech companies, research labs, and startups.",
+    "nplacademia": "NPLAcademia is a mentorship-driven initiative designed to help Nepali students navigate the complex journey of applying to top graduate schools in the U.S. and beyond. It provides personalized mentorship, strategy sessions, application workshops, and networking opportunities to increase the representation of Nepali students in world-class research programs. With guidance on research experience, recommendation letters, statement of purpose writing, and funding opportunities, NPLAcademia aims to create a pipeline of Nepali scholars excelling in academia and research globally."
+  },
+  "About": {
+    "title": "NPLCoder",
+    "description1": "NPLCoder is a non-profit organization driven by a simple yet powerful belief: the immense talent in Nepal deserves the opportunity to shine in the field of technology. Nepal, a land of unparalleled cultural and natural diversity, is home to resilient and resourceful people who have long harnessed their ingenuity to adapt to challenging environments. However, in this era of rapid technological advancement, there is a pressing need to channel this potential into the field of computing and innovation.",
+    "description2": "We are dedicated to empowering students in Nepal by providing them with the tools, resources, and support they need to excel in computing and lead the computing innovation from Nepal. By blending the richness of Nepal’s cultural heritage with a forward-looking approach to technology, we strive to cultivate a generation of technologists who will solve global challenges while proudly carrying the identity of their homeland. With the tagline \"Shaping Nepal’s Future with Computational Innovation,\" we aim to nurture the next generation of technologists and computational thinkers.",
+    "description3": "NPLCoder is more than an organization; it is a movement to empower Nepali youth through computational innovation. By nurturing talent, fostering collaboration, and providing platforms for growth, NPLCoder aims to shape Nepal’s future, one student at a time.",
+    "missionheading": "Our Mission",
+    "mission": "To unlock the vast potential of Nepali talent by cultivating a culture of computational excellence and fostering innovation. NPLCoder is committed to equipping students with cutting-edge skills, invaluable resources, and transformative opportunities, enabling them to spearhead technological advancements on both national and global stages with confidence and expertise."
+  },
+  "values": {
+    "headline": "Our Values",
+    "title": "Bridge the Educational Divide",
+    "description": "Make coding and technological learning resources available to students in both urban and rural areas.",
+    "title1": "Empower the Youth",
+    "description1": "Equip students with the skills and confidence needed to excel in the global tech landscape, enabling them to contribute innovative solutions to real-world problems.",
+    "title2": "Drive National Growth",
+    "description2": "Contribute to the development of Nepal as a hub for technological innovation by fostering a generation of skilled programmers and tech professionals.",
+    "title3": "Achieve Global Representation",
+    "description3": "Support students to represent Nepal in international competitions and platforms, showcasing their talents on a global stage and bringing recognition to the nation's capabilities.",
+    "title4": "Create Sustainable Impact",
+    "description4": "Build programs that evolve to meet the changing needs of students, ensuring long-term benefits for the community."
+  },
+  "goals": {
+    "headline": "Our Goals",
+    "title": "Promote Interest in Technology",
+    "description": "Foster interest in computing and informatics among high school and university students in Nepal.",
+    "title1": "Provide Access to Resources",
+    "description1": "Offer educational tools, mentorship, training programs, and necessary funding to students to enhance their computational skills and enable them to carry out impactful projects and research.",
+    "title2": "Encourage Innovation",
+    "description2": "Create platforms that challenge participants to solve real-world problems using computational thinking.",
+    "title3": "Enhance Representation",
+    "description3": "Enable talented students to represent Nepal in international competitions such as the International Olympiad in Informatics (IOI), the International Collegiate Programming Contest (ICPC), Kaggle Competitions, IEEE Big Data Cup, and other prestigious global challenges in computing.",
+    "title4": "Build Professional Networks",
+    "description4": "Connect students with mentors and industry professionals to foster collaboration, career development, and leadership in AI/ML research.",
+    "title5": "Ensure Inclusivity",
+    "description5": "Encourage participation from diverse backgrounds by actively targeting students from all districts of Nepal, ensuring equal opportunities for all students regardless of their geographic or economic circumstances.",
+    "title6": "Develop Mentorship",
+    "description6": "Identify and engage mentors who can guide junior participants and support the next generation of technologists."
+  },
+
+  "Genai": {
+    "page_title": "NPLCoder GenAI Builders Fellowship 001",
+    "program_title": "Build real AI products in 6 weeks",
+    "description": "A 6-week intensive program for Nepali students and professionals looking to become hands-on AI builders. This isn't another course, it's a launchpad for building real, usable, AI-first products.",
+    "apply_button": "Apply Now",
+    "share_button": "Share this fellowship",
+    "link_copied": "Link copied!",
+    "fellowship_time" : "Fellowship Timeline",
+    "failed_to_copy": "Failed to copy",
+    "fellowship_duration": "June 1 – July 12, 2025",
+    "demo_day": "July 13, 2025",
+    "time_commitment": "10–14 hours/week",
+    "what_will_you_learn" : "What Will You Learn?",
+    "best_project_award": "Best Project Award: Funding & Growth Support",
+    "why_fellowship_title": "Why This Fellowship?",
+    "eligibility_criteria_title": "Eligibility Criteria",
+    "nepali_citizen": "Nepali Citizen",
+    "nepali_citizen_desc": "Must be a citizen of Nepal",
+    "education": "Education",
+    "education_desc": "Undergraduate student or beyond",
+    "commitment": "Commitment",
+    "commitment_desc": "10–14 hours per week for 6 weeks",
+    "application_deadline": "Application Deadline: May 29, 2025",
+    "apply_now": "Apply for the Fellowship",
+
+    
+      "ai_first_applications": "AI-First Applications",
+      "ai_first_applications_desc": "Design and build AI-first applications using cutting-edge tools and platforms.",
+      "rag_pipelines": "RAG Pipelines",
+      "rag_pipelines_desc": "Practical implementation of retrieval-augmented generation (RAG) pipelines.",
+      "ai_agents": "AI Agents",
+      "ai_agents_desc": "Development of autonomous AI agents using frameworks like LangChain and LangGraph.",
+      "production_ai": "Production AI",
+      "production_ai_desc": "Best practices for deploying, scaling, and monitoring AI systems in production.",
+      "open_source_contribution": "Open-Source Contribution",
+      "open_source_contribution_desc": "Learn how to contribute to open-source AI projects and build your technical profile.",
+      "portfolio_projects": "Portfolio Projects",
+      "portfolio_projects_desc": "Build a portfolio-ready project that could get you hired, funded, or both.",
+   
+    "week_1": "Week 1",
+    "week_1_subtitle": "AI-First Development",
+    "week_1_desc": "Learn AI-first design principles and start building your project foundation.",
+    
+    "week_2": "Week 2",
+    "week_2_subtitle": "RAG Systems & Data Pipelines",
+    "week_2_desc": "Build retrieval-augmented generation pipelines for knowledge-intensive applications.",
+    
+    "week_3": "Week 3",
+    "week_3_subtitle": "Agents & LangChain",
+    "week_3_desc": "Develop autonomous AI agents using LangChain framework.",
+    
+    "week_4": "Week 4",
+    "week_4_subtitle": "LangGraph & Open-Source",
+    "week_4_desc": "Learn LangGraph and make your first open-source contribution.",
+    
+    "week_5": "Week 5",
+    "week_5_subtitle": "Production-Ready AI Solutions",
+    "week_5_desc": "Deploy your AI application to production with best practices.",
+    
+    "week_6": "Week 6",
+    "week_6_subtitle": "Final Review & Portfolio Defense",
+    "week_6_desc": "Prepare for Demo Day and finalize your portfolio project.",
+    
+    "demo_day1": "Demo Day",
+    "demo_day_subtitle": "July 13, 2025",
+    "demo_day_desc": "Present your project to industry experts and potential backers.",
+      "project_first": "Project-First Learning",
+      "project_first_desc": "Apply AI in real, impactful ways through hands-on project development.",
+      "no_fluff": "No Fluff, Only Skills",
+      "no_fluff_desc": "Focus only on skills that matter in AI product development and deployment.",
+      "portfolio_ready": "Portfolio-Ready Projects",
+      "portfolio_ready_desc": "Build a project that could get you hired, funded, or both.",
+      "nepali_community": "Nepalese AI Community",
+      "nepali_community_desc": "Join a community of like-minded Nepalese AI builders and innovators.",
+      "top_resources": "Access to Top Resources",
+      "top_resources_desc": "Get access to top resources and supporting tools to build your project.",
+      "funding_opportunities": "Funding Opportunities",
+      "funding_opportunities_desc": "Potential funding and growth support for the most promising projects."
+    
+  
+  }
+}

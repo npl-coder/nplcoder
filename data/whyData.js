@@ -1,34 +1,34 @@
 const whyData = [
-    {
-      "title": "Project-First Learning",
-      "description": "Apply AI in real, impactful ways through hands-on project development.",
-      "color": "#DC143C"
-    },
-    {
-      "title": "No Fluff, Only Skills",
-      "description": "Focus only on skills that matter in AI product development and deployment.",
-      "color": "#003893"
-    },
-    {
-      "title": "Portfolio-Ready Projects",
-      "description": "Build a project that could get you hired, funded, or both.",
-      "color": "#DC143C"
-    },
-    {
-      "title": "Nepalese AI Community",
-      "description": "Join a community of like-minded Nepalese AI builders and innovators.",
-      "color": "#003893"
-    },
-    {
-      "title": "Access to top resources and tools",
-      "description": "Get acess to top resources and supporting tools to build your project.",
-      "color": "#DC143C"
-    },
-    {
-      "title": "Funding Opportunities",
-      "description": "Potential funding and growth support for the most promising projects.",
-      "color": "#003893"
-    }
-  ]
-  
-  export default whyData;
+  {
+    "title": "project_first",
+    "description": "project_first_desc",
+    "color": "#DC143C"
+  },
+  {
+    "title": "no_fluff",
+    "description": "no_fluff_desc",
+    "color": "#003893"
+  },
+  {
+    "title": "portfolio_ready",
+    "description": "portfolio_ready_desc",
+    "color": "#DC143C"
+  },
+  {
+    "title": "nepali_community",
+    "description": "nepali_community_desc",
+    "color": "#003893"
+  },
+  {
+    "title": "top_resources",
+    "description": "top_resources_desc",
+    "color": "#DC143C"
+  },
+  {
+    "title": "funding_opportunities",
+    "description": "funding_opportunities_desc",
+    "color": "#003893"
+  }
+];
+
+export default whyData;

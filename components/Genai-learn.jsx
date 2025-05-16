@@ -7,6 +7,7 @@ import {
     Zap,
   } from "lucide-react";
   
+  import { useTranslations } from "next-intl";
   const iconMap = {
     Sparkles: <Sparkles className="w-6 h-6" />,
     BookOpen: <BookOpen className="w-6 h-6" />,
@@ -15,16 +16,17 @@ import {
     Cpu: <Cpu className="w-6 h-6" />,
     Zap: <Zap className="w-6 h-6" />,
   };
-  
   const GenaiLearn = ({ title = "What You'll Learn", items = [] }) => {
     const half = Math.ceil(items.length / 2);
     const firstCol = items.slice(0, half);
     const secondCol = items.slice(half);
-  
+    const t = useTranslations("Genai");
+
     return (
+      
       <div className="py-16">
         <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-          {title}
+          {t("what_will_you_learn")}
         </h2>
         <div className="bg-white/50 dark:bg-gray-800/30 rounded-2xl p-8 backdrop-blur-sm">
           <div className="grid md:grid-cols-2 gap-8">
@@ -39,9 +41,9 @@ import {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                        {item.title}
+                        {t(item.title)}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+                      <p className="text-gray-600 dark:text-gray-300">{t(item.description)}</p>
                     </div>
                   </div>
                 ))}

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, ChevronRight, StarIcon } from "lucide-react";
 import ModeToggle from "./modeswitch";
+import LanguageSwitcher from "./LanguageSwitch";
+import { useTranslations } from "next-intl";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,28 +28,30 @@ const Nav = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
 
-  const basicNavItems = ["Home", "About", "Events", "Team"];
+  const t = useTranslations("Nav");
+  const basicNavItems = [t("home"), t("about"), t("events"), t("team")];
+  const linkNavItems = ["Home", "About", "Events", "Team"];
 
   const initiativeItems = [
     {
       name: "NPLAlgo",
-      resources: { name: "Resources", href: "#/nplalgo/resources" },
-      contest: { name: "Contest", href: "#/nplalgo/contest" },
+      resources: { name: t("resources"), href: "#/nplalgo/resources" },
+      contest: { name: t("contest"), href: "#/nplalgo/contest" },
     },
     {
       name: "NPLNeural",
-      resources: { name: "Resources", href: "#/nplneural/resources" },
-      contest: { name: "Contest", href: "#/nplneural/contest" },
+      resources: { name: t("resources"), href: "#/nplneural/resources" },
+      contest: { name: t("contest"), href: "#/nplneural/contest" },
     },
     {
       name: "NPLCareer",
-      resources: { name: "Resources", href: "#/nplcareer/resources" },
-      contest: { name: "Contest", href: "#/nplcareer/contest" },
+      resources: { name: t("resources"), href: "#/nplcareer/resources" },
+      contest: { name: t("contest"), href: "#/nplcareer/contest" },
     },
     {
       name: "NPLAcademia",
-      resources: { name: "Resources", href: "#/nplacademia/resources" },
-      contest: { name: "Contest", href: "#/nplacademia/contest" },
+      resources: { name: t("resources"), href: "#/nplacademia/resources" },
+      contest: { name: t("contest"), href: "#/nplacademia/contest" },
     },
   ];
 
@@ -95,7 +99,7 @@ const Nav = () => {
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center space-x-3 z-10">
                 <img
-                  src="./images/NPLCoder.png"
+                  src="/images/NPLCoder.png"
                   alt="NPL Coder"
                   className="w-10 h-10"
                 />
@@ -111,10 +115,14 @@ const Nav = () => {
 
               <div className="hidden xl:flex items-center justify-center flex-1 mx-8">
                 <div className="flex space-x-6 xl:space-x-8">
-                  {basicNavItems.map((item) => (
+                  {basicNavItems.map((item, index) => (
                     <Link
-                      key={item}
-                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                      key={linkNavItems[index]}
+                      href={
+                        linkNavItems[index] === "Home"
+                          ? "/"
+                          : `/${linkNavItems[index].toLowerCase()}`
+                      }
                       className="text-gray-900 dark:text-gray-300 transition-all duration-200 text-[16px] font-medium relative group"
                     >
                       {item}
@@ -164,21 +172,19 @@ const Nav = () => {
               </div>
 
               <div className="flex items-center space-x-2 md:space-x-4">
+                <LanguageSwitcher />
                 <ModeToggle />
 
                 <div className="hidden xl:flex">
                   <div className="relative inline-block">
-                    
                     <Link href="/gen-ai-fellowship">
-                    <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1.5px] focus:outline-none focus:ring-none focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#3b82f6_50%,#b3d9ff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#1e40af_50%,#b3d9ff_100%)]" />
+                      <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1.5px] focus:outline-none focus:ring-none focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#3b82f6_50%,#b3d9ff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#1e40af_50%,#b3d9ff_100%)]" />
 
-  <span className="relative inline-flex h-full w-full items-center justify-center rounded-xl bg-[#e6f0ff] dark:bg-[#1e3a8a] border border-[#b3d9ff] text-[#0f172a] dark:text-white px-6 py-1 text-md font-medium backdrop-blur-3xl">
-    GenAI Fellowship 001
-  </span>
-</button>
-
-
+                        <span className="relative inline-flex h-full w-full items-center justify-center rounded-xl bg-[#e6f0ff] dark:bg-[#1e3a8a] border border-[#b3d9ff] text-[#0f172a] dark:text-white px-6 py-1 text-md font-medium backdrop-blur-3xl">
+                          GenAI Fellowship 001
+                        </span>
+                      </button>
                     </Link>
                   </div>
                 </div>
@@ -269,15 +275,15 @@ const Nav = () => {
                 ))}
 
                 <div className="relative inline-block">
-                <Link href="/gen-ai-fellowship">
+                  <Link href="/gen-ai-fellowship">
                     <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1.5px] focus:outline-none focus:ring-none focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#3b82f6_50%,#b3d9ff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#1e40af_50%,#b3d9ff_100%)]" />
+                      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#3b82f6_50%,#b3d9ff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#1e40af_50%,#b3d9ff_100%)]" />
 
-  <span className="relative inline-flex h-full w-full items-center justify-center rounded-xl bg-[#e6f0ff] dark:bg-[#1e3a8a] border border-[#b3d9ff] text-[#0f172a] dark:text-white px-6 py-1 text-md font-medium backdrop-blur-3xl">
-    GenAI Fellowship 001
-  </span>
-</button>
-</Link>
+                      <span className="relative inline-flex h-full w-full items-center justify-center rounded-xl bg-[#e6f0ff] dark:bg-[#1e3a8a] border border-[#b3d9ff] text-[#0f172a] dark:text-white px-6 py-1 text-md font-medium backdrop-blur-3xl">
+                        GenAI Fellowship 001
+                      </span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

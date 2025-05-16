@@ -9,6 +9,7 @@ import {
   ArrowUpRight,
   Mail,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const SocialIcon = ({ icon: Icon, href = "#", className = "" }) => (
   <Link
@@ -24,25 +25,25 @@ const SocialIcon = ({ icon: Icon, href = "#", className = "" }) => (
 const socialIcons = [
   { icon: Linkedin, platform: "https://www.linkedin.com/company/nplcoder/" },
   { icon: Instagram, platform: "https://www.instagram.com/nplcoder/" },
-  // { icon: Facebook, platform: 'https://www.facebook.com/nplcoder/' },
+  { icon: Facebook, platform: 'https://www.facebook.com/people/NPLCoder/61576287650990/' },
   { icon: Mail, platform: "mailto:work@nplcoder.org" },
 ];
 
-const quickLinks = [
-  { href: "/about", text: "About" },
-  { href: "/noi", text: "NOI" },
-  { href: "/ndc", text: "NDC" },
-  { href: "/team", text: "Team" },
-];
-
-const contactInfo = [
-  "+1 615-484-1629(USA) ",
-  "+977 9862021531(Nepal)",
-  "work@nplcoder.org",
-  "Kathmandu, Nepal",
-];
-
 const Footer = () => {
+  const t = useTranslations("Footer");
+  const quickLinks = [
+    { href: "/", text: t("quick_links.home") },
+    { href: "/about", text: t("quick_links.about") },
+    { href: "/team", text: t("quick_links.team") },
+    { href: "/events", text: t("quick_links.events") },
+  
+  ];
+  const contactInfo = [
+   t("contact_info.us"),
+   t("contact_info.nepal"),
+   t("contact_info.email"),  
+    t("contact_info.location"),
+  ];
   return (
     <footer className="relative border-t border-gray-300 dark:border-gray-800 bg-white dark:bg-[#24293d] text-gray-800 dark:text-gray-300">
       <div className="absolute inset-0 w-full h-full">
@@ -53,7 +54,7 @@ const Footer = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col justify-center items-center text-center">
               <h1 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
-                Shaping Nepal's Future with Computational Innovation
+               {t('tagline')}
               </h1>
 
               <a
@@ -78,7 +79,7 @@ const Footer = () => {
                     />
                   </svg>
                   <p className="pl-3 group-hover:pl-4 transition-all duration-300">
-                    Join Discord{" "}
+                    {t('join_discord')}{" "}
                   </p>
                   <ArrowUpRight className="ml-2 w-5 h-5 group-hover:ml-3 transition-all duration-300" />
                 </button>
@@ -104,7 +105,6 @@ const Footer = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-            {/* Logo for desktop, hidden on mobile */}
             <div className="hidden md:block space-y-4">
               <Image
                 src="/images/NPLCoder.png"
@@ -120,7 +120,7 @@ const Footer = () => {
 
             <div className="text-center md:text-left">
               <h4 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                Navigate
+                {t('navigate')}
               </h4>
               <ul className="space-y-2">
                 {quickLinks.map(({ href, text }) => (
@@ -138,7 +138,7 @@ const Footer = () => {
 
             <div className="text-center md:text-left">
               <h4 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                Contact Us
+                {t('contact_us')}
               </h4>
               <ul className="space-y-2">
                 {contactInfo.map((info) => (
@@ -151,7 +151,7 @@ const Footer = () => {
 
             <div className="col-span-2 md:col-span-1 text-center md:text-left mt-6 md:mt-0">
               <h4 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                Follow Us
+                {t('follow_us')}
               </h4>
               <div className="flex gap-4 justify-center md:justify-start">
                 {socialIcons.map(({ icon: Icon, platform }) => (
@@ -165,9 +165,9 @@ const Footer = () => {
         <div className="border-t border-gray-300 dark:border-gray-800">
           <div className="container mx-auto px-4 py-6 text-center flex items-center justify-center">
             <p className="text-gray-600 dark:text-gray-300">
-              Made with
+              {t('made_with')}
               <Heart className="w-5 h-5 text-[#DC143C] fill-current inline-block mx-1" />
-              by Aashish Karki & Safal Poudel
+              {t("by")}
             </p>
           </div>
         </div>

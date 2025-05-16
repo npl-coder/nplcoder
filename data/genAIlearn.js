@@ -1,42 +1,42 @@
 const genAIlearn = [
     {
-      "title": "AI-First Applications",
-      "description": "Design and build AI-first applications using cutting-edge tools and platforms.",
+      "title": "ai_first_applications",
+      "description": "ai_first_applications_desc",
       "icon": "Sparkles",
       "fromColor": "#DC143C",
       "toColor": "#DC143C70"
     },
     {
-      "title": "RAG Pipelines",
-      "description": "Practical implementation of retrieval-augmented generation (RAG) pipelines.",
+      "title": "rag_pipelines",
+      "description": "rag_pipelines_desc",
       "icon": "BookOpen",
       "fromColor": "#003893",
       "toColor": "#00389370"
     },
     {
-      "title": "AI Agents",
-      "description": "Development of autonomous AI agents using frameworks like LangChain and LangGraph.",
+      "title": "ai_agents",
+      "description": "ai_agents_desc",
       "icon": "Brain",
       "fromColor": "#DC143C",
       "toColor": "#DC143C70"
     },
     {
-      "title": "Production AI",
-      "description": "Best practices for deploying, scaling, and monitoring AI systems in production.",
+      "title": "production_ai",
+      "description": "production_ai_desc",
       "icon": "Cloud",
       "fromColor": "#003893",
       "toColor": "#00389370"
     },
     {
-      "title": "Open-Source Contribution",
-      "description": "Learn how to contribute to open-source AI projects and build your technical profile.",
+      "title": "open_source_contribution",
+      "description": "open_source_contribution_desc",
       "icon": "Cpu",
       "fromColor": "#DC143C",
       "toColor": "#DC143C70"
     },
     {
-      "title": "Portfolio Projects",
-      "description": "Build a portfolio-ready project that could get you hired, funded, or both.",
+      "title": "portfolio_projects",
+      "description": "portfolio_projects_desc",
       "icon": "Zap",
       "fromColor": "#003893",
       "toColor": "#00389370"

@@ -1,10 +1,12 @@
 import { Trophy } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const Timeline = ({ title = "Fellowship Timeline", events = [] }) => {
+const Timeline = ({ events = [] }) => {
+  const t = useTranslations("Genai");
   return (
     <div className="py-16 px-4 container mx-auto">
       <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-        {title}
+       {t("fellowship_time")}
       </h2>
       <div className="relative">
         <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#DC143C] to-[#003893] md:left-1/2 md:transform md:-translate-x-1/2"></div>
@@ -25,13 +27,13 @@ const Timeline = ({ title = "Fellowship Timeline", events = [] }) => {
                       : "text-gray-900 dark:text-white"
                   }`}
                 >
-                  {event.title}
+                  {t(event.title)}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {event.subtitle}
+                  {t(event.subtitle)}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mt-2 md:hidden">
-                  {event.description}
+                  {t(event.description)}
                 </p>
               </div>
 
@@ -48,7 +50,7 @@ const Timeline = ({ title = "Fellowship Timeline", events = [] }) => {
               </div>
 
               <div className="hidden md:block md:w-1/2 md:pl-12">
-                <p className="text-gray-600 dark:text-gray-300 max-w-[400px]">{event.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 max-w-[400px]">{t(event.description)}</p>
               </div>
             </div>
           ))}
