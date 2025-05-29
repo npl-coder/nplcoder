@@ -1,8 +1,10 @@
 {
-  "/[locale]/page": "app/[locale]/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/[locale]/events/page": "app/[locale]/events/page.js",
   "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/ndc/page": "app/[locale]/ndc/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/noi/page": "app/[locale]/noi/page.js",
   "/[locale]/team/page": "app/[locale]/team/page.js",
   "/[locale]/gen-ai-fellowship/page": "app/[locale]/gen-ai-fellowship/page.js"
 }

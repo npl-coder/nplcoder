@@ -35,6 +35,34 @@ const teamMembers = [
     category: "Founding",
   },
   {
+    name: "Atish Shah Rouniyar",
+    title: "Graduate student at Wichita State University",
+    image: "./images/teamMembers/Atish.jpeg",
+    linkedin: "https://www.linkedin.com/in/atishshahrouniyar/",
+    category: "Operations",
+  },
+  {
+    name: "Manish Dhakal",
+    title: "PhD Student at GSU",
+    image: "./images/teamMembers/Manish.jpeg",
+    linkedin: "https://www.linkedin.com/in/manishdhakal521/",
+    category: "Operations",
+  },
+  {
+    name: "Rohit Pokhrel",
+    title: "Incoming SWE @ Two Sigma | Senior @ Oberlin",
+    image: "./images/teamMembers/Rohit.jpeg",
+    linkedin: "https://www.linkedin.com/in/rohitpoks/",
+    category: "Operations",
+  },
+  {
+    name: "Hemanta Sharma",
+    title: "CS @ UC Berkeley",
+    image: "./images/teamMembers/hemanta.jpeg",
+    linkedin: "https://www.linkedin.com/in/hemanta-sharma-586089315/",
+    category: "Operations",
+  },
+  {
     name: "Sumit Yadav",
     title: "AI Engineer",
     image: "../images/teamMembers/Sumit.jpeg",
@@ -57,13 +85,6 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/safalpoudel808/",
     category: "Operations",
   },
-  {
-    name: "Mahesh Pandit",
-    title: "Undergraduate Student",
-    image: "https://uunchai.org/assets/img/mahesh.jpg",
-    website: "https://maheshpandit.com.np/",
-    category: "Operations",
-  },
   // {
   //   name: "Sujit Maharjan",
   //   title: "PhD Student in Computer Science, University of Texas at Arlington",
@@ -76,6 +97,14 @@ const teamMembers = [
     title: "Founder & Visionary |  Advisor (Current)",
     image: "../images/teamMembers/Amrit.jpeg",
     linkedin: "https://www.linkedin.com/in/amritkandel/",
+    category: "Advisory",
+  },
+  {
+    name: "Debojoti Das Soumya",
+    title: "Competitive Programmer | 3x IOI Medalist, MIT",
+    image: "./images/teamMembers/Soumya.jpeg",
+    linkedin: "https://www.linkedin.com/in/debojoti-das-soumya-683539288/",
+    website: "https://stats.ioinformatics.org/people/7675/",
     category: "Advisory",
   },
   // {
@@ -110,7 +139,7 @@ export default function TeamPage() {
         {/* Executive Members Section */}
         <div className="mt-14">
           <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white text-center">
-            {t('founding_members')}
+            {t("founding_members")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
             {executiveMembers.map((member) => (
@@ -129,7 +158,7 @@ export default function TeamPage() {
         {/* Operations Members Section */}
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-2 mt-2  text-gray-900 dark:text-white text-center">
-          {t('project_members')}
+            {t("project_members")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
             {operationMembers.map((member) => (
@@ -148,14 +177,14 @@ export default function TeamPage() {
         {/* Advisory Members Section */}
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-6 mt-2 text-gray-900 dark:text-white text-center">
-          {t('advisory_members')}
+            {t("advisory_members")}
           </h2>
           <div className="max-w-4xl mx-auto">
             <div>
               {advisoryMembers.map((member) => (
                 <div
                   key={member.name}
-                  className="bg-gray-100 dark:bg-gray-800 p-5 rounded-lg border-l-4 border-[#003893] transition-all duration-300 hover:shadow-md hover:border-[#DC143C] flex flex-col items-center text-center"
+                  className="bg-gray-100 dark:bg-gray-800 p-5 mb-4 rounded-lg border-l-4 border-[#003893] transition-all duration-300 hover:shadow-md hover:border-[#DC143C] flex flex-col items-center text-center"
                 >
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white">
                     {member.name}
