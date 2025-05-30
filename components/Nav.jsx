@@ -29,6 +29,7 @@ const Nav = () => {
   }, [lastScroll]);
 
   const t = useTranslations("Nav");
+  const h = useTranslations("Hero");
   const basicNavItems = [t("home"), t("about"), t("events"), t("team")];
   const linkNavItems = ["Home", "About", "Events", "Team"];
 
@@ -177,15 +178,11 @@ const Nav = () => {
 
                 <div className="hidden xl:flex">
                   <div className="relative inline-block">
-                    <Link href="/gen-ai-fellowship">
-                      <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1.5px] focus:outline-none focus:ring-none focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#3b82f6_50%,#b3d9ff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#1e40af_50%,#b3d9ff_100%)]" />
-
-                        <span className="relative inline-flex h-full w-full items-center justify-center rounded-xl bg-[#e6f0ff] dark:bg-[#1e3a8a] border border-[#b3d9ff] text-[#0f172a] dark:text-white px-6 py-1 text-md font-medium backdrop-blur-3xl">
-                          GenAI Fellowship 001
-                        </span>
-                      </button>
-                    </Link>
+                  <a href="https://forms.gle/Z4bPVsWo5sdQLEvs5" target="_blank" rel="noreferrer">
+                <button className=" hover:scale-105 py-3 sm:py-4 px-6 rounded-xl font-normal border border-gray-600 text-gray-800 dark:text-white hover:bg-white/10 hover:shadow-lg transition duration-300">
+                  {h('joinbutton')}
+                </button>
+              </a>
                   </div>
                 </div>
 
@@ -275,15 +272,21 @@ const Nav = () => {
                 ))}
 
                 <div className="relative inline-block">
-                  <Link href="/gen-ai-fellowship">
-                    <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1.5px] focus:outline-none focus:ring-none focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+
+                  <a href="https://forms.gle/Z4bPVsWo5sdQLEvs5" target="_blank" rel="noreferrer">
+                <button className="bg-gradient-to-r hover:scale-105 from-[#DC143C] to-[#003893] text-white py-3 sm:py-4 px-6 rounded-xl font-semibold mt-4 sm:mt-6 hover:shadow-lg transition duration-300">
+                  {h('joinbutton')}
+                </button>
+              </a>
+                    
+                    {/* <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1.5px] focus:outline-none focus:ring-none focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#3b82f6_50%,#b3d9ff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#1e40af_50%,#b3d9ff_100%)]" />
 
                       <span className="relative inline-flex h-full w-full items-center justify-center rounded-xl bg-[#e6f0ff] dark:bg-[#1e3a8a] border border-[#b3d9ff] text-[#0f172a] dark:text-white px-6 py-1 text-md font-medium backdrop-blur-3xl">
                         GenAI Fellowship 001
                       </span>
                     </button>
-                  </Link>
+                    */}
                 </div>
               </div>
             </div>
