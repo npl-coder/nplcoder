@@ -42,7 +42,7 @@ function LanguageSwitcher() {
         <DropdownMenuTrigger asChild>
           <Button variant="outline" className="flex items-center p-2 dark:border-gray-600 rounded text-gray-700 dark:bg-transparent dark:text-white transition">
             <Image
-              src={locale === "en" ? "/images/english.webp" : "/images/nepali.png"}
+              src={locale === "en" ? "/images/english.png" : "/images/nepali.png"}
               alt={locale === "en" ? "English Flag" : "Nepali Flag"}
               className="transition-transform duration-200"
               width={20}
@@ -55,7 +55,7 @@ function LanguageSwitcher() {
 ">
           <DropdownMenuItem onClick={() => switchLanguage("en")}>
             <Image
-              src="/images/english.webp"
+              src="/images/english.png"
               alt="English Flag"
               width={20}
               height={20}
