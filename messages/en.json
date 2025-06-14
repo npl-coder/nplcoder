@@ -9,7 +9,9 @@
     "events": "Events",
     "team": "Team",
     "resources": "Resources",
-    "contest": "Contest"
+    "contest": "Contest",
+    "initiatives": "Our Initiatives"
+
   },
   "Footer": {
     "tagline": "Shaping Nepal's Future with Computational Innovation",

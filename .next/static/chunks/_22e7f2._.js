@@ -631,8 +631,11 @@ const Nav = ()=>{
     const [isScrollingUp, setIsScrollingUp] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     const [lastScroll, setLastScroll] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const [activeDropdown, setActiveDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [activeNestedDropdown, setActiveNestedDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [mobileActiveInitiative, setMobileActiveInitiative] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [mobileActiveNestedInitiative, setMobileActiveNestedInitiative] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const dropdownTimerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const nestedDropdownTimerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Nav.useEffect": ()=>{
             const handleScroll = {
@@ -658,14 +661,14 @@ const Nav = ()=>{
     const basicNavItems = [
         t("home"),
         t("about"),
-        t("events"),
-        t("team")
+        t("team"),
+        t("events")
     ];
     const linkNavItems = [
         "Home",
         "About",
-        "Events",
-        "Team"
+        "Team",
+        "Events"
     ];
     const initiativeItems = [
         {
@@ -713,22 +716,40 @@ const Nav = ()=>{
             }
         }
     ];
-    const handleMouseEnter = (index)=>{
+    const handleMouseEnter = ()=>{
         if (dropdownTimerRef.current) {
             clearTimeout(dropdownTimerRef.current);
         }
-        setActiveDropdown(index);
+        setActiveDropdown('initiatives');
     };
     const handleMouseLeave = ()=>{
         dropdownTimerRef.current = setTimeout(()=>{
             setActiveDropdown(null);
+            setActiveNestedDropdown(null);
         }, 200);
     };
-    const handleDropdownMouseEnter = (index)=>{
+    const handleDropdownMouseEnter = ()=>{
         if (dropdownTimerRef.current) {
             clearTimeout(dropdownTimerRef.current);
         }
-        setActiveDropdown(index);
+        setActiveDropdown('initiatives');
+    };
+    const handleNestedMouseEnter = (index)=>{
+        if (nestedDropdownTimerRef.current) {
+            clearTimeout(nestedDropdownTimerRef.current);
+        }
+        setActiveNestedDropdown(index);
+    };
+    const handleNestedMouseLeave = ()=>{
+        nestedDropdownTimerRef.current = setTimeout(()=>{
+            setActiveNestedDropdown(null);
+        }, 200);
+    };
+    const handleNestedDropdownMouseEnter = (index)=>{
+        if (nestedDropdownTimerRef.current) {
+            clearTimeout(nestedDropdownTimerRef.current);
+        }
+        setActiveNestedDropdown(index);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         className: `fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrollingUp ? "translate-y-0" : "-translate-y-full"}`,
@@ -737,7 +758,7 @@ const Nav = ()=>{
                 className: `absolute inset-x-0 top-0 h-full transition-all duration-300 ${scrollPosition > 50 ? " " : "bg-transparent"}`
             }, void 0, false, {
                 fileName: "[project]/components/Nav.jsx",
-                lineNumber: 85,
+                lineNumber: 109,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -760,7 +781,7 @@ const Nav = ()=>{
                                                 className: "w-10 h-10"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Nav.jsx",
-                                                lineNumber: 102,
+                                                lineNumber: 126,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -771,7 +792,7 @@ const Nav = ()=>{
                                                         children: "NPL"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Nav.jsx",
-                                                        lineNumber: 108,
+                                                        lineNumber: 132,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -779,25 +800,25 @@ const Nav = ()=>{
                                                         children: "Coder"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Nav.jsx",
-                                                        lineNumber: 111,
+                                                        lineNumber: 135,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Nav.jsx",
-                                                lineNumber: 107,
+                                                lineNumber: 131,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Nav.jsx",
-                                        lineNumber: 101,
+                                        lineNumber: 125,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "hidden xl:flex items-center justify-center flex-1 mx-8",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex space-x-6 xl:space-x-8",
+                                            className: "flex items-center space-x-6 xl:space-x-8",
                                             children: [
                                                 basicNavItems.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                         href: linkNavItems[index] === "Home" ? "/" : `/${linkNavItems[index].toLowerCase()}`,
@@ -808,88 +829,132 @@ const Nav = ()=>{
                                                                 className: "absolute inset-x-0 bottom-0 h-0.5 bg-gray-900 dark:bg-white transform scale-x-0 origin-left transition-transform group-hover:scale-x-100"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/Nav.jsx",
-                                                                lineNumber: 130,
+                                                                lineNumber: 154,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, linkNavItems[index], true, {
                                                         fileName: "[project]/components/Nav.jsx",
-                                                        lineNumber: 120,
+                                                        lineNumber: 144,
                                                         columnNumber: 21
                                                     }, this)),
-                                                initiativeItems.map((initiative, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "relative group",
-                                                        onMouseEnter: ()=>handleMouseEnter(index),
-                                                        onMouseLeave: handleMouseLeave,
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "text-gray-900 dark:text-gray-300 transition-all duration-200 text-[16px] font-medium flex items-center cursor-pointer",
-                                                                children: [
-                                                                    initiative.name,
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
-                                                                        className: "ml-1 h-4 w-4"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/Nav.jsx",
-                                                                        lineNumber: 143,
-                                                                        columnNumber: 25
-                                                                    }, this)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/Nav.jsx",
-                                                                lineNumber: 141,
-                                                                columnNumber: 23
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: `absolute left-0 mt-2 w-48 rounded-md bg-white dark:bg-[#2C3043] shadow-lg border border-gray-100 dark:border-gray-700 z-[150] transition-all duration-200 ${activeDropdown === index ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-1 pointer-events-none"}`,
-                                                                onMouseEnter: ()=>handleDropdownMouseEnter(index),
-                                                                onMouseLeave: handleMouseLeave,
-                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "py-1",
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                                            href: initiative.resources.href,
-                                                                            className: "block px-4 py-2 text-sm text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800",
-                                                                            children: initiative.resources.name
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/components/Nav.jsx",
-                                                                            lineNumber: 156,
-                                                                            columnNumber: 27
-                                                                        }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                                            href: initiative.contest.href,
-                                                                            className: "block px-4 py-2 text-sm text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800",
-                                                                            children: initiative.contest.name
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/components/Nav.jsx",
-                                                                            lineNumber: 162,
-                                                                            columnNumber: 27
-                                                                        }, this)
-                                                                    ]
-                                                                }, void 0, true, {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "relative group",
+                                                    onMouseEnter: handleMouseEnter,
+                                                    onMouseLeave: handleMouseLeave,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "text-gray-900 dark:text-gray-300 transition-all duration-200 text-[16px] font-medium flex items-center cursor-pointer",
+                                                            children: [
+                                                                t("initiatives"),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
+                                                                    className: "ml-1 h-4 w-4"
+                                                                }, void 0, false, {
                                                                     fileName: "[project]/components/Nav.jsx",
-                                                                    lineNumber: 155,
-                                                                    columnNumber: 25
+                                                                    lineNumber: 165,
+                                                                    columnNumber: 23
                                                                 }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/components/Nav.jsx",
+                                                            lineNumber: 163,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: `absolute left-0 mt-2 w-48 rounded-md bg-white dark:bg-[#2C3043] shadow-lg border border-gray-100 dark:border-gray-700 z-[150] transition-all duration-200 ${activeDropdown === 'initiatives' ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-1 pointer-events-none"}`,
+                                                            onMouseEnter: handleDropdownMouseEnter,
+                                                            onMouseLeave: handleMouseLeave,
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "py-1",
+                                                                children: initiativeItems.map((initiative, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "relative",
+                                                                        onMouseEnter: ()=>handleNestedMouseEnter(index),
+                                                                        onMouseLeave: handleNestedMouseLeave,
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                className: "flex items-center justify-between px-4 py-2 text-sm text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer",
+                                                                                children: [
+                                                                                    initiative.name,
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
+                                                                                        className: "h-4 w-4"
+                                                                                    }, void 0, false, {
+                                                                                        fileName: "[project]/components/Nav.jsx",
+                                                                                        lineNumber: 187,
+                                                                                        columnNumber: 31
+                                                                                    }, this)
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/components/Nav.jsx",
+                                                                                lineNumber: 185,
+                                                                                columnNumber: 29
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                className: `absolute left-full top-0 ml-1 w-40 rounded-md bg-white dark:bg-[#2C3043] shadow-lg border border-gray-100 dark:border-gray-700 z-[160] transition-all duration-200 ${activeNestedDropdown === index ? "opacity-100 translate-x-0 pointer-events-auto" : "opacity-0 translate-x-1 pointer-events-none"}`,
+                                                                                onMouseEnter: ()=>handleNestedDropdownMouseEnter(index),
+                                                                                onMouseLeave: handleNestedMouseLeave,
+                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                    className: "py-1",
+                                                                                    children: [
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                                            href: initiative.resources.href,
+                                                                                            className: "block px-4 py-2 text-sm text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800",
+                                                                                            children: initiative.resources.name
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/Nav.jsx",
+                                                                                            lineNumber: 201,
+                                                                                            columnNumber: 33
+                                                                                        }, this),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                                            href: initiative.contest.href,
+                                                                                            className: "block px-4 py-2 text-sm text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800",
+                                                                                            children: initiative.contest.name
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/Nav.jsx",
+                                                                                            lineNumber: 207,
+                                                                                            columnNumber: 33
+                                                                                        }, this)
+                                                                                    ]
+                                                                                }, void 0, true, {
+                                                                                    fileName: "[project]/components/Nav.jsx",
+                                                                                    lineNumber: 200,
+                                                                                    columnNumber: 31
+                                                                                }, this)
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/components/Nav.jsx",
+                                                                                lineNumber: 191,
+                                                                                columnNumber: 29
+                                                                            }, this)
+                                                                        ]
+                                                                    }, initiative.name, true, {
+                                                                        fileName: "[project]/components/Nav.jsx",
+                                                                        lineNumber: 179,
+                                                                        columnNumber: 27
+                                                                    }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/Nav.jsx",
-                                                                lineNumber: 146,
+                                                                lineNumber: 177,
                                                                 columnNumber: 23
                                                             }, this)
-                                                        ]
-                                                    }, initiative.name, true, {
-                                                        fileName: "[project]/components/Nav.jsx",
-                                                        lineNumber: 135,
-                                                        columnNumber: 21
-                                                    }, this))
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/Nav.jsx",
+                                                            lineNumber: 168,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/Nav.jsx",
+                                                    lineNumber: 158,
+                                                    columnNumber: 19
+                                                }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Nav.jsx",
-                                            lineNumber: 118,
+                                            lineNumber: 142,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/Nav.jsx",
-                                        lineNumber: 117,
+                                        lineNumber: 141,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -897,12 +962,12 @@ const Nav = ()=>{
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$LanguageSwitch$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                                 fileName: "[project]/components/Nav.jsx",
-                                                lineNumber: 176,
+                                                lineNumber: 224,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$modeswitch$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                                 fileName: "[project]/components/Nav.jsx",
-                                                lineNumber: 177,
+                                                lineNumber: 225,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -918,22 +983,22 @@ const Nav = ()=>{
                                                             children: h('joinbutton')
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Nav.jsx",
-                                                            lineNumber: 182,
-                                                            columnNumber: 17
+                                                            lineNumber: 230,
+                                                            columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Nav.jsx",
-                                                        lineNumber: 181,
-                                                        columnNumber: 19
+                                                        lineNumber: 229,
+                                                        columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Nav.jsx",
-                                                    lineNumber: 180,
+                                                    lineNumber: 228,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Nav.jsx",
-                                                lineNumber: 179,
+                                                lineNumber: 227,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -952,102 +1017,136 @@ const Nav = ()=>{
                                                         d: isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Nav.jsx",
-                                                        lineNumber: 200,
+                                                        lineNumber: 248,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Nav.jsx",
-                                                    lineNumber: 194,
+                                                    lineNumber: 242,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Nav.jsx",
-                                                lineNumber: 189,
+                                                lineNumber: 237,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Nav.jsx",
-                                        lineNumber: 175,
+                                        lineNumber: 223,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Nav.jsx",
-                                lineNumber: 100,
+                                lineNumber: 124,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: `xl:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-screen opacity-100 mt-4" : "max-h-0 opacity-0"}`,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex flex-col space-y-4 px-4 pb-6",
+                                    className: "flex flex-col space-y-4 px-4 pb-6 ",
                                     children: [
-                                        basicNavItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: item === "Home" ? "/" : `/${item.toLowerCase()}`,
+                                        basicNavItems.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: linkNavItems[index] === "Home" ? "/" : `/${linkNavItems[index].toLowerCase()}`,
                                                 className: "text-gray-900 dark:text-gray-300 transition-colors text-lg font-medium",
                                                 onClick: ()=>setIsOpen(false),
                                                 children: item
                                             }, item, false, {
                                                 fileName: "[project]/components/Nav.jsx",
-                                                lineNumber: 222,
+                                                lineNumber: 270,
                                                 columnNumber: 19
                                             }, this)),
-                                        initiativeItems.map((initiative, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "relative",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "text-gray-900 dark:text-gray-300 text-lg font-medium flex justify-between items-center cursor-pointer",
-                                                        onClick: ()=>setMobileActiveInitiative(mobileActiveInitiative === index ? null : index),
-                                                        children: [
-                                                            initiative.name,
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                                                                className: `h-5 w-5 transition-transform duration-300 ${mobileActiveInitiative === index ? "rotate-90" : ""}`
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/Nav.jsx",
-                                                                lineNumber: 243,
-                                                                columnNumber: 23
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/components/Nav.jsx",
-                                                        lineNumber: 234,
-                                                        columnNumber: 21
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: `pl-4 mt-2 space-y-2 overflow-hidden transition-all duration-300 ${mobileActiveInitiative === index ? "max-h-24 opacity-100" : "max-h-0 opacity-0"}`,
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                                href: initiative.resources.href,
-                                                                className: "block text-gray-600 dark:text-gray-400 text-base",
-                                                                onClick: ()=>setIsOpen(false),
-                                                                children: initiative.resources.name
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/Nav.jsx",
-                                                                lineNumber: 256,
-                                                                columnNumber: 23
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                                href: initiative.contest.href,
-                                                                className: "block text-gray-600 dark:text-gray-400 text-base",
-                                                                onClick: ()=>setIsOpen(false),
-                                                                children: initiative.contest.name
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/Nav.jsx",
-                                                                lineNumber: 263,
-                                                                columnNumber: 23
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/components/Nav.jsx",
-                                                        lineNumber: 249,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                ]
-                                            }, initiative.name, true, {
-                                                fileName: "[project]/components/Nav.jsx",
-                                                lineNumber: 233,
-                                                columnNumber: 19
-                                            }, this)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "relative",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "text-gray-900 dark:text-gray-300 text-lg font-medium flex justify-between items-center cursor-pointer",
+                                                    onClick: ()=>setMobileActiveInitiative(mobileActiveInitiative === 'initiatives' ? null : 'initiatives'),
+                                                    children: [
+                                                        "Initiatives",
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
+                                                            className: `h-5 w-5 transition-transform duration-300 ${mobileActiveInitiative === 'initiatives' ? "rotate-90" : ""}`
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/Nav.jsx",
+                                                            lineNumber: 291,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/Nav.jsx",
+                                                    lineNumber: 282,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: `pl-4 mt-2 space-y-2 overflow-hidden transition-all duration-300 ${mobileActiveInitiative === 'initiatives' ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`,
+                                                    children: initiativeItems.map((initiative, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "relative",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "text-gray-600 dark:text-gray-400 text-base flex justify-between items-center cursor-pointer py-1",
+                                                                    onClick: ()=>setMobileActiveNestedInitiative(mobileActiveNestedInitiative === index ? null : index),
+                                                                    children: [
+                                                                        initiative.name,
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
+                                                                            className: `h-4 w-4 transition-transform duration-300 ${mobileActiveNestedInitiative === index ? "rotate-90" : ""}`
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/components/Nav.jsx",
+                                                                            lineNumber: 315,
+                                                                            columnNumber: 27
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/components/Nav.jsx",
+                                                                    lineNumber: 306,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: `pl-4 mt-1 space-y-1 overflow-hidden transition-all duration-300 ${mobileActiveNestedInitiative === index ? "max-h-20 opacity-100" : "max-h-0 opacity-0"}`,
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                            href: initiative.resources.href,
+                                                                            className: "block text-gray-500 dark:text-gray-500 text-sm py-1",
+                                                                            onClick: ()=>setIsOpen(false),
+                                                                            children: initiative.resources.name
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/components/Nav.jsx",
+                                                                            lineNumber: 328,
+                                                                            columnNumber: 27
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                            href: initiative.contest.href,
+                                                                            className: "block text-gray-500 dark:text-gray-500 text-sm py-1",
+                                                                            onClick: ()=>setIsOpen(false),
+                                                                            children: initiative.contest.name
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/components/Nav.jsx",
+                                                                            lineNumber: 335,
+                                                                            columnNumber: 27
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/components/Nav.jsx",
+                                                                    lineNumber: 321,
+                                                                    columnNumber: 25
+                                                                }, this)
+                                                            ]
+                                                        }, initiative.name, true, {
+                                                            fileName: "[project]/components/Nav.jsx",
+                                                            lineNumber: 305,
+                                                            columnNumber: 23
+                                                        }, this))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/Nav.jsx",
+                                                    lineNumber: 297,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/Nav.jsx",
+                                            lineNumber: 281,
+                                            columnNumber: 17
+                                        }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "relative inline-block",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1059,54 +1158,54 @@ const Nav = ()=>{
                                                     children: h('joinbutton')
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Nav.jsx",
-                                                    lineNumber: 277,
-                                                    columnNumber: 17
+                                                    lineNumber: 350,
+                                                    columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Nav.jsx",
-                                                lineNumber: 276,
+                                                lineNumber: 349,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/Nav.jsx",
-                                            lineNumber: 274,
+                                            lineNumber: 348,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Nav.jsx",
-                                    lineNumber: 220,
+                                    lineNumber: 268,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Nav.jsx",
-                                lineNumber: 215,
+                                lineNumber: 263,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Nav.jsx",
-                        lineNumber: 99,
+                        lineNumber: 123,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Nav.jsx",
-                    lineNumber: 92,
+                    lineNumber: 116,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Nav.jsx",
-                lineNumber: 91,
+                lineNumber: 115,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Nav.jsx",
-        lineNumber: 80,
+        lineNumber: 104,
         columnNumber: 5
     }, this);
 };
-_s(Nav, "crlS9QzZ1IEgc8hWx9y/g4CbnZ4=", false, function() {
+_s(Nav, "sENXHoeDyiLLkRJus17RJu9kgWA=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$intl$2f$dist$2f$esm$2f$development$2f$react$2d$client$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["useTranslations"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$intl$2f$dist$2f$esm$2f$development$2f$react$2d$client$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["useTranslations"]
