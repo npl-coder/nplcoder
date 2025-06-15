@@ -46,7 +46,7 @@
     "description": "NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation. We provide resources, mentorship, and opportunities to nurture talent that will drive global change while proudly representing Nepal, blending the nation's rich heritage with technology.",
     "joinbutton": "Join Our Initiative",
     "aboutbutton": "About Us",
-    "members": "+300 members",
+    "members": "+400 members",
     "discord": "Join our Discord"
   },
   "Initiatives": {
@@ -100,7 +100,7 @@
     "page_title": "NPLCoder GenAI Builders Fellowship 001",
     "program_title": "Build real AI products in 6 weeks",
     "description": "A 6-week intensive program for Nepali students and professionals looking to become hands-on AI builders. This isn't another course, it's a launchpad for building real, usable, AI-first products.",
-    "apply_button": "Apply Now",
+    "apply_button": "Join the Waitlist",
     "share_button": "Share this fellowship",
     "link_copied": "Link copied!",
     "fellowship_time" : "Fellowship Timeline",
@@ -118,8 +118,8 @@
     "education_desc": "Undergraduate student or beyond",
     "commitment": "Commitment",
     "commitment_desc": "10–14 hours per week for 6 weeks",
-    "application_deadline": "Application Deadline: May 29, 2025",
-    "apply_now": "Apply for the Fellowship",
+    "application_deadline": "Application Deadline : 29 May, 2025",
+    "apply_now": "Join the Waitlist",
 
     
       "ai_first_applications": "AI-First Applications",
