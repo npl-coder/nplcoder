@@ -10,7 +10,10 @@
     "team": "Team",
     "resources": "Resources",
     "contest": "Contest",
-    "initiatives": "Our Initiatives"
+    "initiatives": "Our Initiatives",
+    "contact": "Contact Us",
+    "past_events":"Past Events"
+
 
   },
   "Footer": {

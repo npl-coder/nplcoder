@@ -33,8 +33,13 @@ const Nav = () => {
 
   const t = useTranslations("Nav");
   const h = useTranslations("Hero");
-  const basicNavItems = [t("home"), t("about"), t("team"), t("events")];
-  const linkNavItems = ["Home", "About", "Team", "Events"];
+  const basicNavItems = [t("home"), t("about"), t("team")];
+  const linkNavItems = ["Home", "About", "Team"];
+
+  const eventsItems = [
+    { name: t("events"), href: "/events" },
+    { name: t("past_events"), href: "#" }
+  ];
 
   const initiativeItems = [
     {
@@ -59,11 +64,11 @@ const Nav = () => {
     },
   ];
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (dropdownType) => {
     if (dropdownTimerRef.current) {
       clearTimeout(dropdownTimerRef.current);
     }
-    setActiveDropdown('initiatives');
+    setActiveDropdown(dropdownType);
   };
 
   const handleMouseLeave = () => {
@@ -73,11 +78,11 @@ const Nav = () => {
     }, 200);
   };
 
-  const handleDropdownMouseEnter = () => {
+  const handleDropdownMouseEnter = (dropdownType) => {
     if (dropdownTimerRef.current) {
       clearTimeout(dropdownTimerRef.current);
     }
-    setActiveDropdown('initiatives');
+    setActiveDropdown(dropdownType);
   };
 
   const handleNestedMouseEnter = (index) => {
@@ -155,9 +160,44 @@ const Nav = () => {
                     </Link>
                   ))}
 
+                  {/* Events Dropdown */}
                   <div
                     className="relative group"
-                    onMouseEnter={handleMouseEnter}
+                    onMouseEnter={() => handleMouseEnter('events')}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="text-gray-900 dark:text-gray-300 transition-all duration-200 text-[16px] font-medium flex items-center cursor-pointer">
+                      {t("events")}
+                      <ChevronDown className="ml-1 h-4 w-4" />
+                    </div>
+
+                    <div
+                      className={`absolute left-0 mt-2 w-48 rounded-md bg-white dark:bg-[#2C3043] shadow-lg border border-gray-100 dark:border-gray-700 z-[150] transition-all duration-200 ${
+                        activeDropdown === 'events'
+                          ? "opacity-100 translate-y-0 pointer-events-auto"
+                          : "opacity-0 translate-y-1 pointer-events-none"
+                      }`}
+                      onMouseEnter={() => handleDropdownMouseEnter('events')}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <div className="py-1">
+                        {eventsItems.map((event, index) => (
+                          <Link
+                            key={event.name}
+                            href={event.href}
+                            className="block px-4 py-2 text-sm text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                          >
+                            {event.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Initiatives Dropdown */}
+                  <div
+                    className="relative group"
+                    onMouseEnter={() => handleMouseEnter('initiatives')}
                     onMouseLeave={handleMouseLeave}
                   >
                     <div className="text-gray-900 dark:text-gray-300 transition-all duration-200 text-[16px] font-medium flex items-center cursor-pointer">
@@ -171,7 +211,7 @@ const Nav = () => {
                           ? "opacity-100 translate-y-0 pointer-events-auto"
                           : "opacity-0 translate-y-1 pointer-events-none"
                       }`}
-                      onMouseEnter={handleDropdownMouseEnter}
+                      onMouseEnter={() => handleDropdownMouseEnter('initiatives')}
                       onMouseLeave={handleMouseLeave}
                     >
                       <div className="py-1">
@@ -215,10 +255,21 @@ const Nav = () => {
                           </div>
                         ))}
                       </div>
+                   
                     </div>
                   </div>
+                  
+                  <Link
+                    href="#"
+                    className="text-gray-900 dark:text-gray-300 transition-all duration-200 text-[16px] font-medium relative group"
+                  >
+                    {t("contact")}
+                    <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gray-900 dark:bg-white transform scale-x-0 origin-left transition-transform group-hover:scale-x-100" />
+                  </Link>
                 </div>
+               
               </div>
+             
 
               <div className="flex items-center space-x-2 md:space-x-4">
                 <LanguageSwitcher />
@@ -264,9 +315,10 @@ const Nav = () => {
               </div>
             </div>
 
+            {/* Mobile Menu */}
             <div
               className={`xl:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-                isOpen ? "max-h-screen opacity-100 mt-4" : "max-h-0 opacity-0"
+                isOpen ? "max-h-screen opacity-100 mt-5" : "max-h-0 opacity-0"
               }`}
             >
               <div className="flex flex-col space-y-4 px-4 pb-6 ">
@@ -281,6 +333,44 @@ const Nav = () => {
                   </Link>
                 ))}
 
+                {/* Mobile Events Dropdown */}
+                <div className="relative">
+                  <div
+                    className="text-gray-900 dark:text-gray-300 text-lg font-medium flex justify-between items-center cursor-pointer"
+                    onClick={() =>
+                      setMobileActiveInitiative(
+                        mobileActiveInitiative === 'events' ? null : 'events'
+                      )
+                    }
+                  >
+                    {t("events")}
+                    <ChevronRight
+                      className={`h-5 w-5 transition-transform duration-300 ${
+                        mobileActiveInitiative === 'events' ? "rotate-90" : ""
+                      }`}
+                    />
+                  </div>
+                  <div
+                    className={`pl-4 mt-2 space-y-2 overflow-hidden transition-all duration-300 ${
+                      mobileActiveInitiative === 'events'
+                        ? "max-h-96 opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    {eventsItems.map((event, index) => (
+                      <Link
+                        key={event.name}
+                        href={event.href}
+                        className="block text-gray-600 dark:text-gray-400 text-base py-1"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {event.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile Initiatives Dropdown */}
                 <div className="relative">
                   <div
                     className="text-gray-900 dark:text-gray-300 text-lg font-medium flex justify-between items-center cursor-pointer"
@@ -290,7 +380,7 @@ const Nav = () => {
                       )
                     }
                   >
-                    Initiatives
+                    {t("initiatives")}
                     <ChevronRight
                       className={`h-5 w-5 transition-transform duration-300 ${
                         mobileActiveInitiative === 'initiatives' ? "rotate-90" : ""
@@ -345,20 +435,20 @@ const Nav = () => {
                         </div>
                       </div>
                     ))}
+                    
                   </div>
                 </div>
-
+                
+                <Link
+                  href="#"
+                  className="text-gray-900 dark:text-gray-300 transition-colors text-lg font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t("contact")}
+                </Link>
+                
                 <div className="relative inline-block">
-                 
-                 {/* <a href="https://forms.gle/Z4bPVsWo5sdQLEvs5" target="_blank" rel="noreferrer">
-                    <button className="bg-gradient-to-r hover:scale-105 from-[#DC143C] to-[#003893] text-white py-3 sm:py-4 px-6 rounded-xl font-semibold mt-4 sm:mt-6 hover:shadow-lg transition duration-300">
-                      {h('joinbutton')}
-                    </button>
-                  </a> */}
-                <Link href="/gen-ai-fellowship">
-
-                  
-                    
+                  <Link href="/gen-ai-fellowship">
                     <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1.5px] focus:outline-none focus:ring-none focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#3b82f6_50%,#b3d9ff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#1e40af_50%,#b3d9ff_100%)]" />
 
@@ -368,9 +458,9 @@ const Nav = () => {
                     </button>
                   </Link>
                 </div>
-                </div>
               </div>
             </div>
+          </div>
         </nav>
       </div>
     </header>

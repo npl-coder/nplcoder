@@ -1,5 +1,7 @@
 {
-  "/[locale]/gen-ai-fellowship/page": "app/[locale]/gen-ai-fellowship/page.js",
   "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/team/page": "app/[locale]/team/page.js",
+  "/[locale]/events/page": "app/[locale]/events/page.js",
   "/_not-found/page": "app/_not-found/page.js"
 }

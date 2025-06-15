@@ -79,7 +79,7 @@ const teamMembers = [
   },
   {
     name: "Safal Poudel",
-    title: "Web Master",
+    title: "Web Developer",
     image: "../images/teamMembers/Safal.jpeg",
     website: "https://www.safal-poudel.com.np/",
     linkedin: "https://www.linkedin.com/in/safalpoudel808/",
