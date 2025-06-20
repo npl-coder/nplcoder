@@ -1,38 +1,63 @@
-import { Metadata } from 'next';
+import  { Metadata } from "next";
+import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Nav from "@/components/Nav";
-
 import Footer from "@/components/Footer";
+import { NextIntlClientProvider } from "next-intl";
+import Script from 'next/script';
 
 export const metadata = {
-  title: 'NPLCoder GenAI Builders Fellowship 001 | Build Real AI Products',
-  description: 'A 6-week intensive program for Nepali students and professionals to become hands-on AI builders and create real, usable, AI-first products.',
-  keywords: 'GenAI, AI Fellowship, Nepal, NPLCoder, AI Builders, AI Products, Artificial Intelligence Training',
-  
+  metadataBase: new URL('https://nplcoder.org'),
+  title: {
+    default: 'NPLCoder | Empowering the Next Generation of Nepali Computational Minds',
+    template: 'NPLCoder',
+  },
+  description: 'NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation through resources, mentorship, and opportunities to nurture talent that will drive global change.',
+  keywords: [
+    'NPLCoder', 'Nepal Programming', 'Nepali Coders', 'Nepal Tech', 
+    'Competitive Programming Nepal', 'NPLAlgo', 'NPLNeural', 'NPLCareer', 
+    'NPLAcademia', 'GenAI Fellowship', 'Nepal Olympiad in Informatics', 
+    'Tech Education Nepal', 'Coding Nepal', 'AI Nepal', 'Machine Learning Nepal'
+  ],
   openGraph: {
-    title: 'NPLCoder GenAI Builders Fellowship 001',
-    description: 'Build real AI products in 6 weeks. A launchpad for Nepali students and professionals to create usable AI-first products.',
-    url: 'https://www.nplcoder.org/gen-ai-fellowship',
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://nplcoder.org',
     siteName: 'NPLCoder',
+    title: 'NPLCoder | Empowering the Next Generation of Nepali Computational Minds',
+    description: 'Building the foundation for Nepal\'s digital future through programs designed to nurture and showcase computational talent.',
     images: [
       {
-        url: 'https://nplcoder.org/images/gen-ai-fellowship.svg',
+        url: '/images/NPLCoder.jpg', 
         width: 1200,
         height: 630,
-        alt: 'NPLCoder GenAI Builders Fellowship',
-      },
+        alt: 'NPLCoder - Shaping Nepal\'s Future with Computational Innovation',
+      }
     ],
-    locale: 'en_US',
-    type: 'website',
   },
-  
   twitter: {
     card: 'summary_large_image',
-    title: 'NPLCoder GenAI Builders Fellowship 001',
-    description: 'A 6-week intensive program for building real AI products in Nepal',
-    images: ['https://nplcoder.org/images/gen-ai-fellowship.svg'], 
+    title: 'NPLCoder | Empowering Nepali Computational Minds',
+    description: 'A non-profit organization dedicated to empowering Nepali students in computing and innovation.',
+    images: ['/images/NPLCoder.png'],
+    creator: '@nplcoder', 
+    site: '@nplcoder',
   },
-
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.ico', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/favicon.ico' },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/favicon.ico',
+      },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
@@ -44,26 +69,65 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-
-  canonical: 'https://www.nplcoder.org/gen-ai-fellowship',
-  
+  alternates: {
+    canonical: 'https://nplcoder.org',
+    languages: {
+      'en-US': 'https://nplcoder.org',
+    },
+  },
+  category: 'Technology, Education, Non-Profit',
   other: {
     'application-name': 'NPLCoder',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'NPLCoder Fellowship',
+    'apple-mobile-web-app-title': 'NPLCoder',
     'format-detection': 'telephone=no',
+    'msapplication-TileColor': '#2d89ef',
+    'theme-color': '#ffffff',
   },
 };
 
-export default function Layout({ children }) {
-  return (
-    <>
-    <ThemeProvider>
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'NPLCoder',
+  url: 'https://nplcoder.org',
+  logo: 'https://nplcoder.org/images/NPLCoder.png',
+  sameAs: [
+    'https://www.instagram.com/nplcoder',
+    'https://www.linkedin.com/company/nplcoder',
+  ],
+  description: 'NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation through resources, mentorship, and opportunities.',
+};
 
-        {children}
-        
-       </ThemeProvider>
-        </>
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="preload" href="/images/NPLCoder.jpg" as="image" />
+      </head>
+      <body className="font-verdana antialiased">
+        <ThemeProvider>
+          <NextIntlClientProvider>
+            <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
+              <section className="relative overflow-hidden mx-auto lg:px-8 pt-32 lg:pt-[200px]">
+                <div className="container mx-auto px-4 lg:px-8 pb-20">
+                  <Nav />
+                  {children}
+                </div>
+              </section>
+            </main>
+            <Footer />
+          </NextIntlClientProvider>
+        </ThemeProvider>
+
+        <Script
+          id="json-ld-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </body>
+    </html>
   );
 }
