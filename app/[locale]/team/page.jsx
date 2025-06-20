@@ -130,15 +130,14 @@ export default function TeamPage() {
   );
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
-      <section className="px-4 py-10 lg:px-8 max-w-7xl mx-auto my-20">
+<main>      <section >
         {/* <h1 className="text-3xl font-bold mb-14 text-center text-gray-900 dark:text-white">
             Meet Our Team
           </h1> */}
 
         {/* Executive Members Section */}
-        <div className="mt-14">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white text-center">
+        <div className="pb-8">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white text-center">
             {t("founding_members")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
@@ -156,8 +155,8 @@ export default function TeamPage() {
         </div>
 
         {/* Operations Members Section */}
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2 mt-2  text-gray-900 dark:text-white text-center">
+        <div className="pb-8">
+        <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white text-center">
             {t("project_members")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">

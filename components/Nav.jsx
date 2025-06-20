@@ -260,7 +260,7 @@ const Nav = () => {
                   </div>
                   
                   <Link
-                    href="#"
+                    href="/contact"
                     className="text-gray-900 dark:text-gray-300 transition-all duration-200 text-[16px] font-medium relative group"
                   >
                     {t("contact")}
@@ -440,7 +440,7 @@ const Nav = () => {
                 </div>
                 
                 <Link
-                  href="#"
+                  href="/contact"
                   className="text-gray-900 dark:text-gray-300 transition-colors text-lg font-medium"
                   onClick={() => setIsOpen(false)}
                 >

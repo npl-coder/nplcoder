@@ -85,10 +85,10 @@ const AboutUs = () => {
   ];
 
   return (
-    <main className="min-h-screen p-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
-    <section className="relative overflow-hidden mx-auto lg:px-8 pt-16 lg:pt-[180px]">
-      <div className="max-w-7xl mx-auto px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-4 items-center">
+
+<>
+<div className="container mx-auto px-4 lg:px-8 pb-20">
+<div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-4 items-center">
       <div className="relative group flex justify-center lg:justify-center">
             <div className="relative z-10 rounded-3xl overflow-hidden">
               <img 
@@ -113,11 +113,9 @@ const AboutUs = () => {
 </p></div>
       </div>
     </div>
-  </div>
-</section>
-<section className="py-16">
+<section className="lg:py-16 py-12">
   <br></br>
-        <div className="max-w-7xl mx-auto px-4">
+        <div className=" mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-black dark:text-white bg-clip-text">
         {t('missionheading')}
           </h2>
@@ -127,8 +125,8 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="lg:py-16 py-12">
+      <div className=" mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-black dark:text-white bg-clip-text">
           {v('headline')}
           </h2>
@@ -153,8 +151,8 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="py-16 ">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="lg:pt-16 pt-12">
+      <div className="mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-black dark:text-white">
             {g('headline')}
           </h2>
@@ -179,7 +177,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-    </main>
+      </div>
+    </>
+
   );
 };
 

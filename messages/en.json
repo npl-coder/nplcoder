@@ -179,5 +179,26 @@
       "funding_opportunities_desc": "Potential funding and growth support for the most promising projects."
     
   
-  }
+  },
+  
+    "contact": {
+      "title": "Get in Touch",
+      "subtitle": "Have questions or want to collaborate? We'd love to hear from you.",
+      "contactInfoTitle": "Contact Information",
+      "followUs": "Follow Us",
+      "formTitle": "Send us a Message",
+      "fullName": "Full Name",
+      "emailAddress": "Email Address",
+      "subject": "Subject",
+      "messagePlaceholder": "Tell us about your inquiry...",
+      "sendButton": "Send Message",
+      "email": "Email",
+      "phoneUsa": "Phone (USA)",
+      "phoneNepal": "Phone (Nepal)",
+      "location": "Location",
+      "kathmandu": "Kathmandu, Nepal",
+      "nepalnumber": "+977 9862021531",
+      "usanumber": "+1 615-484-1629"
+    }
+  
 }

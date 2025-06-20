@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <main className="relative">
-      <div className="container mx-auto px-4 lg:px-8 pt-32 lg:pt-[220px] pb-20">
+      <div className="container mx-auto px-4 lg:px-8 pb-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
           <div className="flex-1 text-left">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white tracking-tight mb-6">

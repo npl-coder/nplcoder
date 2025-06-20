@@ -117,11 +117,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-verdana antialiased ">
         <ThemeProvider>
           <NextIntlClientProvider>
+          <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
+          <section className="relative overflow-hidden mx-auto lg:px-8 pt-32 lg:pt-[200px]">
+          <div className="container mx-auto px-4 lg:px-8 pb-20">
+
+
         <Nav/>
 
         {children}
-        
+        </div>
+        </section>
+        </main>
         <Footer/>
+
         </NextIntlClientProvider></ThemeProvider>
 
       </body>

@@ -18,7 +18,7 @@ const Initiatives = () => {
           <polyline points="8 6 2 12 8 18"></polyline>
         </svg>
       ),
-      url: "nplalgo",
+      url: "#",
       visual: (canvasRef) => (
         <div className="relative w-full h-full overflow-hidden">
           <div className="absolute top-1/4 left-1/5 w-20 h-16 bg-[#003893]/20 dark:bg-[#003893]/30 backdrop-blur-sm rounded-md transform rotate-12 animate-float-slow hover:scale-110 transition-transform cursor-pointer group">
@@ -92,7 +92,7 @@ const Initiatives = () => {
           <line x1="12" y1="22" x2="12" y2="12"></line>
         </svg>
       ),
-      url: "/nplneural",
+      url: "#",
     
       visual: (canvasRef) => (
         <div className="relative w-full h-full overflow-hidden ">
@@ -243,7 +243,7 @@ const Initiatives = () => {
           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
         </svg>
       ),
-      url: "nplcareer",
+      url: "#",
       visual: (canvasRef) => (
         <div className="relative w-full h-full">
           {/*Career ladder*/}
@@ -309,7 +309,7 @@ const Initiatives = () => {
           <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
         </svg>
       ),
-      url: "nplacademia",
+      url: "#",
 
       visual: (canvasRef) => (
         <div className="relative w-full h-full">
@@ -441,7 +441,7 @@ const Initiatives = () => {
   }, []);
 
   return (
-    <section className="py-24">
+    <section className="lg:py-24">
     <div className="container mx-auto px-4 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white mb-6">
