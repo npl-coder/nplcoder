@@ -4,14 +4,13 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { NextIntlClientProvider } from "next-intl";
+import Script from 'next/script';
 
-
-
-export const metadata = {
+export const metadata : Metadata = {
   metadataBase: new URL('https://nplcoder.org'),
   title: {
     default: 'NPLCoder | Empowering the Next Generation of Nepali Computational Minds',
-    template: 'NPLCoder'
+    template: 'NPLCoder',
   },
   description: 'NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation through resources, mentorship, and opportunities to nurture talent that will drive global change.',
   keywords: [
@@ -20,7 +19,6 @@ export const metadata = {
     'NPLAcademia', 'GenAI Fellowship', 'Nepal Olympiad in Informatics', 
     'Tech Education Nepal', 'Coding Nepal', 'AI Nepal', 'Machine Learning Nepal'
   ],
-  
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -30,14 +28,13 @@ export const metadata = {
     description: 'Building the foundation for Nepal\'s digital future through programs designed to nurture and showcase computational talent.',
     images: [
       {
-        url: '/images/NPLCoder.jpg', 
+        url: '/images/NPLCoder.png', 
         width: 1200,
         height: 630,
         alt: 'NPLCoder - Shaping Nepal\'s Future with Computational Innovation',
       }
     ],
   },
-  
   twitter: {
     card: 'summary_large_image',
     title: 'NPLCoder | Empowering Nepali Computational Minds',
@@ -46,7 +43,6 @@ export const metadata = {
     creator: '@nplcoder', 
     site: '@nplcoder',
   },
-  
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -62,8 +58,6 @@ export const metadata = {
       },
     ],
   },
-  
-  
   robots: {
     index: true,
     follow: true,
@@ -75,18 +69,13 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  
-
-  
   alternates: {
     canonical: 'https://nplcoder.org',
     languages: {
       'en-US': 'https://nplcoder.org',
     },
   },
-  
   category: 'Technology, Education, Non-Profit',
-  
   other: {
     'application-name': 'NPLCoder',
     'apple-mobile-web-app-capable': 'yes',
@@ -103,7 +92,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'NPLCoder',
   url: 'https://nplcoder.org',
-  logo: 'https://nplcoder.org/images/NPLCoder.png', 
+  logo: 'https://nplcoder.org/images/NPLCoder.png',
   sameAs: [
     'https://www.instagram.com/nplcoder',
     'https://www.linkedin.com/company/nplcoder',
@@ -111,27 +100,33 @@ const organizationSchema = {
   description: 'NPLCoder is a non-profit organization dedicated to empowering Nepali students in computing and innovation through resources, mentorship, and opportunities.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children } : { children: React.ReactNode }) {
   return (
-    <html suppressHydrationWarning>
-      <body className="font-verdana antialiased ">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="preload" href="/images/NPLCoder.png" as="image" />
+      </head>
+      <body className="font-verdana antialiased">
         <ThemeProvider>
           <NextIntlClientProvider>
-          <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
-          <section className="relative overflow-hidden mx-auto lg:px-8 pt-32 lg:pt-[200px]">
-          <div className="container mx-auto px-4 lg:px-8 pb-20">
+            <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
+              <section className="relative overflow-hidden mx-auto lg:px-8 pt-32 lg:pt-[200px]">
+                <div className="container mx-auto px-4 lg:px-8 pb-20">
+                  <Nav />
+                  {children}
+                </div>
+              </section>
+            </main>
+            <Footer />
+          </NextIntlClientProvider>
+        </ThemeProvider>
 
-
-        <Nav/>
-
-        {children}
-        </div>
-        </section>
-        </main>
-        <Footer/>
-
-        </NextIntlClientProvider></ThemeProvider>
-
+        <Script
+          id="json-ld-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </body>
     </html>
   );
