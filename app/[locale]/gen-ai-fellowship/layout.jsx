@@ -28,7 +28,7 @@ export const metadata = {
     description: 'Building the foundation for Nepal\'s digital future through programs designed to nurture and showcase computational talent.',
     images: [
       {
-        url: '/images/NPLCoder.jpg', 
+        url: '/images/NPLCoder.png', 
         width: 1200,
         height: 630,
         alt: 'NPLCoder - Shaping Nepal\'s Future with Computational Innovation',
@@ -105,7 +105,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="preload" href="/images/NPLCoder.jpg" as="image" />
+        <link rel="preload" href="/images/NPLCoder.png" as="image" />
       </head>
       <body className="font-verdana antialiased">
         <ThemeProvider>
