@@ -52,9 +52,8 @@ const NPLCoderFellowship = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-[#0d0f15] dark:via-[#2C3043] dark:to-[#1a1d2c]">
-      <div className="container mx-auto px-4 lg:px-8 pt-16 lg:pt-[180px]">
-        <div className="relative py-12 overflow-hidden">
+    <>
+        <div className="relative overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/2">
@@ -219,8 +218,7 @@ const NPLCoderFellowship = () => {
             </button>
           </a>
         </div>
-      </div>
-    </div>
+        </>
   );
 };
 

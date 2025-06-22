@@ -1,9 +1,7 @@
 {
   "/[locale]/page": "app/[locale]/page.js",
-  "/[locale]/about/page": "app/[locale]/about/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/[locale]/gen-ai-fellowship/page": "app/[locale]/gen-ai-fellowship/page.js",
-  "/[locale]/team/page": "app/[locale]/team/page.js",
-  "/[locale]/events/page": "app/[locale]/events/page.js",
-  "/[locale]/contact/page": "app/[locale]/contact/page.js"
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/contact/page": "app/[locale]/contact/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

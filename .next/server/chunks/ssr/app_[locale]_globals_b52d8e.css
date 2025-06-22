@@ -712,10 +712,6 @@ body {
   grid-column: span 2 / span 2;
 }
 
-.m-0 {
-  margin: 0;
-}
-
 .-mx-1 {
   margin-left: -.25rem;
   margin-right: -.25rem;
@@ -749,11 +745,6 @@ body {
 .my-2 {
   margin-top: .5rem;
   margin-bottom: .5rem;
-}
-
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .mb-1 {
@@ -816,10 +807,6 @@ body {
   margin-top: .375rem;
 }
 
-.mt-14 {
-  margin-top: 3.5rem;
-}
-
 .mt-2 {
   margin-top: .5rem;
 }
@@ -846,10 +833,6 @@ body {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.box-border {
-  box-sizing: border-box;
 }
 
 .block {
@@ -2281,12 +2264,6 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-white {
-  --tw-gradient-from: #fff var(--tw-gradient-from-position);
-  --tw-gradient-to: #fff0 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-yellow-500\/20 {
   --tw-gradient-from: #eab30833 var(--tw-gradient-from-position);
   --tw-gradient-to: #eab30800 var(--tw-gradient-to-position);
@@ -2389,10 +2366,6 @@ body {
   object-fit: cover;
 }
 
-.p-0 {
-  padding: 0;
-}
-
 .p-1 {
   padding: .25rem;
 }
@@ -2464,11 +2437,6 @@ body {
   padding-bottom: .375rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -2487,11 +2455,6 @@ body {
 .py-2\.5 {
   padding-top: .625rem;
   padding-bottom: .625rem;
-}
-
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 
 .py-3 {
@@ -2518,8 +2481,12 @@ body {
   padding-bottom: .25rem;
 }
 
-.pb-12 {
-  padding-bottom: 3rem;
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
 }
 
 .pb-20 {
@@ -2572,26 +2539,6 @@ body {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pt-20 {
-  padding-top: 5rem;
-}
-
-.pt-24 {
-  padding-top: 6rem;
-}
-
-.pb-16 {
-  padding-bottom: 4rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
-.pb-2 {
-  padding-bottom: .5rem;
 }
 
 .text-left {
@@ -3770,14 +3717,6 @@ body {
     padding-bottom: 1rem;
   }
 
-  .sm\:pb-16 {
-    padding-bottom: 4rem;
-  }
-
-  .sm\:pt-24 {
-    padding-top: 6rem;
-  }
-
   .sm\:text-left {
     text-align: left;
   }
@@ -4046,42 +3985,26 @@ body {
     padding-right: 2rem;
   }
 
-  .lg\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
 
-  .lg\:pb-20 {
-    padding-bottom: 5rem;
+  .lg\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
-  .lg\:pt-32 {
-    padding-top: 8rem;
+  .lg\:pt-16 {
+    padding-top: 4rem;
   }
 
   .lg\:pt-\[100px\] {
     padding-top: 100px;
   }
 
-  .lg\:pt-\[180px\] {
-    padding-top: 180px;
-  }
-
-  .lg\:pt-\[220px\] {
-    padding-top: 220px;
-  }
-
   .lg\:pt-\[200px\] {
     padding-top: 200px;
-  }
-
-  .lg\:pt-16 {
-    padding-top: 4rem;
   }
 
   .lg\:text-left {
@@ -4139,10 +4062,6 @@ body {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .xl\:pt-\[220px\] {
-    padding-top: 220px;
   }
 }
 
