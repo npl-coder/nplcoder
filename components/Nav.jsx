@@ -39,7 +39,7 @@ const Nav = () => {
 
   const eventsItems = [
     { name: t("eventssub"), href: "/events" },
-    { name: t("past_events"), href: "#" }
+    { name: t("past_events"), href: "/past-events" }
   ];
 
   const initiativeItems = [

@@ -4,5 +4,7 @@
   "/[locale]/team/page": "app/[locale]/team/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/[locale]/contact/page": "app/[locale]/contact/page.js",
-  "/[locale]/gen-ai-fellowship/page": "app/[locale]/gen-ai-fellowship/page.js"
+  "/[locale]/gen-ai-fellowship/page": "app/[locale]/gen-ai-fellowship/page.js",
+  "/[locale]/events/page": "app/[locale]/events/page.js",
+  "/[locale]/past-events/page": "app/[locale]/past-events/page.js"
 }

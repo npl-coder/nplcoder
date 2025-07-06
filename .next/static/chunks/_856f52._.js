@@ -905,7 +905,7 @@ const Nav = ()=>{
         },
         {
             name: t("past_events"),
-            href: "#"
+            href: "/past-events"
         }
     ];
     const initiativeItems = [
