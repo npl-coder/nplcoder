@@ -7,6 +7,7 @@
     "home": "Home",
     "about": "About",
     "events": "Events",
+    "eventssub": "Ongoing Events",
     "team": "Team",
     "resources": "Resources",
     "contest": "Contest",
@@ -60,6 +61,7 @@
     "nplcareer": "NPLCareer is committed to career guidance and professional development for Nepali students in computer science, both within Nepal and abroad, particularly in the U.S. It provides resources on internship opportunities, job applications, technical interviews, resume building, and networking. NPLCareer also hosts mentorship programs, industry talks, and career workshops, helping students successfully transition from academia to top tech companies, research labs, and startups.",
     "nplacademia": "NPLAcademia is a mentorship-driven initiative designed to help Nepali students navigate the complex journey of applying to top graduate schools in the U.S. and beyond. It provides personalized mentorship, strategy sessions, application workshops, and networking opportunities to increase the representation of Nepali students in world-class research programs. With guidance on research experience, recommendation letters, statement of purpose writing, and funding opportunities, NPLAcademia aims to create a pipeline of Nepali scholars excelling in academia and research globally."
   },
+  
   "About": {
     "title": "NPLCoder",
     "description1": "NPLCoder is a non-profit organization driven by a simple yet powerful belief: the immense talent in Nepal deserves the opportunity to shine in the field of technology. Nepal, a land of unparalleled cultural and natural diversity, is home to resilient and resourceful people who have long harnessed their ingenuity to adapt to challenging environments. However, in this era of rapid technological advancement, there is a pressing need to channel this potential into the field of computing and innovation.",
@@ -68,6 +70,7 @@
     "missionheading": "Our Mission",
     "mission": "To unlock the vast potential of Nepali talent by cultivating a culture of computational excellence and fostering innovation. NPLCoder is committed to equipping students with cutting-edge skills, invaluable resources, and transformative opportunities, enabling them to spearhead technological advancements on both national and global stages with confidence and expertise."
   },
+
   "values": {
     "headline": "Our Values",
     "title": "Bridge the Educational Divide",

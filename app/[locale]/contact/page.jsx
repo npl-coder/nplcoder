@@ -129,7 +129,7 @@ const ContactUs = () => {
                 <div className="flex gap-4">
                   {socialLinks.map(({ icon: Icon, href }, idx) => (
                     <a key={idx} href={href} target="_blank" rel="noreferrer"
-                      className="w-12 h-12 bg-[#003893] rounded-lg flex items-center justify-center p-2 hover:scale-110 transition duration-300">
+                      className="w-12 h-12 bg-[#DC143C] rounded-lg flex items-center justify-center p-2 hover:scale-110 transition duration-300">
                       <Icon className="text-white w-5 h-5" />
                     </a>
                   ))}
@@ -189,8 +189,8 @@ const ContactUs = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#003893] text-white py-4 px-6 rounded-xl font-semibold hover:scale-105 hover:shadow-lg transition duration-300"
-                  >
+                  className="bg-gradient-to-r w-full hover:scale-105 from-[#dc143c] to-[#003893] text-white py-3 sm:py-4 px-6 rounded-xl font-semibold mt-4 sm:mt-6 hover:shadow-lg transition duration-300">
+                  
                     {t('sendButton')}
                   </button>
                 </div>

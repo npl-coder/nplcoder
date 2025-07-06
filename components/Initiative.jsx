@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 const Initiatives = () => {
 
     const t = useTranslations('Initiatives');
-  
+
   const initiatives = [
     {
       title: "NPLAlgo",
@@ -19,67 +19,36 @@ const Initiatives = () => {
         </svg>
       ),
       url: "#",
-      visual: (canvasRef) => (
-        <div className="relative w-full h-full overflow-hidden">
-          <div className="absolute top-1/4 left-1/5 w-20 h-16 bg-[#003893]/20 dark:bg-[#003893]/30 backdrop-blur-sm rounded-md transform rotate-12 animate-float-slow hover:scale-110 transition-transform cursor-pointer group">
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity absolute inset-0 flex items-center justify-center text-xs text-[#003893] dark:text-white">for(i=0;i&lt;n;i++)</div>
-          </div>
-          <div className="absolute top-1/3 right-1/4 w-24 h-12 bg-[#DC143C]/20 dark:bg-[#DC143C]/30 backdrop-blur-sm rounded-md transform -rotate-6 animate-float-slow-reverse hover:scale-110 transition-transform cursor-pointer group">
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity absolute inset-0 flex items-center justify-center text-xs text-[#DC143C] dark:text-white">while(left&lt;right)</div>
-          </div>
-          <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-gradient-to-br from-[#003893]/10 to-[#DC143C]/10 dark:from-[#003893]/20 dark:to-[#DC143C]/20 backdrop-blur-sm rounded-md transform rotate-45 animate-float hover:scale-110 transition-transform cursor-pointer group">
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity absolute inset-0 flex items-center justify-center text-xs text-gray-700 dark:text-white transform -rotate-45">if(a[mid]==key)</div>
-          </div>
-          
-          <div className="absolute left-2/3 top-2/3 w-1/4 h-1/4">
-            <div className="relative w-full h-full">
-              <div className="absolute inset-0 flex items-end justify-around">
-                {[0.3, 0.7, 0.5, 0.9, 0.4, 0.6, 0.8].map((height, i) => (
-                  <div 
-                    key={i} 
-                    className={`w-2 bg-gradient-to-t from-[#003893] to-[#DC143C] rounded-t-sm transition-all duration-500 ease-in-out hover:from-[#DC143C] hover:to-[#003893]`}
-                    style={{height: `${height * 100}%`}}
-                  ></div>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          {/* "Code" lines with typewriter effect */}
-          <div className="absolute inset-x-8 top-12 h-1 bg-gradient-to-r from-[#003893] to-transparent rounded w-0 animate-expand-slow"></div>
-          <div className="absolute inset-x-12 top-20 h-1 bg-gradient-to-r from-[#003893] to-transparent rounded w-0 animate-expand-slower"></div>
-          <div className="absolute inset-x-16 top-28 h-1 bg-gradient-to-r from-[#003893] to-transparent rounded w-0 animate-expand-slowest"></div>
-          <div className="absolute inset-x-20 top-36 h-1 bg-gradient-to-r from-[#DC143C] to-transparent rounded w-0 animate-expand-slow"></div>
-          <div className="absolute inset-x-12 bottom-28 h-1 bg-gradient-to-r from-[#DC143C] to-transparent rounded w-0 animate-expand-slower"></div>
-          <div className="absolute inset-x-8 bottom-20 h-1 bg-gradient-to-r from-[#DC143C] to-transparent rounded w-0 animate-expand-slowest"></div>
-
-          {/* Binary tree visualization */}
-          <div className="absolute left-1/2 top-16 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse"></div>
-          <div className="absolute left-1/3 top-1/3 -translate-x-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed"></div>
-          <div className="absolute left-2/3 top-1/3 -translate-x-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed"></div>
-          <div className="absolute left-1/4 top-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed-more"></div>
-          <div className="absolute left-2/5 top-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed-more"></div>
-          <div className="absolute left-3/5 top-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed-more"></div>
-          <div className="absolute left-3/4 top-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed-more"></div>
-          
-          {/* Tree connections */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="50%" y1="18" x2="33.3%" y2="33.3%" className="animate-draw-line" stroke="url(#lineGradient)" strokeWidth="1" />
-            <line x1="50%" y1="18" x2="66.7%" y2="33.3%" className="animate-draw-line-delayed" stroke="url(#lineGradient)" strokeWidth="1" />
-            <line x1="33.3%" y1="33.3%" x2="25%" y2="50%" className="animate-draw-line-delayed-more" stroke="url(#lineGradient)" strokeWidth="1" />
-            <line x1="33.3%" y1="33.3%" x2="40%" y2="50%" className="animate-draw-line-delayed-more" stroke="url(#lineGradient)" strokeWidth="1" />
-            <line x1="66.7%" y1="33.3%" x2="60%" y2="50%" className="animate-draw-line-delayed-more" stroke="url(#lineGradient)" strokeWidth="1" />
-            <line x1="66.7%" y1="33.3%" x2="75%" y2="50%" className="animate-draw-line-delayed-more" stroke="url(#lineGradient)" strokeWidth="1" />
-            <defs>
-              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#003893" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#DC143C" stopOpacity="0.6" />
-              </linearGradient>
-            </defs>
-          </svg>
-          
-          <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none"></canvas>
-        </div>
+      visual: () => (
+        <div className="relative w-full h-full flex items-center justify-center scale-125">
+        {/* Binary tree nodes */}
+        <div className="absolute left-1/2.2 top-[26%] -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse"></div>
+      
+        <div className="absolute left-[32%] top-[50%] -translate-x-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed"></div>
+        <div className="absolute left-[66%] top-[50%] -translate-x-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed"></div>
+      
+        <div className="absolute left-[24%] top-[75%] -translate-x-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed-more"></div>
+        <div className="absolute left-[39.5%] top-[75%] -translate-x-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed-more"></div>
+        <div className="absolute left-[59%] top-[75%] -translate-x-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed-more"></div>
+        <div className="absolute left-[74.4%] top-[75%] -translate-x-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-[#003893] to-[#DC143C] animate-pulse-delayed-more"></div>
+      
+        {/* Tree connections */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#003893" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#DC143C" stopOpacity="0.6" />
+            </linearGradient>
+          </defs>
+          <line x1="50%" y1="28%" x2="33.3%" y2="50%" className="animate-draw-line" stroke="url(#lineGradient)" strokeWidth="1.5" />
+          <line x1="50%" y1="28%" x2="66.7%" y2="50%" className="animate-draw-line-delayed" stroke="url(#lineGradient)" strokeWidth="1.5" />
+          <line x1="33.3%" y1="50%" x2="25%" y2="75%" className="animate-draw-line-delayed-more" stroke="url(#lineGradient)" strokeWidth="1.5" />
+          <line x1="33.3%" y1="50%" x2="40%" y2="75%" className="animate-draw-line-delayed-more" stroke="url(#lineGradient)" strokeWidth="1.5" />
+          <line x1="66.7%" y1="50%" x2="60%" y2="75%" className="animate-draw-line-delayed-more" stroke="url(#lineGradient)" strokeWidth="1.5" />
+          <line x1="66.7%" y1="50%" x2="75%" y2="75%" className="animate-draw-line-delayed-more" stroke="url(#lineGradient)" strokeWidth="1.5" />
+        </svg>
+      </div>
+      
       )
     },
     {
@@ -93,144 +62,73 @@ const Initiatives = () => {
         </svg>
       ),
       url: "#",
-    
-      visual: (canvasRef) => (
-        <div className="relative w-full h-full overflow-hidden ">
-          {/* Interactive neural network visualization */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5">
-            {/* Connection lines - Positioned first to be in the background */}
-            <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#003893" stopOpacity="0.5" />
-                  <stop offset="100%" stopColor="#DC143C" stopOpacity="0.5" />
-                </linearGradient>
-                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feGaussianBlur stdDeviation="2" result="blur" />
-                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                </filter>
-              </defs>
-              
-              {/* Input to Hidden Layer 1 connections */}
-              <g className="opacity-70">
-                {/* Input node 1 to all hidden layer 1 nodes */}
-                <path d="M 0 25 L 33 16" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 25 L 33 32" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 25 L 33 48" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 25 L 33 64" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 25 L 33 80" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
+      visual: () => (
+        <div className="relative w-full h-full flex items-center justify-center">
+            <div className="absolute w-full h-full">
+                {/* Connection lines */}
+                <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="#003893" stopOpacity="0.4" />
+                            <stop offset="100%" stopColor="#DC143C" stopOpacity="0.4" />
+                        </linearGradient>
+                    </defs>
+                    <g>
+                        {/* Input to Hidden 1 */}
+                        <path d="M 10 20 L 35 10" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 20 L 35 30" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 20 L 35 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 20 L 35 70" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 20 L 35 90" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 50 L 35 10" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 50 L 35 30" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 50 L 35 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 50 L 35 70" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 50 L 35 90" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 80 L 35 10" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 80 L 35 30" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 80 L 35 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 80 L 35 70" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 10 80 L 35 90" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+
+                        {/* Hidden 1 to Hidden 2 */}
+                        <path d="M 35 10 L 65 25" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 10 L 65 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 10 L 65 75" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 30 L 65 25" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 30 L 65 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 30 L 65 75" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 50 L 65 25" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 50 L 65 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 50 L 65 75" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 70 L 65 25" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 70 L 65 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 70 L 65 75" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 90 L 65 25" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 90 L 65 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 35 90 L 65 75" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+
+                        {/* Hidden 2 to Output */}
+                        <path d="M 65 25 L 90 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 65 50 L 90 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                        <path d="M 65 75 L 90 50" stroke="url(#neuralGradient)" strokeWidth="0.5" />
+                    </g>
+                </svg>
                 
-                {/* Input node 2 to all hidden layer 1 nodes */}
-                <path d="M 0 50 L 33 16" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 50 L 33 32" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 50 L 33 48" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 50 L 33 64" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 50 L 33 80" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                
-                {/* Input node 3 to all hidden layer 1 nodes */}
-                <path d="M 0 75 L 33 16" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 75 L 33 32" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 75 L 33 48" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 75 L 33 64" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 0 75 L 33 80" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                
-                {/* Hidden Layer 1 to Hidden Layer 2 connections */}
-                {/* Each node in hidden layer 1 connects to each node in hidden layer 2 */}
-                <path d="M 33 16 L 66 25" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 16 L 66 50" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 16 L 66 75" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                
-                <path d="M 33 32 L 66 25" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 32 L 66 50" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 32 L 66 75" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                
-                <path d="M 33 48 L 66 25" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 48 L 66 50" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 48 L 66 75" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                
-                <path d="M 33 64 L 66 25" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 64 L 66 50" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 64 L 66 75" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                
-                <path d="M 33 80 L 66 25" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 80 L 66 50" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 33 80 L 66 75" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                
-                {/* Hidden Layer 2 to Output connections */}
-                <path d="M 66 25 L 100 50" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 66 50 L 100 50" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-                <path d="M 66 75 L 100 50" stroke="url(#neuralGradient)" strokeWidth="1.5" className="animate-pulse" />
-              </g>
-    
-              <g className="signal-paths " filter="url(#glow)">
-                <circle r="2" className="animate-neural-signal">
-                  <animateMotion 
-                    path="M 0 25 L 33 48 L 66 50 L 100 50" 
-                    dur="2s" 
-                    repeatCount="indefinite" 
-                    begin="0s"
-                  />
-                </circle>
-                <circle r="2" className="animate-neural-signal ">
-                  <animateMotion 
-                    path="M 0 75 L 33 80 L 66 75 L 100 50" 
-                    dur="2.2s" 
-                    repeatCount="indefinite" 
-                    begin="0.5s"
-                  />
-                </circle>
-                <circle r="2" className="animate-neural-signal">
-                  <animateMotion 
-                    path="M 0 50 L 33 32 L 66 25 L 100 50" 
-                    dur="1.8s" 
-                    repeatCount="indefinite" 
-                    begin="1s"
-                  />
-                </circle>
-                
-              </g>
-            </svg>
-            
-            {/* Input layer */}
-            <div className="absolute left-0 top-1/4 w-5 h-5 rounded-full bg-[#003893] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-blue-500/50"></div>
-            <div className="absolute left-0 top-2/4 w-5 h-5 rounded-full bg-[#003893] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-blue-500/50"></div>
-            <div className="absolute left-0 top-3/4 w-5 h-5 rounded-full bg-[#003893] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-blue-500/50"></div>
-            
-            {/* Hidden layer 1 */}
-            <div className="absolute left-1/3 top-[16%] w-5 h-5 rounded-full bg-[#DC143C] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-red-500/50"></div>
-            <div className="absolute left-1/3 top-[32%] w-5 h-5 rounded-full bg-[#DC143C] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-red-500/50"></div>
-            <div className="absolute left-1/3 top-[48%] w-5 h-5 rounded-full bg-[#DC143C] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-red-500/50 animate-pulse"></div>
-            <div className="absolute left-1/3 top-[64%] w-5 h-5 rounded-full bg-[#DC143C] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-red-500/50"></div>
-            <div className="absolute left-1/3 top-[80%] w-5 h-5 rounded-full bg-[#DC143C] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-red-500/50"></div>
-            
-            {/* Hidden layer 2 */}
-            <div className="absolute left-2/3 top-1/4 w-5 h-5 rounded-full bg-[#003893] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-blue-500/50"></div>
-            <div className="absolute left-2/3 top-2/4 w-5 h-5 rounded-full bg-[#003893] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-blue-500/50 animate-pulse"></div>
-            <div className="absolute left-2/3 top-3/4 w-5 h-5 rounded-full bg-[#003893] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-blue-500/50"></div>
-            
-            {/* Output layer */}
-            <div className="absolute right-0 top-2/4 w-5 h-5 rounded-full bg-[#DC143C] hover:scale-150 hover:z-10 transition-transform cursor-pointer shadow-lg shadow-red-500/50 animate-pulse"></div>
-            
-            {/* Interactive "firing" neurons */}
-            <div className="absolute left-1/3 top-[48%] w-16 h-16 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#DC143C] opacity-30 animate-ping"></div>
-            <div className="absolute left-2/3 top-2/4 w-16 h-16 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#003893] opacity-30 animate-ping animation-delay-500"></div>
-            <div className="absolute right-0 top-2/4 w-16 h-16 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#DC143C] opacity-30 animate-ping animation-delay-1000"></div>
-          </div>
-          
-          {/* Neural wave patterns */}
-          <div className="absolute top-5 left-5 w-20 h-10">
-            <svg className="w-full h-full" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0,25 Q10,5 20,25 T40,25 T60,25 T80,25 T100,25" stroke="#003893" fill="none" strokeWidth="2" className="animate-wave" />
-            </svg>
-          </div>
-          <div className="absolute bottom-5 right-5 w-20 h-10">
-            <svg className="w-full h-full" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0,25 Q10,45 20,25 T40,25 T60,25 T80,25 T100,25" stroke="#DC143C" fill="none" strokeWidth="2" className="animate-wave-reverse" />
-            </svg>
-          </div>
-          
-         
-          <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+                {/* Neuron Layers */}
+                <div className="absolute left-[10%] top-[20%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#003893] shadow-lg"></div>
+                <div className="absolute left-[10%] top-[50%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#003893] shadow-lg"></div>
+                <div className="absolute left-[10%] top-[80%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#003893] shadow-lg"></div>
+                <div className="absolute left-[35%] top-[10%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#DC143C] shadow-lg"></div>
+                <div className="absolute left-[35%] top-[30%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#DC143C] shadow-lg"></div>
+                <div className="absolute left-[35%] top-[50%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#DC143C] shadow-lg"></div>
+                <div className="absolute left-[35%] top-[70%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#DC143C] shadow-lg"></div>
+                <div className="absolute left-[35%] top-[90%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#DC143C] shadow-lg"></div>
+                <div className="absolute left-[65%] top-[25%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#003893] shadow-lg"></div>
+                <div className="absolute left-[65%] top-[50%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#003893] shadow-lg"></div>
+                <div className="absolute left-[65%] top-[75%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#003893] shadow-lg"></div>
+                <div className="absolute left-[90%] top-[50%] w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#DC143C] shadow-lg"></div>
+            </div>
         </div>
       )
     },
@@ -244,60 +142,58 @@ const Initiatives = () => {
         </svg>
       ),
       url: "#",
-      visual: (canvasRef) => (
-        <div className="relative w-full h-full">
-          {/*Career ladder*/}
-          <div className="absolute left-1/6 bottom-1/6 w-2/3 h-2/3 flex flex-col justify-between perspective-800">
-            <div className="h-1/5 w-full bg-gradient-to-r from-[#003893]/10 to-[#DC143C]/10 dark:from-[#003893]/20 dark:to-[#DC143C]/20 rounded-md border border-[#003893]/20 dark:border-[#003893]/40 flex items-center justify-center transform hover:translate-z-10 hover:scale-105 transition-transform duration-300 group cursor-pointer">
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-[#DC143C] dark:group-hover:text-white transition-colors">Leadership</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#003893]/0 to-[#DC143C]/0 group-hover:from-[#003893]/10 group-hover:to-[#DC143C]/20 transition-all duration-300 rounded-md"></div>
-            </div>
-            <div className="h-1/5 w-11/12 mx-auto bg-gradient-to-r from-[#003893]/10 to-[#DC143C]/10 dark:from-[#003893]/20 dark:to-[#DC143C]/20 rounded-md border border-[#003893]/20 dark:border-[#003893]/40 flex items-center justify-center transform hover:translate-z-8 hover:scale-105 transition-transform duration-300 group cursor-pointer">
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-[#DC143C] dark:group-hover:text-white transition-colors">Senior</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#003893]/0 to-[#DC143C]/0 group-hover:from-[#003893]/10 group-hover:to-[#DC143C]/20 transition-all duration-300 rounded-md"></div>
-            </div>
-            <div className="h-1/5 w-10/12 mx-auto bg-gradient-to-r from-[#003893]/10 to-[#DC143C]/10 dark:from-[#003893]/20 dark:to-[#DC143C]/20 rounded-md border border-[#003893]/20 dark:border-[#003893]/40 flex items-center justify-center transform hover:translate-z-6 hover:scale-105 transition-transform duration-300 group cursor-pointer">
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-[#DC143C] dark:group-hover:text-white transition-colors">Mid-level</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#003893]/0 to-[#DC143C]/0 group-hover:from-[#003893]/10 group-hover:to-[#DC143C]/20 transition-all duration-300 rounded-md"></div>
-            </div>
-            <div className="h-1/5 w-9/12 mx-auto bg-gradient-to-r from-[#003893]/10 to-[#DC143C]/10 dark:from-[#003893]/20 dark:to-[#DC143C]/20 rounded-md border border-[#003893]/20 dark:border-[#003893]/40 flex items-center justify-center transform hover:translate-z-4 hover:scale-105 transition-transform duration-300 group cursor-pointer">
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-[#DC143C] dark:group-hover:text-white transition-colors">Junior</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#003893]/0 to-[#DC143C]/0 group-hover:from-[#003893]/10 group-hover:to-[#DC143C]/20 transition-all duration-300 rounded-md"></div>
-            </div>
-            <div className="h-1/5 w-8/12 mx-auto bg-gradient-to-r from-[#003893]/10 to-[#DC143C]/10 dark:from-[#003893]/20 dark:to-[#DC143C]/20 rounded-md border border-[#003893]/20 dark:border-[#003893]/40 flex items-center justify-center transform hover:translate-z-2 hover:scale-105 transition-transform duration-300 group cursor-pointer">
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-[#DC143C] dark:group-hover:text-white transition-colors">Internship</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#003893]/0 to-[#DC143C]/0 group-hover:from-[#003893]/10 group-hover:to-[#DC143C]/20 transition-all duration-300 rounded-md"></div>
-            </div>
-          </div>
-          
-         
-          
-         
-          <div className="absolute top-1/6 right-1/6 w-12 h-12 rounded-full border-2 border-dashed border-[#DC143C]/40 animate-spin-slow cursor-pointer hover:border-[#DC143C]/80 transition-colors"></div>
-          <div className="absolute top-1/3 left-1/6 w-8 h-8 rounded-full border-2 border-dashed border-[#003893]/40 animate-spin-slow-reverse cursor-pointer hover:border-[#003893]/80 transition-colors"></div>
-          
-          {/* resume document */}
-          <div className="absolute bottom-5 right-5 w-1/4 h-1/4 bg-white dark:bg-gray-800 rounded shadow-md transform rotate-6 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer">
-            <div className="p-1 flex flex-col h-full"> <p className='font-bold text-[12px] dark:text-gray-400'>Resume</p>
-              <div className="w-full h-2 bg-[#003893] mb-1 rounded-sm"></div>
-              <div className="flex gap-1 mb-1">
-                <div className="w-1/3 h-1 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
-                <div className="w-1/2 h-1 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
-              </div>
-              <div className="flex gap-1 mb-1">
-                <div className="w-1/4 h-1 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
-                <div className="w-2/3 h-1 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
-              </div>
-              <div className="flex-1 border-t border-gray-200 dark:border-gray-700 mt-1 pt-1">
-                <div className="w-full h-1 bg-gray-300 dark:bg-gray-600 rounded-sm mb-1"></div>
-                <div className="w-full h-1 bg-gray-300 dark:bg-gray-600 rounded-sm mb-1"></div>
-                <div className="w-3/4 h-1 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
-              </div>
-            </div>
-          </div>
-          
-          <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+      visual: () => (
+        <div className="relative w-full h-full flex items-center justify-center">
+  {/* resume document */}
+  <div className="w-1/2 h-[70%] bg-white dark:bg-gray-800 rounded-lg shadow-xl transform rotate-6 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer overflow-hidden">
+    <div className="p-4 flex flex-col h-full">
+      <p className='font-bold text-lg dark:text-gray-300 mb-2'>Resume</p>
+      <div className="w-full h-3 bg-gradient-to-r from-[#003893] to-[#DC143C] mb-3 rounded-sm"></div>
+
+      {/* Section 1: Header */}
+      <div className="flex gap-2 mb-2">
+        <div className="w-1/3 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+        <div className="w-1/2 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+      </div>
+      <div className="flex gap-2 mb-3">
+        <div className="w-1/4 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+        <div className="w-2/3 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+      </div>
+
+      {/* Section Divider */}
+      <div className="flex-1 border-t-2 border-gray-200 dark:border-gray-700 mt-2 pt-2 space-y-2">
+        {/* Experience */}
+        <div className="w-1/3 h-2 bg-gray-400 dark:bg-gray-500 rounded-sm"></div>
+        <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+        <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+        <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm mb-3"></div>
+
+        {/* Education */}
+        <div className="w-1/4 h-2 bg-gray-400 dark:bg-gray-500 rounded-sm"></div>
+        <div className="w-5/6 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+        <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+        <div className="w-2/3 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm mb-3"></div>
+
+        {/* Skills */}
+        <div className="w-1/5 h-2 bg-gray-400 dark:bg-gray-500 rounded-sm"></div>
+        <div className="flex gap-1 flex-wrap">
+          <div className="w-1/4 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+          <div className="w-1/4 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+          <div className="w-1/4 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+          <div className="w-1/4 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+          <div className="w-1/3 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
         </div>
+
+        {/* Projects */}
+        <div className="w-1/3 h-2 bg-gray-400 dark:bg-gray-500 rounded-sm mt-3"></div>
+        <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+        <div className="w-11/12 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+        <div className="w-2/3 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
       )
     },
     {
@@ -310,117 +206,50 @@ const Initiatives = () => {
         </svg>
       ),
       url: "#",
+      visual: () => (
+        <div className="relative w-full h-full flex items-center justify-around">
+            {/* Graduation Hat */}
+            <div className="w-1/3 text-gray-700 dark:text-gray-400">
+                <svg width="100" height="100" viewBox="0 0 100 100" className="w-full h-full animate-float-slow transition-transform hover:scale-110">
+                    <defs>
+                        <linearGradient id="gradCapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style={{stopColor: '#003893'}} />
+                            <stop offset="100%" style={{stopColor: '#DC143C'}} />
+                        </linearGradient>
+                         <filter id="glow-effect" x="-50%" y="-50%" width="200%" height="200%">
+                          <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+                          <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                    </defs>
+                    <g filter="url(#glow-effect)" opacity="0.7">
+                      <path d="M50 10 L90 30 L50 50 L10 30 Z" fill="url(#gradCapGradient)" />
+                      <path d="M18 31 L50 49 L82 31 L50 65 Z" fill="rgba(0,0,0,0.3)" />
+                      <line x1="80" y1="33" x2="88" y2="60" stroke="#DC143C" strokeWidth="2" />
+                      <circle cx="88" cy="60" r="4" fill="#DC143C" />
+                    </g>
+                </svg>
+            </div>
 
-      visual: (canvasRef) => (
-        <div className="relative w-full h-full">
-          <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-40 h-40">
-            <div className="relative w-full h-full">
-              <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-24 h-6 bg-gradient-to-r from-[#003893] to-[#DC143C] rounded hover:scale-105 transition-transform cursor-pointer"></div>
-              
-              <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 -translate-y-full w-20 h-20 bg-gradient-to-br from-[#003893] to-[#DC143C] transform rotate-45 origin-bottom-right hover:rotate-[50deg] transition-transform cursor-pointer"></div>
-              
-              <div className="absolute bottom-1/4 left-1/2 translate-x-6 w-1 h-12 bg-[#DC143C] origin-top transform rotate-6 hover:rotate-12 transition-transform"></div>
-              <div className="absolute bottom-1/4 left-1/2 translate-x-6 translate-y-12 w-5 h-5 bg-[#003893] rounded-full animate-swing"></div>
-              
-              {/* Label */}
-            </div>
-          </div>
-          
-          <div className="absolute left-1/2 bottom-1/6 -translate-x-1/2 w-64 h-40 flex justify-center">
-            <div className="relative w-full h-full flex flex-col items-center">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
-                {/* Paper 3 (bottom) */}
-                <div className="w-32 h-40 bg-white dark:bg-gray-700 rounded-md shadow-lg transform -rotate-6 translate-x-3 translate-y-3">
-                  <div className="w-full h-full p-3 flex flex-col">
-                    <div className="w-full h-2 bg-[#003893]/50 mb-2 rounded"></div>
-                    <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-2/3 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-1/2 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                  </div>
+            {/* Papers Stack */}
+            <div className="relative w-1/2 h-full flex flex-col items-center justify-center">
+                <div className="absolute w-40 h-48">
+                    {/* Paper 3 (bottom) */}
+                    <div className="w-full h-full bg-white dark:bg-gray-700 rounded-md shadow-lg transform -rotate-6 translate-x-3 translate-y-3 absolute top-0">
+                        <div className="w-full h-full p-3 flex flex-col"><div className="w-full h-2 bg-[#003893]/50 mb-2 rounded"></div><div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div><div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div><div className="w-2/3 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div><div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div></div>
+                    </div>
+                    {/* Paper 2 (middle) */}
+                    <div className="w-full h-full bg-white dark:bg-gray-700 rounded-md shadow-lg transform -rotate-3 translate-x-1 translate-y-1 absolute top-0">
+                        <div className="w-full h-full p-3 flex flex-col"><div className="w-full h-2 bg-[#DC143C]/50 mb-2 rounded"></div><div className="w-1/2 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div><div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div><div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div></div>
+                    </div>
+                    {/* Paper 1 (top) */}
+                    <div className="w-full h-full bg-white dark:bg-gray-700 rounded-md shadow-lg absolute top-0 hover:rotate-3 hover:translate-y-1 transition-transform cursor-pointer">
+                        <div className="w-full h-full p-3 flex flex-col"><p className='font-bold text-sm dark:text-gray-400'>Abstract</p><div className="w-full h-2 bg-[#003893]/50 mb-2 rounded"></div><div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div><div className="w-1/2 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div><div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div></div>
+                    </div>
                 </div>
-                
-                {/* Paper 2 (middle) */}
-                <div className="w-32 h-40 bg-white dark:bg-gray-700 rounded-md shadow-lg transform -rotate-3 translate-x-1 translate-y-1 absolute top-0">
-                  <div className="w-full h-full p-3 flex flex-col">
-                    <div className="w-full h-2 bg-[#DC143C]/50 mb-2 rounded"></div>
-                    <div className="w-1/2 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-1/2 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                  </div>
-                </div>
-                
-                {/* Paper 1 (top) */}
-                <div className="w-32 h-40 bg-white dark:bg-gray-700 rounded-md shadow-lg absolute top-0 hover:rotate-3 hover:translate-y-1 transition-transform cursor-pointer">
-                  <div className="w-full h-full p-3 flex flex-col">
-                    <p className='font-bold text-[12px] dark:text-gray-400'>Abstract</p>
-                    <div className="w-full h-2 bg-[#003893]/50 mb-2 rounded"></div>
-                    <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-1/2 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-2/3 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-3/4 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-full h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                    <div className="w-1/2 h-2 bg-gray-300 dark:bg-gray-600 mb-2 rounded"></div>
-                  </div>
-                </div>
-              </div>
-              
             </div>
-          </div>
-          
-        
-          
-          <div className="absolute left-1/6 top-1/2 -translate-y-1/2 w-32 h-40">
-            {/* Open book */}
-            <div className="relative w-32 h-24 flex hover:scale-105 transition-transform cursor-pointer">
-              {/* Left page */}
-              <div className="w-1/2 h-full bg-white dark:bg-gray-700 rounded-l-md shadow-md transform origin-right hover:rotate-3 transition-transform flex flex-col p-2">
-                <div className="w-full h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-3/4 h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-full h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-1/2 h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-3/4 h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-full h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-2/3 h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-              </div>
-              
-              {/* Book spine */}
-              <div className="h-full w-2 bg-gradient-to-r from-[#003893] to-[#DC143C]"></div>
-              
-              {/* Right page */}
-              <div className="w-1/2 h-full bg-white dark:bg-gray-700 rounded-r-md shadow-md transform origin-left hover:rotate-[-3deg] transition-transform flex flex-col p-2">
-                <div className="w-full h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-1/2 h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-3/4 h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-full h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-2/3 h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-3/4 h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-                <div className="w-1/2 h-1 bg-gray-300 dark:bg-gray-600 mb-1"></div>
-              </div>
-            </div>
-            
-            {/* Label */}          </div>
-          
-          <div className="absolute top-1/4 right-1/3 w-3 h-3 bg-[#DC143C]/20 rounded-full animate-float-slow"></div>
-          <div className="absolute top-2/3 left-1/4 w-2 h-2 bg-[#003893]/20 rounded-full animate-float-slow-reverse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-4 h-4 bg-[#DC143C]/20 rounded-full animate-float"></div>
-          <div className="absolute top-2/4 left-1/3 w-2 h-2 bg-[#003893]/20 rounded-full animate-float-slow-reverse"></div>
-          <div className="absolute bottom-3/4 right-1/5 w-4 h-4 bg-[#DC143C]/20 rounded-full animate-float"></div>
-          <div className="absolute bottom-1/3 right-1/2 w-4 h-4 bg-[#DC143C]/20 rounded-full animate-float"></div>
-
-          {/* Subtle connections in background */}
-         
-          
-          {/* Interactive canvas */}
-          <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none"></canvas>
         </div>
       )
     }
@@ -433,7 +262,6 @@ const Initiatives = () => {
     initiatives.forEach((initiative, i) => {
       const canvas = canvasRefs.current[i];
       if (canvas && canvas.current) {
-        initiative.visual(canvas.current);
       }
     });
 
@@ -456,17 +284,20 @@ const Initiatives = () => {
             key={index} 
             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-2 lg:gap-10 border-b border-gray-200 dark:border-gray-700 pb-20`}
           >
+            {/* Mobile Title & Icon */}
             <div className="w-full flex justify-center items-center lg:hidden mb-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#DC143C] to-[#003893] flex items-center justify-center text-white shadow-lg">
+              <div className={`w-16 h-16 rounded-full ${index % 2 === 0 ? 'bg-[#003893]' : 'bg-[#DC143C]'} flex items-center justify-center text-white shadow-lg`}>
                 {initiative.icon}
               </div>
               <h3 className="ml-4 text-2xl font-bold text-gray-800 dark:text-white">{initiative.title}</h3>
             </div>
             
+            {/* Content Section */}
             <div className="flex-1 lg:w-3/5 lg:flex-none">
+              {/* Desktop Title & Icon */}
               <div className={`hidden lg:flex items-center gap-4 mb-8 ${index % 2 === 0 ? '' : 'justify-end'}`}>
                 {index % 2 === 1 && <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{initiative.title}</h3>}
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#DC143C] to-[#003893] flex items-center justify-center text-white shadow-lg">
+                <div className={`w-16 h-16 rounded-full ${index % 2 === 0 ? 'bg-[#003893]' : 'bg-[#DC143C]'} flex items-center justify-center text-white shadow-lg`}>
                   {initiative.icon}
                 </div>
                 {index % 2 === 0 && <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{initiative.title}</h3>}
@@ -484,9 +315,10 @@ const Initiatives = () => {
               </div>
             </div>
             
+            {/* Visual Section */}
             <div className="hidden lg:block flex-1 lg:w-2/5 lg:flex-none h-80">
               <div className="relative w-full h-full overflow-hidden">
-                {initiative.visual(canvasRefs.current[index])}
+                {initiative.visual()}
               </div>
             </div>
           </div>

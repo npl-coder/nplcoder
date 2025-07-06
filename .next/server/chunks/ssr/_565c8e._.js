@@ -354,7 +354,7 @@ const ContactUs = ()=>{
                                                 href: href,
                                                 target: "_blank",
                                                 rel: "noreferrer",
-                                                className: "w-12 h-12 bg-[#003893] rounded-lg flex items-center justify-center p-2 hover:scale-110 transition duration-300",
+                                                className: "w-12 h-12 bg-[#DC143C] rounded-lg flex items-center justify-center p-2 hover:scale-110 transition duration-300",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
                                                     className: "text-white w-5 h-5"
                                                 }, void 0, false, {
@@ -477,7 +477,7 @@ const ContactUs = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             type: "submit",
-                                            className: "w-full bg-[#003893] text-white py-4 px-6 rounded-xl font-semibold hover:scale-105 hover:shadow-lg transition duration-300",
+                                            className: "bg-gradient-to-r w-full hover:scale-105 from-[#dc143c] to-[#003893] text-white py-3 sm:py-4 px-6 rounded-xl font-semibold mt-4 sm:mt-6 hover:shadow-lg transition duration-300",
                                             children: t('sendButton')
                                         }, void 0, false, {
                                             fileName: "[project]/app/[locale]/contact/page.jsx",

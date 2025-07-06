@@ -5,6 +5,7 @@ import { ChevronDown, ChevronRight, StarIcon } from "lucide-react";
 import ModeToggle from "./modeswitch";
 import LanguageSwitcher from "./LanguageSwitch";
 import { useTranslations } from "next-intl";
+import CombinedButton from "./NavButton"; 
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ const Nav = () => {
   const linkNavItems = ["Home", "About", "Team"];
 
   const eventsItems = [
-    { name: t("events"), href: "/events" },
+    { name: t("eventssub"), href: "/events" },
     { name: t("past_events"), href: "#" }
   ];
 
@@ -277,15 +278,7 @@ const Nav = () => {
 
                 <div className="hidden xl:flex">
                   <div className="relative inline-block">
-                  <Link href="/gen-ai-fellowship">
-                      <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1.5px] focus:outline-none focus:ring-none focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#3b82f6_50%,#b3d9ff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#b3d9ff_0%,#1e40af_50%,#b3d9ff_100%)]" />
-
-                        <span className="relative inline-flex h-full w-full items-center justify-center rounded-xl bg-[#e6f0ff] dark:bg-[#1e3a8a] border border-[#b3d9ff] text-[#0f172a] dark:text-white px-6 py-1 text-md font-medium backdrop-blur-3xl">
-                          GenAI Fellowship 001
-                        </span>
-                      </button>
-                    </Link>
+                 <CombinedButton/>
                   </div>
                 </div>
 
